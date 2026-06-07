@@ -79,24 +79,24 @@
 
 
 
-//quest.2 offer apply//
+// quest.2 offer apply//
 
-// let items=[250,645,300,900,50];
+let items=[250,645,300,900,50];
 
-// let i=0;
-// //calculation part of inner code
-// for(let val of items){
-//     let offer = val/10;
-//     // let items2 = i-val;                 //this for inner code check
-//     items[i]= items[i]-offer          // this for changing array to new 
-//     // console.log(i)
+let i=0;
+//calculation part of inner code
+for(let val of items){
+    let offer = val/10;
+    let items2 = val-offer;                 //this for inner code check
+    items[i]= items[i]-offer          // this is using for indexing to place new item discounted in new array //250-25=225(0)//645-64.5=580(1)//new array index place itme
+    console.log(offer)              //each item discount by 10%
 
-//     // console.log(`price after applying 10% offer is ${items2}`);
-//     // i++;
-//     // offer+=items[i];
-// } //final here
+    console.log(`price after applying 10% offer is ${items2}`);
+    i++;
+    // offer+=items[i];
+} //final here
 
-// console.log(items) //this print new array through indexing 
+console.log(items) //this print new array through indexing 
 
 
 // quest.3 method of array 
@@ -178,3 +178,40 @@
 //     console.log(sum1Each) ;
 // })
 
+//quest from filter method to find 90+ score student in class
+// const scoreArr=[66,78,99,56,94,88,92,87,34,96];
+
+// let filterArr= scoreArr.filter((val)=>{
+//     let findScore=val>90;
+//     return findScore;
+// })
+
+// console.log(filterArr);
+
+//ques take input from the user and do some reduce method 
+
+// let userInp=prompt("Enter your number: ")
+
+// let arrUser=[];
+
+// //store all number one by one in new array 
+// for(let i=1; i<=userInp; i++){              //i mean number of user input break in single number and iterate over it start from 1 (like 1,2,3)
+//     arrUser[i-1]=i;                         //store each item in new array through respective manner of indexes from 0 index so there is i-1 mean i=1-1 ==0index
+// }                                           //i=1, indexof 0// i=2, indexof 1   
+// console.log(`The elements of userinput ${userInp} is ${arrUser}`)
+
+
+// //sum of all jumber given by user
+// let sumUser=arrUser.reduce((res,curr)=>{
+//     let allSum=res+curr;
+//     return allSum;
+// })
+// console.log(`add all elements of userinput ${sumUser}`);
+
+// //product of all number given by user
+// let factorial=arrUser.reduce((res,curr)=>{
+//     let allSum=res*curr;
+//     return allSum;
+// })
+
+// console.log(`factorial of elements given by userinput ${userInp} : ${factorial}`);
