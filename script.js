@@ -79,24 +79,24 @@
 
 
 
-// quest.2 offer apply//
+// // quest.2 offer apply//
 
-let items=[250,645,300,900,50];
+// let items=[250,645,300,900,50];
 
-let i=0;
-//calculation part of inner code
-for(let val of items){
-    let offer = val/10;
-    let items2 = val-offer;                 //this for inner code check
-    items[i]= items[i]-offer          // this is using for indexing to place new item discounted in new array //250-25=225(0)//645-64.5=580(1)//new array index place itme
-    console.log(offer)              //each item discount by 10%
+// let i=0;
+// //calculation part of inner code
+// for(let val of items){
+//     let offer = val/10;
+//     let items2 = val-offer;                 //this for inner code check
+//     items[i]= items[i]-offer          // this is using for indexing to place new item discounted in new array //250-25=225(0)//645-64.5=580(1)//new array index place itme
+//     console.log(offer)              //each item discount by 10%
 
-    console.log(`price after applying 10% offer is ${items2}`);
-    i++;
-    // offer+=items[i];
-} //final here
+//     console.log(`price after applying 10% offer is ${items2}`);
+//     i++;
+//     // offer+=items[i];
+// } //final here
 
-console.log(items) //this print new array through indexing 
+// console.log(items) //this print new array through indexing 
 
 
 // quest.3 method of array 
@@ -215,3 +215,42 @@ console.log(items) //this print new array through indexing
 // })
 
 // console.log(`factorial of elements given by userinput ${userInp} : ${factorial}`);
+
+
+// //quest for add text in h2 for the help of js and window obj method
+// let headingChange=document.querySelector("h2");
+// headingChange.innerText= headingChange.innerText +" "+ "from apna college";
+// console.log(headingChange.innerText)
+
+//quest for print all box innertext through loop in js 
+// let makeDiv=document.querySelectorAll(".unidiv");
+
+// let idx=0;
+
+// for( i of makeDiv){
+//     i.innerText=`value of ${idx}`;
+//     idx++
+// }
+
+// // console.log(makeDiv); 
+// // makeDiv[0].innerText= "hello";
+// // makeDiv[1].innerText= "krish";
+// // makeDiv[2].innerText= "kumar";
+
+//quest insert item through js
+
+// let textChange=document.querySelector("h2");
+// // console.log(textChange);
+
+
+// textChange.innerText=textChange.innerText+" " + " from apna bhai";
+// // console.log(textChange);
+
+//quest.1 from DOM create btn and text click me bg red and text of white
+
+let btn=document.createElement("button");
+btn.innerText="click Me!!";
+btn.styel.background(red);
+btn.style.text(white);
+
+h2.append(btn);
