@@ -248,9 +248,28 @@
 
 //quest.1 from DOM create btn and text click me bg red and text of white
 
-let btn=document.createElement("button");
-btn.innerText="click Me!!";
-btn.styel.background(red);
-btn.style.text(white);
+// let btn=document.createElement("button");
+// btn.innerText="click Me!!";
+// btn.style.background="red";
+// btn.style.text="white";
 
-h2.append(btn);
+// console.log(btn);
+
+// document.querySelector("body").prepend(btn); 
+
+let btn1=document.querySelector("button");
+let mode="light";
+
+btn1.addEventListener("click", ()=>{
+    if(mode==="light"){
+        mode="dark";
+        document.querySelector("body").style.background="black";
+        document.querySelector("p").style.color="white";
+    }else{
+        mode="light";
+        document.querySelector("body").style.background="white";
+        document.querySelector("p").style.color="black";
+    }
+
+  console.log(result)
+});
