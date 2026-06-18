@@ -290,3 +290,4 @@ class userDetails{
 }
 
 let studentOne = new userDetails("krish", "alone123@gmail.com")
+let studentTwo = new userDetails("ankit", "ankit123@gmail.com")
