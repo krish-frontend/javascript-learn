@@ -276,18 +276,36 @@
 
 //make a website where making object function for 2 user to storeb their details 
 
-let data="secret info"
+// let data="secret info"
+
+// class userDetails{
+//     constructor(name, email){
+//         this.name=name;
+//         this.email=email;
+//     }
+
+//      viewData(){
+//         console.log(`Date=${data}`);
+//      }
+// }
+
+// let studentOne = new userDetails("krish", "alone123@gmail.com");
+// let studentTwo = new userDetails("ankit", "ankit123@gmail.com");
+
+
+// for taking details from the user student 
+
 
 class userDetails{
-    constructor(name, email){
-        this.name=name;
-        this.email=email;
+    constructor(rollNo, wClass, yMobile, yEmailId){
+        this.Roll_no = rollNo;
+        this.which_Class = wClass;
+        this.y_Mobile = yMobile;
+        this.y_EmailId = yEmailId;
     }
-
-     viewDate(){
-        console.log(`Date=${data}`);
-     }
 }
 
-let studentOne = new userDetails("krish", "alone123@gmail.com")
-let studentTwo = new userDetails("ankit", "ankit123@gmail.com")
+let arr=[];
+
+
+
