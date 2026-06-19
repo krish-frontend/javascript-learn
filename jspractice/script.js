@@ -295,6 +295,7 @@
 
 // for taking details from the user student 
 
+let arr=[];
 
 class userDetails{
     constructor(rollNo, wClass, yMobile, yEmailId){
@@ -305,7 +306,39 @@ class userDetails{
     }
 }
 
-let arr=[];
+
+let studentCount=Number(prompt("How many student-"));
+
+for(let i=0; i<studentCount; i++){
+
+    
+    let studentName=prompt("Name-");
+    let studentClass=prompt("class-");
+    let mobileNumber=prompt("mobile number- ");
+    let emailId=prompt("email id- ");
+    
+    let studentDetails = new userDetails(studentName,studentClass);
+    
+    arr.push(studentDetails);
+}
 
 
+let teacherAdmin=prompt("admin name- ")
 
+if(true){
+    tName=prompt("name-");
+    tMobile=prompt("mobileN-")
+
+    class teacherDetails extends userDetails{
+        constructor(name, email){
+            super(name, email);
+        }
+
+        editDetails(){
+            dataModify="change data formate";
+        }
+    }
+}
+
+
+console.log(arr);
