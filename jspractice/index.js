@@ -29,10 +29,3 @@
 // }
 
 
-function callBack(a,b, newCb){
-    let add=a+b;
-
-    newCb(add);    
-}
-
-callBack(2,4, (el)=>{console.log(el)});
