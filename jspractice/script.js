@@ -137,6 +137,7 @@
 // arr.forEach((el)=>{
 //     let sqNum=el*el;
 //     console.log(sqNum);
+    
 // })
 
 // const arr1=[14,16,18,9,1,30];
