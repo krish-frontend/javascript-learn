@@ -28,12 +28,12 @@
 // console.log(arr)
 // console.log(arr[50])
 
-let userGuess = prompt("guess the number: ");
+// let userGuess = prompt("guess the number: ");
 
-let num=29;
+// let num=29;
 
-while(num!=userGuess){
-    userGuess= prompt("guess again buddy!!")
-}
+// while(num!=userGuess){
+//     userGuess= prompt("guess again buddy!!")
+// }
 
-alert("guessing correct buddy!!")
+// alert("guessing correct buddy!!")
