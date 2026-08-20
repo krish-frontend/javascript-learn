@@ -98,6 +98,30 @@
 // console.log(items) //this print new array through indexing 
 
 
+// let arrItem = [250,645,300,900, 50];
+
+// let idx = 0;
+// let i = 0;
+
+// for(let el of arrItem){
+    
+//     let discountItem = el/10;
+    
+//     let afterDiscount = el-discountItem;
+   
+//     console.log(arrItem [idx]);
+//     idx++;
+    
+//     console.log(discountItem);
+//     console.log(afterDiscount);
+//     console.log(`the item after the discount ${afterDiscount}`);
+
+//     arrItem[i] = arrItem[i]-discountItem;   // index of 0 225- 22.5 after 10%discount and place on idex of 0
+
+//     console.log(arrItem);
+      
+// }
+
 // quest.3 method of array 
 
 // let arrCompanies=["bloomberg","microsoft","uber","google","ibm","netflix"];
@@ -169,6 +193,42 @@
 // })
 
 // console.log(arr2)
+
+
+
+// let arr = [2,4,5,6,8];
+
+// let arr2 = arr.reduce((prev, curr)=>{
+    
+//     // let bigInt = prev < curr;
+//     // if(bigInt){
+//     //     return curr;
+//     // }else{
+//     //     return prev;
+//     // }
+
+//     // return prev +curr;
+    
+
+//     // return arr.length
+
+//     let sum = arr.reduce((prev, curr)=>{
+//         let avg = prev + curr/arr.length;
+//         return avg;
+//     })
+//     console.log(sum)
+
+//     return  prev * curr;
+     
+//     return curr - prev;
+    
+//     return  prev && curr %2===0;
+
+     
+// })
+
+// console.log(arr2);
+
 
 // const arr1=[14,16,18,9,1,30];
 

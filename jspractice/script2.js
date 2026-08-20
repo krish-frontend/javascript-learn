@@ -1,6 +1,6 @@
 
 
-// //quest 1:- what is prompt?
+//quest 1:- what is prompt?
 
 // let userInp= prompt("Enter the number?")  //prompt is used to take input from user
 
@@ -10,6 +10,14 @@
 //     console.log(userInp, "this number not divide by 5")            //store the input from the user in console panel of inspect//
 // }
 
+// //ood even
+// let ask= prompt("what's your number!!!");
+
+// if(ask%2===0){
+//     console.log("you chosen number is Even")
+// }else{
+//     console.log("you chosen number is Odd")
+// }
 
 
 // //quest 2:- how to give a grade to student according to their marks?  //using conditional//
