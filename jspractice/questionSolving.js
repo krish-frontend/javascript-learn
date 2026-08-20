@@ -52,3 +52,21 @@
 // }
 
 // console.log(evenNumbers)
+
+//q. 7
+
+let numbers = [2, 5, 8, 11, 14, 17, 20, 23];
+
+let odd = 0;
+let even = 0;
+
+for(let i of numbers){
+    if(i%2===0){
+        even++
+    }else{
+        odd++
+    }
+}
+
+console.log(`ODD:- ${odd}`);
+console.log(`EVEN:- ${even}`;)
