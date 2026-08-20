@@ -53,20 +53,59 @@
 
 // console.log(evenNumbers)
 
-//q. 7
+// //q. 7
 
-let numbers = [2, 5, 8, 11, 14, 17, 20, 23];
+// let numbers = [2, 5, 8, 11, 14, 17, 20, 23];
 
-let odd = 0;
-let even = 0;
+// let odd = 0;
+// let even = 0;
 
-for(let i of numbers){
-    if(i%2===0){
-        even++
-    }else{
-        odd++
-    }
+// for(let i of numbers){
+//     if(i%2===0){
+//         even++
+//     }else{
+//         odd++
+//     }
+// }
+
+// console.log(`ODD:- ${odd}`);
+// console.log(`EVEN:- ${even}`;)
+
+
+// //q.8
+
+// for (let i = 1; i <= 10; i++) {
+
+//     if (i % 2 === 0) {
+//         continue;
+//     }
+
+//     console.log(i);
+// }
+
+// //predict :- 1,3,5,7,9,
+
+// //q.9
+
+// for (let i = 1; i <= 10; i++) {
+
+//     if (i === 6) {
+//         break;
+//     }
+
+//     console.log(i);
+// }
+// //predict: -12345
+
+//q.10
+
+let student = {
+    name: "Krish",
+    age: 24,
+    class: 5,
+    passed: true
+};
+
+for(let i in student){
+    console.log(`${i}:${student[i]}`)
 }
-
-console.log(`ODD:- ${odd}`);
-console.log(`EVEN:- ${even}`;)
