@@ -146,19 +146,38 @@
 
 
 
-//q.14
+// //q.14
 
-let numbers = [10, 20, 30, 40, 50];
+// let numbers = [10, 20, 30, 40, 50];
 
 
 
-for(let i = 0, j = numbers.length - 1; i < j; i++, j--){
-    let temp = numbers[i];
-    numbers[i]= numbers[j];
-    numbers[j]=temp;
+// for(let i = 0, j = numbers.length - 1; i < j; i++, j--){
+//     let temp = numbers[i];
+//     numbers[i]= numbers[j];
+//     numbers[j]=temp;
+// }
+
+// console.log(numbers)
+
+//q.15
+
+let numbers = [10, -5, 0, 20, -8, 0, 15];
+
+let negNum = 0;
+let posNum = 0;
+let zeroCount = 0;
+
+for(let i of numbers){
+    if(i<0){
+    negNum++
+    }else if(i>0){
+        posNum++
+    }else{
+        zeroCount++
+    }
 }
 
-console.log(numbers)
-
-
-
+console.log(`Majority count of Negative Number: ${negNum}`);
+console.log(`Majority count of Positive Number: ${posNum}`);
+console.log(`Majority count of Zeroes Number: ${zeroCount}`);
