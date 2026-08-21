@@ -160,24 +160,38 @@
 
 // console.log(numbers)
 
-//q.15
+// //q.15
 
-let numbers = [10, -5, 0, 20, -8, 0, 15];
+// let numbers = [10, -5, 0, 20, -8, 0, 15];
 
-let negNum = 0;
-let posNum = 0;
-let zeroCount = 0;
+// let negNum = 0;
+// let posNum = 0;
+// let zeroCount = 0;
 
-for(let i of numbers){
-    if(i<0){
-    negNum++
-    }else if(i>0){
-        posNum++
-    }else{
-        zeroCount++
+// for(let i of numbers){
+//     if(i<0){
+//     negNum++
+//     }else if(i>0){
+//         posNum++
+//     }else{
+//         zeroCount++
+//     }
+// }
+
+// console.log(`Majority count of Negative Number: ${negNum}`);
+// console.log(`Majority count of Positive Number: ${posNum}`);
+// console.log(`Majority count of Zeroes Number: ${zeroCount}`);
+
+
+//q.16
+
+let numbers = [10, 20, 30, 40, 50];
+
+for(let i=0; i<numbers.length;i++){
+    if(numbers[i]===30){  
+        console.log(`Number Found on the indeces of ${i}`)              
+        break;       
     }
+    console.log(i )
 }
 
-console.log(`Majority count of Negative Number: ${negNum}`);
-console.log(`Majority count of Positive Number: ${posNum}`);
-console.log(`Majority count of Zeroes Number: ${zeroCount}`);
