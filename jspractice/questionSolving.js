@@ -110,37 +110,55 @@
 //     console.log(`${i}:${student[i]}`)
 // }
 
-// //q.12
+// // //q.12
 
-let numbers = [56, 45, 7, 12, 23, 89];
+// let numbers = [56, 45, 7, 12, 23, 89];
 
-let max = numbers[0]
+// let max = numbers[0]
 
-for(let i=0; i<numbers.length;i++){
+// for(let i=0; i<numbers.length;i++){
 
-    for(let j=i+1; j<numbers.length;j++){
+//     for(let j=i+1; j<numbers.length;j++){
 
-        if(numbers[j]<max){
-            max = numbers[j]
-        }
-    }
+//         if(numbers[j]<max){
+//             max = numbers[j]
+//         }
+//     }
+// }
+
+// console.log(max)
+
+
+// //q.13
+// let number = [45, 12, 78, 3, 56, 9];
+
+// let min= number[0];
+
+// for(let i=0; i<number.length; i++){
+//     for(let j=i+1; j<number.length; j++){
+//         if(number[j]<min){
+//             min=number[j]
+//         };
+//     };
+// };
+
+// console.log(min);
+
+
+
+//q.14
+
+let numbers = [10, 20, 30, 40, 50];
+
+
+
+for(let i = 0, j = numbers.length - 1; i < j; i++, j--){
+    let temp = numbers[i];
+    numbers[i]= numbers[j];
+    numbers[j]=temp;
 }
 
-console.log(max)
+console.log(numbers)
 
 
-//q.13
-let number = [45, 12, 78, 3, 56, 9];
-
-let min= number[0];
-
-for(let i=0; i<number.length; i++){
-    for(let j=i+1; j<number.length; j++){
-        if(number[j]<min){
-            min=number[j]
-        };
-    };
-};
-
-console.log(min);
 
