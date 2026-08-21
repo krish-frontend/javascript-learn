@@ -97,15 +97,50 @@
 // }
 // //predict: -12345
 
-//q.10
+// //q.10
 
-let student = {
-    name: "Krish",
-    age: 24,
-    class: 5,
-    passed: true
+// let student = {
+//     name: "Krish",
+//     age: 24,
+//     class: 5,
+//     passed: true
+// };
+
+// for(let i in student){
+//     console.log(`${i}:${student[i]}`)
+// }
+
+// //q.12
+
+let numbers = [56, 45, 7, 12, 23, 89];
+
+let max = numbers[0]
+
+for(let i=0; i<numbers.length;i++){
+
+    for(let j=i+1; j<numbers.length;j++){
+
+        if(numbers[j]<max){
+            max = numbers[j]
+        }
+    }
+}
+
+console.log(max)
+
+
+//q.13
+let number = [45, 12, 78, 3, 56, 9];
+
+let min= number[0];
+
+for(let i=0; i<number.length; i++){
+    for(let j=i+1; j<number.length; j++){
+        if(number[j]<min){
+            min=number[j]
+        };
+    };
 };
 
-for(let i in student){
-    console.log(`${i}:${student[i]}`)
-}
+console.log(min);
+
