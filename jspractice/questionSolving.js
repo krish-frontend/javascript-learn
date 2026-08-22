@@ -311,20 +311,33 @@
 
 
 
-// q. 21 while loop password
+// // q. 21 while loop password
 
-let user = prompt("Enter your PASSWORD: -");
-let pW = "@krish123";
+// let user = prompt("Enter your PASSWORD: -");
+// let pW = "@krish123";
 
-while(user){
-    if(pW==user){
-        console.log("access granted")
-        alert("pssword set")
-        break;
-    }else if(user==user.replace(/[^a-z,0-9,@]/g, '', )){
-        console.log("Try again!!")
-        break;
-    }
-}
+// while(user){
+//     if(pW==user){
+//         console.log("access granted")
+//         alert("pssword set")
+//         break;
+//     }else if(user==user.replace(/[^a-z,0-9,@]/g, '', )){
+//         console.log("Try again!!")
+//         break;
+//     }
+// }
 
 
+let numbers = [2, 5, 2, 8, 5, 10, 8];
+
+let arr= numbers[0];
+
+for(let i=0; i<numbers.length; i++){
+    for(let j=i+1; j<numbers.length;j++){
+        if(arr<numbers[j]){
+            arr = numbers[j]        
+    };
+};
+};
+
+console.log(arr)
