@@ -185,13 +185,23 @@
 
 //q.16
 
-let numbers = [10, 20, 30, 40, 50];
+// let numbers = [10, 20, 30, 40, 50];
 
-for(let i=0; i<numbers.length;i++){
-    if(numbers[i]===30){  
-        console.log(`Number Found on the indeces of ${i}`)              
-        break;       
+// for(let i=0; i<numbers.length;i++){
+//     if(numbers[i]===30){  
+//         console.log(`Number Found on the indeces of ${numbers.indexOf(numbers[i])}`)              
+//         break;       
+//     }
+//     console.log(i )
+// }
+
+//q.17 Print numbers from 1 to 30, but don't print numbers divisible by 3.
+
+for(let i=1;i<=30;i++){
+    if(i%3===0){
+        console.log(`${i}this number division by 3 `)
+        continue;
     }
-    console.log(i )
+    console.log(i)
 }
 
