@@ -195,13 +195,29 @@
 //     console.log(i )
 // }
 
-//q.17 Print numbers from 1 to 30, but don't print numbers divisible by 3.
+// //q.17 Print numbers from 1 to 30, but don't print numbers divisible by 3.
 
-for(let i=1;i<=30;i++){
-    if(i%3===0){
-        console.log(`${i}this number division by 3 `)
+// for(let i=1;i<=30;i++){
+//     if(i%3===0){
+//         console.log(`${i}this number division by 3 `)
+//         continue;
+//     }
+//     console.log(i)
+// }
+
+//q.18  Count vowels
+
+let word = "javascript";
+
+let vowelCount = 0;
+
+for(let i of word){
+    if(i==="a" || i==="e" || i==="i" || i==="o" || i==="u"){
+        vowelCount++
+        console.log(`This is a vowel ${i}`)
         continue;
     }
-    console.log(i)
+ console.log(i)
 }
 
+console.log(`Result:- Total number of count is ${vowelCount}`);
