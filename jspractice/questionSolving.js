@@ -222,20 +222,49 @@
 
 // console.log(`Result:- Total number of count is ${vowelCount}`);
 
-//q. 19. Reverse a string
+// //q. 19. Reverse a string
 
-let word = "hello";
+// let word = "hello";
 
-let newStr = word.split("");
+// let newStr = word.split("");
 
-for(let i=0, j=newStr.length-1; i<j; i++,j--){
+// for(let i=0, j=newStr.length-1; i<j; i++,j--){
     
-    let temp = newStr[i];
-    newStr[i] =newStr[j];
-    newStr[j]= temp;
+//     let temp = newStr[i];
+//     newStr[i] =newStr[j];
+//     newStr[j]= temp;
 
-};
+// };
 
-word=newStr.join("");
+// word=newStr.join("");
 
-console.log(word);
+// console.log(word);
+
+//q. 20. Check palindrome
+
+
+
+
+let word = "20055002";
+
+
+let left = 0;
+let right = word.length-1;
+
+let isPalindrome = true;
+
+while(left<right){
+    if(word[left]!==word[right]){
+        isPalindrome = false;
+        break;
+    }
+    left++;
+    right--;
+
+}
+
+if(isPalindrome){
+    console.log("yes");
+}else{
+    console.log("No")
+}
