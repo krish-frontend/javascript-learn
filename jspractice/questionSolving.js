@@ -279,32 +279,51 @@
 //     console.log("No")
 // }
 
-function isPalindrome(str){
+// function isPalindrome(str){
 
-    let cleanStr = str.toLowerCase().replace(/[^a-z,0-9]/g, '');
+//     let cleanStr = str.toLowerCase().replace(/[^a-z,0-9]/g, '');
     
-    // case 1 inbuilt method
-    // let newStr = cleanStr.split("").reverse().join("");
+//     // case 1 inbuilt method
+//     // let newStr = cleanStr.split("").reverse().join("");
     
-    // return cleanStr===newStr;
+//     // return cleanStr===newStr;
 
 
-    //case 2 loop method
-        for(let i = 0; i<cleanStr.length/2; i++){
-        if(cleanStr[i]!==cleanStr[cleanStr.length-1-i]){        
-            return false ;
-        };
-    };
-    return true;  
+//     //case 2 loop method
+//         for(let i = 0; i<cleanStr.length/2; i++){
+//         if(cleanStr[i]!==cleanStr[cleanStr.length-1-i]){        
+//             return false ;
+//         };
+//     };
+//     return true;  
 
-};
+// };
 
-// let user = prompt("Enter the word for Palindrome :- ")
+// // let user = prompt("Enter the word for Palindrome :- ")
 
-// if(isPalindrome(str)){
-//     console.log("yes!! this is a palindrome ")
-// }else{
-//     console.log("no!! this is not a palindrome ")
-// }
+// // if(isPalindrome(str)){
+// //     console.log("yes!! this is a palindrome ")
+// // }else{
+// //     console.log("no!! this is not a palindrome ")
+// // }
 
-console.log(isPalindrome("naman"))
+// console.log(isPalindrome("naman"))
+
+
+
+// q. 21 while loop password
+
+let user = prompt("Enter your PASSWORD: -");
+let pW = "@krish123";
+
+while(user){
+    if(pW==user){
+        console.log("access granted")
+        break;
+    }else if(user==user.replace(/[^a-z,0-9]/g, '')){
+        console.log("Try again!!")
+        break;
+    }
+}
+
+
