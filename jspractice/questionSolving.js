@@ -319,8 +319,9 @@ let pW = "@krish123";
 while(user){
     if(pW==user){
         console.log("access granted")
+        alert("pssword set")
         break;
-    }else if(user==user.replace(/[^a-z,0-9]/g, '')){
+    }else if(user==user.replace(/[^a-z,0-9,@]/g, '', )){
         console.log("Try again!!")
         break;
     }
