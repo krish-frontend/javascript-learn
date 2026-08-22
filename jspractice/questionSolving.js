@@ -205,19 +205,37 @@
 //     console.log(i)
 // }
 
-//q.18  Count vowels
+// //q.18  Count vowels
 
-let word = "javascript";
+// let word = "javascript";
 
-let vowelCount = 0;
+// let vowelCount = 0;
 
-for(let i of word){
-    if(i==="a" || i==="e" || i==="i" || i==="o" || i==="u"){
-        vowelCount++
-        console.log(`This is a vowel ${i}`)
-        continue;
-    }
- console.log(i)
-}
+// for(let i of word){
+//     if(i==="a" || i==="e" || i==="i" || i==="o" || i==="u"){
+//         vowelCount++
+//         console.log(`This is a vowel ${i}`)
+//         continue;
+//     }
+//  console.log(i)
+// }
 
-console.log(`Result:- Total number of count is ${vowelCount}`);
+// console.log(`Result:- Total number of count is ${vowelCount}`);
+
+//q. 19. Reverse a string
+
+let word = "hello";
+
+let newStr = word.split("");
+
+for(let i=0, j=newStr.length-1; i<j; i++,j--){
+    
+    let temp = newStr[i];
+    newStr[i] =newStr[j];
+    newStr[j]= temp;
+
+};
+
+word=newStr.join("");
+
+console.log(word);
