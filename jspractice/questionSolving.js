@@ -242,29 +242,39 @@
 
 //q. 20. Check palindrome
 
-
-
-
-let word = "20055002";
-
-
-let left = 0;
-let right = word.length-1;
+let word = "mada";
 
 let isPalindrome = true;
 
-while(left<right){
-    if(word[left]!==word[right]){
+for(let i = 0; i<word.length/2; i++){
+    if(word[i]!==word[word.length-1-i]){
         isPalindrome = false;
         break;
-    }
-    left++;
-    right--;
-
-}
+    };
+};
 
 if(isPalindrome){
-    console.log("yes");
+    console.log(`This is an example of Palindrome ${word}`)
 }else{
-    console.log("No")
+    console.log(`This is not a Plaindrome `)
 }
+
+// let left = 0;
+// let right = word.length-1;
+
+// let isPalindrome = true;
+
+// while(left<right){
+//     if(word[left]!==word[right]){
+//         isPalindrome = false;
+//         break;
+//     }
+//     left++;
+//     right--;
+// }
+
+// if(isPalindrome){
+//     console.log("yes");
+// }else{
+//     console.log("No")
+// }
