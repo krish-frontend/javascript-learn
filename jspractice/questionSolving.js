@@ -333,15 +333,8 @@
 
 let numbers = [2, 5, 2, 8, 5, 10, 8];
 
-let arr = [];
-
-for(let i=0; i<numbers.length; i++){
-    for(let j=i+1; j<numbers.length; j++){
-        if(numbers[i]%numbers[j]===0 && numbers[i]<numbers[j]){
-            console.log(numbers[i])
-            continue;
-        }
+for(let i of numbers){
+    if(numbers[i]%numbers[i]===0){
+        continue;
     }
-};
-
-console.log(arr)
+}
