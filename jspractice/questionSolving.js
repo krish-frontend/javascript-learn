@@ -299,11 +299,12 @@ function isPalindrome(str){
 
 };
 
-let user = prompt("Enter the word for Palindrome :- ")
+// let user = prompt("Enter the word for Palindrome :- ")
 
-if(isPalindrome(user)){
-    console.log("yes!! this is a palindrome ")
-}else{
-    console.log("no!! this is not a palindrome ")
-}
+// if(isPalindrome(str)){
+//     console.log("yes!! this is a palindrome ")
+// }else{
+//     console.log("no!! this is not a palindrome ")
+// }
 
+console.log(isPalindrome("naman"))
