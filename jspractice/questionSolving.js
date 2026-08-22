@@ -242,22 +242,22 @@
 
 //q. 20. Check palindrome
 
-let word = "mada";
+// let word = "mada";
 
-let isPalindrome = true;
+// let isPalindrome = true;
 
-for(let i = 0; i<word.length/2; i++){
-    if(word[i]!==word[word.length-1-i]){
-        isPalindrome = false;
-        break;
-    };
-};
+// for(let i = 0; i<word.length/2; i++){
+//     if(word[i]!==word[word.length-1-i]){
+//         isPalindrome = false;
+//         break;
+//     };
+// };
 
-if(isPalindrome){
-    console.log(`This is an example of Palindrome ${word}`)
-}else{
-    console.log(`This is not a Plaindrome `)
-}
+// if(isPalindrome){
+//     console.log(`This is an example of Palindrome ${word}`)
+// }else{
+//     console.log(`This is not a Plaindrome `)
+// }
 
 // let left = 0;
 // let right = word.length-1;
@@ -278,3 +278,32 @@ if(isPalindrome){
 // }else{
 //     console.log("No")
 // }
+
+function isPalindrome(str){
+
+    let cleanStr = str.toLowerCase().replace(/[^a-z,0-9]/g, '');
+    
+    // case 1 inbuilt method
+    // let newStr = cleanStr.split("").reverse().join("");
+    
+    // return cleanStr===newStr;
+
+
+    //case 2 loop method
+        for(let i = 0; i<cleanStr.length/2; i++){
+        if(cleanStr[i]!==cleanStr[cleanStr.length-1-i]){        
+            return false ;
+        };
+    };
+    return true;  
+
+};
+
+let user = prompt("Enter the word for Palindrome :- ")
+
+if(isPalindrome(user)){
+    console.log("yes!! this is a palindrome ")
+}else{
+    console.log("no!! this is not a palindrome ")
+}
+
