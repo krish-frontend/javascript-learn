@@ -329,16 +329,33 @@
 
 
 
-// q. 22 find duplicates
+// // q. 22 find duplicates
 
-let numbers = [2, 5, 2, 8, 5, 10, 8];
+// let numbers = [2, 5, 2, 8, 5, 10, 8];
 
-let arr = [];
+// let arr = [];
 
-for(let i=0; i<numbers.length; i++){
-    if(!arr.includes(numbers[i])){
-        arr.push(numbers[i]);
-    }
+// for(let i=0; i<numbers.length; i++){
+//     if(!arr.includes(numbers[i])){
+//         arr.push(numbers[i]);
+//     }
 
-}
-console.log(arr);
+// }
+// console.log(arr);
+
+
+//// q. 23 sumof all even numbers in given array
+
+let numbers = [2, 5, 8, 11, 14, 17, 20];
+
+let sumofEven = 0;
+
+for(let i of numbers){
+    if(i%2===0){
+        sumofEven+=i
+    };
+
+    
+};
+
+console.log(sumofEven)
