@@ -344,18 +344,59 @@
 // console.log(arr);
 
 
-//// q. 23 sumof all even numbers in given array
+// // q. 23 sumof all even numbers in given array
 
-let numbers = [2, 5, 8, 11, 14, 17, 20];
+// let numbers = [2, 5, 8, 11, 14, 17, 20];
 
-let sumofEven = 0;
+// let sumofEven = 0;
 
-for(let i of numbers){
-    if(i%2===0){
-        sumofEven+=i
-    };
-
+// for(let i of numbers){
+//     if(i%2===0){
+//         sumofEven+=i
+//     };
     
-};
+// };
 
-console.log(sumofEven)
+// console.log(sumofEven);
+
+//q . 24 do...while menu {Keep showing the menu until the user chooses 3.}
+// 1. Add
+// 2. Subtract
+// 3. Exit
+
+let userChoice = parseInt (prompt("1. Add 2. Subtract 3.Exit!!",
+                                   "choose your one:- "));
+
+do{
+    console.log("1. Add");
+    console.log("2. Subtract");
+    console.log("3. Exit!!");
+    
+
+    if(userChoice===1){
+        let a = parseInt(prompt("Enter First Number:- "));
+        let b = parseInt(prompt("Enter second Number:- "));
+        console.log(a+b);
+        alert(a+b);
+        break;
+
+    }else if(userChoice===2){
+        let a = parseInt(prompt("Enter First Number:- "));
+        let b = parseInt(prompt("Enter second Number:- "));
+    console.log(a-b);
+    alert(a-b);
+    break;
+
+    } else if(userChoice===3){
+    console.log("Program ended");
+    alert("Program ended");
+    break;
+    
+    }else{
+        alert("Invalid Number Enter!! Check and again TRY")
+    }
+
+}while(userChoice!==3);
+
+console.log(`User Choose Number:- ${userChoice}`);
+
