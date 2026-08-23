@@ -359,44 +359,70 @@
 
 // console.log(sumofEven);
 
+
+
 //q . 24 do...while menu {Keep showing the menu until the user chooses 3.}
 // 1. Add
 // 2. Subtract
 // 3. Exit
 
-let userChoice = parseInt (prompt("1. Add 2. Subtract 3.Exit!!",
-                                   "choose your one:- "));
+// let userChoice = parseInt (prompt("1. Add 2. Subtract 3.Exit!!",
+//                                    "choose your one:- "));
 
-do{
-    console.log("1. Add");
-    console.log("2. Subtract");
-    console.log("3. Exit!!");
+// do{
+//     console.log("1. Add");
+//     console.log("2. Subtract");
+//     console.log("3. Exit!!");
     
 
-    if(userChoice===1){
-        let a = parseInt(prompt("Enter First Number:- "));
-        let b = parseInt(prompt("Enter second Number:- "));
-        console.log(a+b);
-        alert(a+b);
-        break;
+//     if(userChoice===1){
+//         let a = parseInt(prompt("Enter First Number:- "));
+//         let b = parseInt(prompt("Enter second Number:- "));
+//         console.log(a+b);
+//         alert(a+b);
+//         break;
 
-    }else if(userChoice===2){
-        let a = parseInt(prompt("Enter First Number:- "));
-        let b = parseInt(prompt("Enter second Number:- "));
-    console.log(a-b);
-    alert(a-b);
-    break;
+//     }else if(userChoice===2){
+//         let a = parseInt(prompt("Enter First Number:- "));
+//         let b = parseInt(prompt("Enter second Number:- "));
+//     console.log(a-b);
+//     alert(a-b);
+//     break;
 
-    } else if(userChoice===3){
-    console.log("Program ended");
-    alert("Program ended");
-    break;
+//     } else if(userChoice===3){
+//     console.log("Program ended");
+//     alert("Program ended");
+//     break;
     
-    }else{
-        alert("Invalid Number Enter!! Check and again TRY")
-    }
+//     }else{
+//         alert("Invalid Number Enter!! Check and again TRY")
+//     }
 
-}while(userChoice!==3);
+// }while(userChoice!==3);
 
-console.log(`User Choose Number:- ${userChoice}`);
+// console.log(`User Choose Number:- ${userChoice}`);
 
+
+// q.25 Find second largest
+
+let numbers = [10, 25, 8, 40, 30];
+
+let sec_l1 =numbers[0];     //i
+// let sec_l2 =numbers[1];     //j
+// let sec_l3 =numbers[2];     //k
+
+for(let i=0; i<numbers.length;i++){
+    for(let j=i+1; j<numbers.length;j++){
+        for(let k=j+1; k<numbers.length; k++){
+            if(numbers[i]>numbers[j] && numbers[j]>numbers[k]){
+                sec_l1.push(numbers[j]);
+            }else if(numbers[j]>numbers[k] && numbers[k]>numbers[i]){
+                sec_l1.push(numbers[k]);
+            }else{
+                sec_l1.push(numbers[i]);
+            };
+        };
+    };
+};
+
+console.log(sec_l1)
