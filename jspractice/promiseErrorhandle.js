@@ -69,7 +69,7 @@
 
 
 
-// how callback work and way to call it
+// // how callback work and way to call it
 // function callBack(a,b, newCb){
 //     let add=a+b;
 
@@ -78,4 +78,4 @@
 
 // callBack(2,4, (el)=>{console.log(el)});
 
-// callback hell means nested stuff stack in one with one like nested stack like a jar fill with multiple packets of product 
+// // callback hell means nested stuff stack in one with one like nested stack like a jar fill with multiple packets of product 
