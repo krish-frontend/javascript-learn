@@ -426,28 +426,42 @@
 
 // // q.25 Find second largest
 
-// let numbers = [10, 25, 8, 40, 30];
+let numbers = [10, 25, 8, 40, 30];
+
+let largest = -Infinity;
+let s_largest = -Infinity;
+
+for(let i of numbers){
+    if(i>largest){
+        s_largest=largest;
+        largest=i;
+    }else if(i>s_largest && i<largest){
+        s_largest = i;
+    };
+};
+
+console.log(s_largest)
+
 
 
 // q.26 find prime between 1 to 100
 
-// let num =100;
-let isPrime;
-let filterPrime = [];
+// let isPrime;
+// let filterPrime = [];
 
-for(let i=2; i<=100; i++){
-    for(let j=2; j<i; j++){
-        if(i%j===1){
-            filterPrime.push(i);
-            isPrime=true;
-            // console.log(j)
-            break;
-        }else{
-            // console.log(i);
-            isPrime=false;   
-            break;
-        }
-    };
-};
+// for(let i=2; i<=100; i++){
+//     for(let j=2; j<i; j++){
+//         if(i%j===1){
+//             filterPrime.push(i);
+//             isPrime=true;
+//             // console.log(j)
+//             break;
+//         }else{
+//             // console.log(i);
+//             isPrime=false;   
+//             break;
+//         }
+//     };
+// };
 
-console.log(filterPrime);
+// console.log(filterPrime);
