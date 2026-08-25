@@ -405,24 +405,33 @@
 
 // q.25 Find second largest
 
-let numbers = [10, 25, 8, 40, 30];
+// let numbers = [10, 25, 8, 40, 30];
 
-let sec_l1 =numbers[0];     //i
-// let sec_l2 =numbers[1];     //j
-// let sec_l3 =numbers[2];     //k
+// let sec_l1 =numbers[0];     //i
+// // let sec_l2 =numbers[1];     //j
+// // let sec_l3 =numbers[2];     //k
 
-for(let i=0; i<numbers.length;i++){
-    for(let j=i+1; j<numbers.length;j++){
-        for(let k=j+1; k<numbers.length; k++){
-            if(numbers[i]>numbers[j] && numbers[j]>numbers[k]){
-                sec_l1.push(numbers[j]);
-            }else if(numbers[j]>numbers[k] && numbers[k]>numbers[i]){
-                sec_l1.push(numbers[k]);
-            }else{
-                sec_l1.push(numbers[i]);
-            };
-        };
+// for(let i=0; i<numbers.length;i++){
+//     for(let j=i+1; j<numbers.length;j++){
+//         for(let k=j+1; k<numbers.length; k++){
+//             if(numbers[i]>numbers[j] && numbers[j]>numbers[k]){
+//                 sec_l1.push(numbers[j]);
+//             }else if(numbers[j]>numbers[k] && numbers[k]>numbers[i]){
+//                 sec_l1.push(numbers[k]);
+//             }else{
+//                 sec_l1.push(numbers[i]);
+//             };
+//         };
+//     };
+// };
+
+// console.log(sec_l1)
+
+let arr=[];
+
+for(let i=1; i<=100;i++){
+    if(i%i===1){
+        console.log(i)
+        // arr.push(i)
     };
 };
-
-console.log(sec_l1)
