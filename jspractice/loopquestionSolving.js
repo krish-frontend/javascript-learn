@@ -242,10 +242,11 @@
 
 // //q. 20. Check palindrome
 
-// // let word = "mada";
+// case1
+// // let word = "madam";
 
 // // let isPalindrome = true;
-
+    // case1
 // // for(let i = 0; i<word.length/2; i++){
 // //     if(word[i]!==word[word.length-1-i]){
 // //         isPalindrome = false;
@@ -254,11 +255,30 @@
 // // };
 
 // // if(isPalindrome){
-// //     console.log(`This is an example of Palindrome ${word}`)
-// // }else{
-// //     console.log(`This is not a Plaindrome `)
-// // }
+    // //     console.log(`This is an example of Palindrome ${word}`)
+    // // }else{
+        // //     console.log(`This is not a Plaindrome `)
+        // // }
+        
+        // // case2
+        // let words = "jaya";
+        // let isPalindrome = true;
+    
+        // for(let i=0,j=words.length-1;i<j;i++,j--){
+        //     if(words[i]!==words[j]){
+        //         isPalindrome=false;
+        //         break;
+        //         }
+        //     }
+    
+        //     if(isPalindrome){
+        //         console.log("true");
+        //     }else{
+        //         console.log("not/false")
+        //     }
+            
 
+// case2
 // // let left = 0;
 // // let right = word.length-1;
 
@@ -279,6 +299,7 @@
 // //     console.log("No")
 // // }
 
+// case3
 // // function isPalindrome(str){
 
 // //     let cleanStr = str.toLowerCase().replace(/[^a-z,0-9]/g, '');
@@ -405,24 +426,24 @@
 
 // // q.25 Find second largest
 
-// // let numbers = [10, 25, 8, 40, 30];
+let numbers = [10, 25, 8, 40, 30];
 
-// // let sec_l1 =numbers[0];     //i
-// // // let sec_l2 =numbers[1];     //j
-// // // let sec_l3 =numbers[2];     //k
+let sec_l1 =numbers[0];     //i
+// let sec_l2 =numbers[1];     //j
+// let sec_l3 =numbers[2];     //k
 
-// // for(let i=0; i<numbers.length;i++){
-// //     for(let j=i+1; j<numbers.length;j++){
-// //         for(let k=j+1; k<numbers.length; k++){
-// //             if(numbers[i]>numbers[j] && numbers[j]>numbers[k]){
-// //                 sec_l1.push(numbers[j]);
-// //             }else if(numbers[j]>numbers[k] && numbers[k]>numbers[i]){
-// //                 sec_l1.push(numbers[k]);
-// //             }else{
-// //                 sec_l1.push(numbers[i]);
-// //             };
-// //         };
-// //     };
-// // };
+for(let i=0; i<numbers.length;i++){
+    for(let j=i+1; j<numbers.length;j++){
+        for(let k=j+1; k<numbers.length; k++){
+            if(numbers[i]>numbers[j] && numbers[j]>numbers[k]){
+                sec_l1.push(numbers[j]);
+            }else if(numbers[j]>numbers[k] && numbers[k]>numbers[i]){
+                sec_l1.push(numbers[k]);
+            }else{
+                sec_l1.push(numbers[i]);
+            };
+        };
+    };
+};
 
-// // console.log(sec_l1)
+console.log(sec_l1)
