@@ -426,21 +426,21 @@
 
 // // q.25 Find second largest
 
-let numbers = [10, 25, 8, 40, 30];
+// let numbers = [10, 25, 8, 40, 30];
 
-let largest = -Infinity;
-let s_largest = -Infinity;
+// let largest = -Infinity;
+// let s_largest = -Infinity;
 
-for(let i of numbers){
-    if(i>largest){
-        s_largest=largest;
-        largest=i;
-    }else if(i>s_largest && i<largest){
-        s_largest = i;
-    };
-};
+// for(let i of numbers){
+//     if(i>largest){
+//         s_largest=largest;
+//         largest=i;
+//     }else if(i>s_largest && i<largest){
+//         s_largest = i;
+//     };
+// };
 
-console.log(s_largest)
+// console.log(s_largest)
 
 
 
@@ -465,3 +465,4 @@ console.log(s_largest)
 // };
 
 // console.log(filterPrime);
+
