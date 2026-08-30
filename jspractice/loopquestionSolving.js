@@ -466,3 +466,19 @@
 
 // console.log(filterPrime);
 
+//q.27 find sum of all Object values
+
+let marks = {
+    math: 80,
+    english: 75,
+    science: 90,
+    computer: 95
+};
+
+let results=0;
+
+for(let i in marks){
+    results+=marks[i];
+};
+
+console.log(results);
