@@ -466,19 +466,36 @@
 
 // console.log(filterPrime);
 
-//q.27 find sum of all Object values
+// //q.27 find sum of all Object values
 
-let marks = {
-    math: 80,
-    english: 75,
-    science: 90,
-    computer: 95
-};
+// let marks = {
+//     math: 80,
+//     english: 75,
+//     science: 90,
+//     computer: 95
+// };
 
-let results=0;
+// let results=0;
 
-for(let i in marks){
-    results+=marks[i];
-};
+// for(let i in marks){
+//     results+=marks[i];
+// };
 
-console.log(results);
+// console.log(results);
+
+// // q. 28 print each chracter of below string;
+
+// let word = "JavaScript";
+
+
+// for(let i of word){
+//     console.log(i)
+// };
+
+// q.29 print every fruits of below array:-
+
+let fruits = ["Apple", "Banana", "Mango", "Orange"];
+
+for(let i of fruits){
+    console.log(i);
+}
