@@ -492,10 +492,10 @@
 //     console.log(i)
 // };
 
-// q.29 print every fruits of below array:-
+// // q.29 print every fruits of below array:-
 
-let fruits = ["Apple", "Banana", "Mango", "Orange"];
+// let fruits = ["Apple", "Banana", "Mango", "Orange"];
 
-for(let i of fruits){
-    console.log(i);
-}
+// for(let i of fruits){
+//     console.log(i);
+// }
