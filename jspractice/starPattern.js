@@ -57,12 +57,30 @@
 // 1234
 // 12345
 
-//----code-----
+// //----code-----
+
+// for(let i=1; i<=5;i++){
+//     let py="";
+//     for(let j=1;j<=i;j++){
+//         py+=j;
+//     };
+//     console.log(py);
+// };
+
+//q.5 Same number pattern below :-
+
+// 1
+// 22
+// 333
+// 4444
+// 55555
+
+// -----code-----
 
 for(let i=1; i<=5;i++){
     let py="";
-    for(let j=1;j<=i;j++){
-        py+=j;
+    for(let j=1; j<=i;j++){
+        py+=i;
     };
     console.log(py);
 };
