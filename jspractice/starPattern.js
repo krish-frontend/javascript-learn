@@ -67,20 +67,43 @@
 //     console.log(py);
 // };
 
-//q.5 Same number pattern below :-
+// //q.5 Same number pattern below :-
 
-// 1
-// 22
-// 333
-// 4444
-// 55555
+// // 1
+// // 22
+// // 333
+// // 4444
+// // 55555
 
-// -----code-----
+// // -----code-----
 
-for(let i=1; i<=5;i++){
-    let py="";
-    for(let j=1; j<=i;j++){
-        py+=i;
+// for(let i=1; i<=5;i++){
+//     let py="";
+//     for(let j=1; j<=i;j++){
+//         py+=i;
+//     };
+//     console.log(py);
+// };
+
+
+
+//q.6 table of 1 to 5;
+
+//--------code-----
+
+// for(let i=1; i<=10;i++){
+    
+// };
+
+
+
+//q.7 find missing number in a given array: -
+
+let numbers = [1, 2, 3, 4, 6, 7, 8, 9, 10];
+
+for(let i=1;i<=numbers.length-1;i++){
+    if(numbers[i]!==i+1){
+        console.log(`this is number is missing :- ${i+1}`)
+        break;
     };
-    console.log(py);
 };
