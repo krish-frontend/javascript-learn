@@ -91,19 +91,24 @@
 
 //--------code-----
 
-// for(let i=1; i<=10;i++){
-    
+let userInput2=prompt("enter the number:-");
+let i=1;
+
+while(i<=10){
+    console.log(`${userInput2}x${i} = ${userInput2*i}`);
+    i++;
+};
+
+
+
+// //q.7 find missing number in a given array: -
+
+// let numbers = [1, 2, 3, 4, 6, 7, 8, 9, 10];
+
+// for(let i=0; i<=numbers.length-1; i++){
+//     if(numbers[i]!==i+1){
+//         console.log(`this is number is missing :- ${i+1}`)
+//         break;
+//     };
 // };
 
-
-
-//q.7 find missing number in a given array: -
-
-let numbers = [1, 2, 3, 4, 6, 7, 8, 9, 10];
-
-for(let i=1;i<=numbers.length-1;i++){
-    if(numbers[i]!==i+1){
-        console.log(`this is number is missing :- ${i+1}`)
-        break;
-    };
-};
