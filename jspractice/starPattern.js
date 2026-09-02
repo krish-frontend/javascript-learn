@@ -87,17 +87,17 @@
 
 
 
-//q.6 table of 1 to 5;
+// //q.6 table of 1 to 5;
 
-//--------code-----
+// //--------code-----
 
-let userInput2=prompt("enter the number:-");
-let i=1;
+// let userInput2=prompt("enter the number:-");
+// let i=1;
 
-while(i<=10){
-    console.log(`${userInput2}x${i} = ${userInput2*i}`);
-    i++;
-};
+// while(i<=10){
+//     console.log(`${userInput2}x${i} = ${userInput2*i}`);
+//     i++;
+// };
 
 
 
@@ -112,3 +112,20 @@ while(i<=10){
 //     };
 // };
 
+//q. 8 Number pyramid as print as below as same:-
+//  1
+//  121
+//  12321
+//  1234321
+//  123454321
+
+for(let i=1; i<=5; i++){
+    let py="";
+    for(let j=1; j<=i;j++){
+       py+=j
+    };
+    for(j=i-1; j>=i;j--){
+        py+=j;
+       };
+    console.log(py);
+};
