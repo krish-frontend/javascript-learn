@@ -119,13 +119,27 @@
 //  1234321
 //  123454321
 
-for(let i=1; i<=5; i++){
-    let py="";
-    for(let j=1; j<=i;j++){
-       py+=j
+// for(let i=1; i<=5; i++){
+//     let py="";
+//     for(let j=1; j<=i;j++){
+//        py+=j
+//     };
+//     for(j=i-1; j>=1;j--){
+//         py+=j;
+//        };
+//     console.log(py);
+// };
+
+//q. 9 find missing number in a given array: -
+
+let numbers = [1, 2, 3, 4, 6, 7, 8, 9, 10];
+
+let arr=0;
+
+for(let i=0; i<numbers.length-1; i++){
+    if(numbers[i] + 1 !== numbers[i + 1]){
+        arr+=numbers[i]+1;
+        break;
     };
-    for(j=i-1; j>=1;j--){
-        py+=j;
-       };
-    console.log(py);
 };
+console.log(arr)
