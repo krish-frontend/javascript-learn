@@ -130,16 +130,31 @@
 //     console.log(py);
 // };
 
-//q. 9 find missing number in a given array: -
+// //q. 9 find missing number in a given array: -
 
-let numbers = [1, 2, 3, 4, 6, 7, 8, 9, 10];
+// let numbers = [1, 2, 3, 4, 6, 7, 8, 9, 10];
 
-let arr=0;
+// let arr=0;
 
-for(let i=0; i<numbers.length-1; i++){
-    if(numbers[i] + 1 !== numbers[i + 1]){
-        arr+=numbers[i]+1;
-        break;
-    };
+// for(let i=0; i<numbers.length-1; i++){
+//     if(numbers[i] + 1 !== numbers[i + 1]){
+//         arr+=numbers[i]+1;
+//         break;
+//     };
+// };
+// console.log(arr)
+
+//q.10 frequency counter
+
+let numbers = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 4];
+let arr= {};
+
+for(let i=0; i<numbers.length; i++){
+    if(arr[numbers[i]]){
+        arr[numbers[i]]++;
+    }else{
+        arr[numbers[i]]=1;
+    }
 };
-console.log(arr)
+
+console.log(arr);
