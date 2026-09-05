@@ -130,31 +130,25 @@
 //     console.log(py);
 // };
 
-// //q. 9 find missing number in a given array: -
 
-// let numbers = [1, 2, 3, 4, 6, 7, 8, 9, 10];
 
-// let arr=0;
+//q. 9 star pyramid as print as below as same:-
+    //      *
+    //     **
+    //    ***
+    //   ****
+    //  ***** 
 
-// for(let i=0; i<numbers.length-1; i++){
-//     if(numbers[i] + 1 !== numbers[i + 1]){
-//         arr+=numbers[i]+1;
-//         break;
-//     };
-// };
-// console.log(arr)
 
-//q.10 frequency counter
-
-let numbers = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 4];
-let arr= {};
-
-for(let i=0; i<numbers.length; i++){
-    if(arr[numbers[i]]){
-        arr[numbers[i]]++;
-    }else{
-        arr[numbers[i]]=1;
-    }
-};
-
-console.log(arr);
+    // ---code----//
+    
+    for(let i=1; i<=5; i++){
+        let py="";
+        for(let j=1; j<=5-i; j++){
+            py+="-";
+        };
+        for(let k=1; k<=i; k++){
+             py+="*";
+        };
+        console.log(py);
+    };
