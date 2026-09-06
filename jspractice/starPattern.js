@@ -142,13 +142,13 @@
 
     // ---code----//
     
-    for(let i=1; i<=5; i++){
-        let py="";
-        for(let j=1; j<=5-i; j++){
-            py+="-";
-        };
-        for(let k=1; k<=i; k++){
-             py+="*";
-        };
-        console.log(py);
-    };
+    // for(let i=1; i<=5; i++){
+    //     let py="";
+    //     for(let j=1; j<=5-i; j++){
+    //         py+="-";
+    //     };
+    //     for(let k=1; k<=i; k++){
+    //          py+="*";
+    //     };
+    //     console.log(py);
+    // };
