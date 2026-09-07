@@ -17,19 +17,41 @@
 
 //q.2 move zeroes to the end 
 
-let numbers = [0, 1, 0, 3, 12];
-let num2 = [];
+// let numbers = [0, 1, 0, 3, 12];
+// let num2 = [];
+
+// for(let i=0; i<numbers.length; i++){
+//     if(numbers[i]>0){
+//         num2.push(numbers[i])
+//     };
+// };
+    
+// for(let i=0; i<numbers.length; i++){
+//     if(numbers[i]===0){
+//         num2.push(numbers[i])
+//     };
+
+// };
+
+// console.log(num2);
+
+// q.3 Find largest and smallest together
+
+let numbers = [45, 12, 89, 23, 7, 56];
+let arr = numbers[0];
+let arr2 = numbers[0];
 
 for(let i=0; i<numbers.length; i++){
-    if(numbers[i]>0){
-        num2.push(numbers[i])
+   for( let j=i+1; j<numbers.length; j++){
+    if(numbers[j]>arr){
+        arr = numbers[j];
+    }else if(numbers[i]<arr2){
+        arr2 = numbers[i];
     };
-};
-    for(let i=0; i<numbers.length; i++){
-    if(numbers[i]===0){
-        num2.push(numbers[i])
-    };
-
+   };
 };
 
-console.log(num2);
+console.log(`This is largest number in array = ${arr}`);
+console.log(`This is smallest number in array = ${arr2}`);
+
+
