@@ -86,15 +86,24 @@
 // console.log(str2);
 
 
-//q.5 Find the first non-repeating character in a string
+// //q.5 Find the first non-repeating character in a string
 
-let str = "aabbcde";
-let str2 = "";
+// let str = "aabbcde";
+// let str2 = "";
 
-for(let i=0; i<str.length; i++){
-    if(str.indexOf(str[i])===str.lastIndexOf(str[i])){
-        str2+=str[i];
-        break;
-    };
+// for(let i=0; i<str.length; i++){
+//     if(str.indexOf(str[i])===str.lastIndexOf(str[i])){
+//         str2+=str[i];
+//         break;
+//     };
+// }
+// console.log(str2);
+
+//q.6 Reverse words
+let sentence = "I love JavaScript";
+let words = sentence.split("")
+
+for(let i=0; i<sentence.length; i++){
+    // console.log(sentence[i])
 }
-console.log(str2);
+console.log(words)
