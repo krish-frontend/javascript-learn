@@ -73,14 +73,28 @@
 // console.log(`This is smallest number in array = ${smallest}`);
 
 
-// q.4 Remove duplicate characters
+// // q.4 Remove duplicate characters
 
-let str = "programming";
+// let str = "programming";
+// let str2 = "";
+
+// for(let i=0; i<str.length; i++){
+//     if(!str2.includes(str[i])){
+//         str2+=str[i];
+//     };
+// };
+// console.log(str2);
+
+
+//q.5 Find the first non-repeating character in a string
+
+let str = "aabbcde";
 let str2 = "";
 
 for(let i=0; i<str.length; i++){
-    if(!str2.includes(str[i])){
+    if(str.indexOf(str[i])===str.lastIndexOf(str[i])){
         str2+=str[i];
+        break;
     };
-};
+}
 console.log(str2);
