@@ -79,11 +79,8 @@ let str = "programming";
 let str2 = "";
 
 for(let i=0; i<str.length; i++){
-    for(let j=i+1; j<str.length; j++){
-        if(str[i]===str[j]){
-            str2+=str[j];
-            continue;
-        };
+    if(!str2.includes(str[i])){
+        str2+=str[i];
     };
-    console.log(str2);
 };
+console.log(str2);
