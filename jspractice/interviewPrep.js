@@ -101,9 +101,12 @@
 
 //q.6 Reverse words
 let sentence = "I love JavaScript";
-let words = sentence.split("")
+let words = sentence.split(" ");
 
-for(let i=0; i<sentence.length; i++){
-    // console.log(sentence[i])
-}
-console.log(words)
+for(let i=0, j=words.length-1; i<j; i++, j--){
+        let temp = words[i];
+        words[i] = words[j];
+        words[j] = temp;
+};
+sentence=words.join(" ")
+console.log(sentence);
