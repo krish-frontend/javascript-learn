@@ -117,10 +117,11 @@ let sentence = "I am learning JavaScript programming";
 
 let strB = sentence.split(" ");
 
-let str = " ";
+let str = "";
 
-for(let i=0,j=i+1; i,j<strB.length; i++, j++){
-        if(strB[i]<strB[j]){
-                console.log(strB[j])
-        };       
-};       
+for(let i=0; i<strB.length; i++){
+        if(strB[i].length>str.length){
+                str=strB[i];
+        };     
+};  
+console.log(str);     
