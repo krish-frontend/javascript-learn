@@ -99,14 +99,27 @@
 // }
 // console.log(str2);
 
-//q.6 Reverse words
-let sentence = "I love JavaScript";
-let words = sentence.split(" ");
+// //q.6 Reverse words
+// let sentence = "I love JavaScript";
+// let words = sentence.split(" ");
 
-for(let i=0, j=words.length-1; i<j; i++, j--){
-        let temp = words[i];
-        words[i] = words[j];
-        words[j] = temp;
+// for(let i=0, j=words.length-1; i<j; i++, j--){
+//         let temp = words[i];
+//         words[i] = words[j];
+//         words[j] = temp;
+// };
+// sentence=words.join(" ")
+// console.log(sentence);
+
+// q.7 Find longest word
+
+let sentence = "I am learning JavaScript programming";
+
+let strB = sentence.split("");
+
+for(let i=0; i<strB.length; i++){
+        if(strB[i]<strB[i]+1){
+                console.log(strb[])
+        }
+     
 };
-sentence=words.join(" ")
-console.log(sentence);
