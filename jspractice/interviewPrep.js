@@ -147,19 +147,46 @@
 
 // console.log(sum);
 
-//q .9 Flatten an array manually
+// //q .9 Flatten an array manually
 
-let arr = [
-    [1, 2],
-    [3, 4],
-    [5, 6]
+// let arr = [
+//     [1, 2],
+//     [3, 4],
+//     [5, 6]
+// ];
+
+// let arr2 = [];
+
+// for(let i=0; i<arr.length; i++){
+//         for(let j=0; j<arr[i].length; j++){
+//                 arr2.push(arr[i][j]);
+//         };
+// };
+// console.log(arr2)
+
+// q.10 Student marks analysis
+// Print every student.
+// Find highest marks.
+// Find lowest marks.
+// Calculate average.
+// Count students who passed (>= 40).
+// Count students who failed.
+// Print the name of the topper.
+
+let students = [
+    {name: "Aman", marks: 75},
+    {name: "Rahul", marks: 45},
+    {name: "Priya", marks: 88},
+    {name: "Neha", marks: 32}
 ];
 
-let arr2 = [];
-
-for(let i=0; i<arr.length; i++){
-        for(let j=0; j<arr[i].length; j++){
-                arr2.push(arr[i][j]);
+for(let i=0; i<students.length; i++){
+        //ans.1
+        for(let j in students[i]){
+                console.log(`${j}:- ${students[i][j]}`);        //j also access key in object -&&- student[i] = 0 idx, student[i][j] = 0 idx*value
         };
+        //ans.2
+        for(let j=0; j<students[i].length)
+        if(students[i][j[1]]>students[i][j[1]+1])
+                console.log(students[i][j[1]])
 };
-console.log(arr2)
