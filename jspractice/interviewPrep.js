@@ -180,13 +180,23 @@ let students = [
     {name: "Neha", marks: 32}
 ];
 
+let max =0;
+let min =0;
+let avg =0;
+
 for(let i=0; i<students.length; i++){
         //ans.1
         for(let j in students[i]){
                 console.log(`${j}:- ${students[i][j]}`);        //j also access key in object -&&- student[i] = 0 idx, student[i][j] = 0 idx*value
-        };
-        //ans.2
-        for(let j=0; j<students[i].length)
-        if(students[i][j[1]]>students[i][j[1]+1])
-                console.log(students[i][j[1]])
+                if(students[i].marks>max){
+                        max=students[i].marks;
+                }else if(students[i].marks<max){
+                        min=students[i].marks;
+                }else if(students[i].length>avg){
+                        let sum = ;
+                        avg+=sum;
+                };
+        };             
 };
+
+console.log(max, min, avg);
