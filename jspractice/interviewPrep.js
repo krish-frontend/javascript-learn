@@ -111,17 +111,38 @@
 // sentence=words.join(" ")
 // console.log(sentence);
 
-// q.7 Find longest word
 
-let sentence = "I am learning JavaScript programming";
 
-let strB = sentence.split(" ");
+// // q.7 Find longest word
 
-let str = "";
+// let sentence = "I am learning JavaScript programming";
 
-for(let i=0; i<strB.length; i++){
-        if(strB[i].length>str.length){
-                str=strB[i];
-        };     
-};  
-console.log(str);     
+// let strB = sentence.split(" ");
+
+// let str = "";
+
+// for(let i=0; i<strB.length; i++){
+//         if(strB[i].length>str.length){
+//                 str=strB[i];
+//         };     
+// };  
+// console.log(str);    
+
+
+//q. 8 Nested array sum
+
+let numbers = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+let sum = 0;
+
+for(let i=0; i<numbers.length; i++){
+    for(let j=0; j<numbers[i].length; j++){
+        sum+=numbers[i][j]
+    };
+};
+
+console.log(sum);
