@@ -129,20 +129,37 @@
 // console.log(str);    
 
 
-//q. 8 Nested array sum
+// //q. 8 Nested array sum
 
-let numbers = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
+// let numbers = [
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9]
+// ];
+
+// let sum = 0;
+
+// for(let i=0; i<numbers.length; i++){
+//     for(let j=0; j<numbers[i].length; j++){
+//         sum+=numbers[i][j]
+//     };
+// };
+
+// console.log(sum);
+
+//q .9 Flatten an array manually
+
+let arr = [
+    [1, 2],
+    [3, 4],
+    [5, 6]
 ];
 
-let sum = 0;
+let arr2 = [];
 
-for(let i=0; i<numbers.length; i++){
-    for(let j=0; j<numbers[i].length; j++){
-        sum+=numbers[i][j]
-    };
+for(let i=0; i<arr.length; i++){
+        for(let j=0; j<arr[i].length; j++){
+                arr2.push(arr[i][j]);
+        };
 };
-
-console.log(sum);
+console.log(arr2)
