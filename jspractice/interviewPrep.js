@@ -192,10 +192,8 @@ for(let i=0; i<students.length; i++){
                         max=students[i].marks;
                 }else if(students[i].marks<max){
                         min=students[i].marks;
-                }else if(students[i].length>avg){
-                        let sum = ;
-                        avg+=sum;
                 };
+                avg+=students[i].marks/j.length
         };             
 };
 
