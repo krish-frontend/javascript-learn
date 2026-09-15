@@ -164,7 +164,10 @@
 // };
 // console.log(arr2)
 
+
+
 // q.10 Student marks analysis
+
 // Print every student.
 // Find highest marks.
 // Find lowest marks.
@@ -173,44 +176,44 @@
 // Count students who failed.
 // Print the name of the topper.
 
-let students = [
-    {name: "Aman", marks: 75},
-    {name: "Rahul", marks: 45},
-    {name: "Priya", marks: 88},
-    {name: "Neha", marks: 32}
-];
+// let students = [
+//     {name: "Aman", marks: 75},
+//     {name: "Rahul", marks: 45},
+//     {name: "Priya", marks: 88},
+//     {name: "Neha", marks: 32}
+// ];
 
-let max =[];
-let min =0;
-let avg =0;
-let findA40=[];
-let fail=[];
-let topper=[];
+// let max =[];
+// let min =0;
+// let avg =0;
+// let findA40=[];
+// let fail=[];
+// let topper=[];
 
-for(let i=0; i<students.length; i++){
-        //ans.1
-        for(let j in students[i]){
-                console.log(`${j}:- ${students[i][j]}`);        //j also access key in object -&&- student[i] = 0 idx, student[i][j] = 0 idx*value
+// for(let i=0; i<students.length; i++){
+//         //ans.1
+//         for(let j in students[i]){
+//                 console.log(`${j}:- ${students[i][j]}`);        //j also access key in object -&&- student[i] = 0 idx, student[i][j] = 0 idx*value
                 
-                if(students[i].marks>max){
-                        max=students[i].marks;
-                }else if(students[i].marks<max){
-                        min=students[i].marks;
-                };
+//                 if(students[i].marks>max){
+//                         max=students[i].marks;
+//                 }else if(students[i].marks<max){
+//                         min=students[i].marks;
+//                 };
                 
-                if(students[i].marks>=40){
-                        findA40.push(` ${j}:- ${students[i][j]}`)
-                }else if(students[i].marks<40){
-                        fail.push(` ${j}:- ${students[i][j]}`)
-                };
+//                 if(students[i].marks>=40){
+//                         findA40.push(` ${j}:- ${students[i][j]}`)
+//                 }else if(students[i].marks<40){
+//                         fail.push(` ${j}:- ${students[i][j]}`)
+//                 };
 
-                avg+=students[i].marks/students.length;
-        };             
-};
+//                 avg+=students[i].marks/students.length;
+//         };             
+// };
 
-console.log(max);
-console.log(min);
-console.log(`The average of students:- ${avg}`);
-console.log(`students  score above 40:- {${findA40}}`);
-console.log(`students  score below 40:- {${fail}}`);
-console.log(topper+max)
+// console.log(max);
+// console.log(min);
+// console.log(`The average of students:- ${avg}`);
+// console.log(`students  score above 40:- {${findA40}}`);
+// console.log(`students  score below 40:- {${fail}}`);
+// console.log(topper+max)
