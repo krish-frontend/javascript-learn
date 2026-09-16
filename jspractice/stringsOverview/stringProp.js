@@ -42,11 +42,14 @@
 
 // Q5 — Count Vowels
 let str = "javascript";
-let str2 = str.split("");
-
 let count = 0;
-if(str2[]==="a"||str2==="e"||str2==="i"||str2==="o"||str2==="u"){
-    count+=1;
+for(let i=0; i<str.length; i++){
+    if(str [i]==="a"||str [i]==="e"||str [i]==="i"||str [i]==="o"||str [i]==="u"){
+        count+=1;
+    };
 };
 
 console.log(count);
+
+// Q9 — Palindrome ⭐⭐⭐
+
