@@ -40,16 +40,30 @@
 // console.log(len);
 
 
-// Q5 — Count Vowels
-let str = "javascript";
-let count = 0;
-for(let i=0; i<str.length; i++){
-    if(str [i]==="a"||str [i]==="e"||str [i]==="i"||str [i]==="o"||str [i]==="u"){
-        count+=1;
-    };
-};
+// // Q5 — Count Vowels
+// let str = "javascript";
+// let count = 0;
+// for(let i=0; i<str.length; i++){
+//     if(str [i]==="a"||str [i]==="e"||str [i]==="i"||str [i]==="o"||str [i]==="u"){
+//         count+=1;
+//     };
+// };
 
-console.log(count);
+// console.log(count);
+
 
 // Q9 — Palindrome ⭐⭐⭐
+
+let str = "madam";
+
+let reverse = str.split(" "). reverse(). join(" ");
+
+if(str===reverse){
+    console.log("isPalindrome")
+}else{
+    console.log("not isPalindrome")
+};
+
+
+
 
