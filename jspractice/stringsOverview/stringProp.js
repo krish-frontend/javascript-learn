@@ -41,8 +41,8 @@
 
 
 // // Q5 — Count Vowels
-let str = "javascript";
-let count = 0;
+// let str = "javascript";
+// let count = 0;
 // for(let i=0; i<str.length; i++){
 //     if(str [i]==="a"||str [i]==="e"||str [i]==="i"||str [i]==="o"||str [i]==="u"){
 //         count+=1;
@@ -50,11 +50,11 @@ let count = 0;
 // };
 
 
-if(str.includes("a","e","i","o","u")){
-    count++;
-}
+// if(str.includes("a","e","i","o","u")){
+//     count++;
+// }
 
-console.log(count);
+// console.log(count);
 
 // Q9 — Palindrome ⭐⭐⭐
 
@@ -85,4 +85,13 @@ console.log(count);
 // }else{
 //     console.log("not isPalindrome")
 // };
+
+
+// q. 10 Count a Character
+
+let str = "banana";
+let count = 0;
+
+console.log(str.charAt(1));
+count++;
 
