@@ -92,6 +92,14 @@
 let str = "banana";
 let count = 0;
 
-console.log(str.charAt(1));
-count++;
+for(let i=0; i<str.length; i++){
+    for(let j=i+1; j<str.length; j++){
+        if(str[i]===str[j]){
+            console.log(str[i])
+            count++;
+        };
+    };
+};
+
+console.log(count)
 
