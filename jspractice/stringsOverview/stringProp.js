@@ -90,16 +90,23 @@
 // q. 10 Count a Character
 
 let str = "banana";
-let count = 0;
+let maxC = 0;
+let charC ="";
 
 for(let i=0; i<str.length; i++){
-    for(let j=i+1; j<str.length; j++){
-        if(str[i]===str[j]){
-            console.log(str[i])
-            count++;
+    let count = 0;
+    for(let j=0; j<str.length; j++){
+        if(str[i]===str[j]){            
+            count++;        
         };
     };
+    if(maxC<count){
+        maxC=count;
+        charC=str[i]
+
+    }
 };
 
-console.log(count)
+console.log(maxC);
+console.log(charC);
 
