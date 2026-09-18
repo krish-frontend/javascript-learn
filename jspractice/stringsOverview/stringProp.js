@@ -87,26 +87,32 @@
 // };
 
 
-// q. 10 Count a Character
+// // q. 10 Count a Character
 
-let str = "banana";
-let maxC = 0;
-let charC ="";
+// let str = "banana";
+// let maxC = 0;
+// let charC ="";
 
-for(let i=0; i<str.length; i++){
-    let count = 0;
-    for(let j=0; j<str.length; j++){
-        if(str[i]===str[j]){            
-            count++;        
-        };
-    };
-    if(maxC<count){
-        maxC=count;
-        charC=str[i]
+// for(let i=0; i<str.length; i++){
+//     let count = 0;
+//     for(let j=0; j<str.length; j++){
+//         if(str[i]===str[j]){            
+//             count++;        
+//         };
+//     };
+//     if(maxC<count){
+//         maxC=count;
+//         charC=str[i];
 
-    }
-};
+//     };
+// };
 
-console.log(maxC);
-console.log(charC);
+// console.log(maxC);
+// console.log(charC);
+
+// q. 11 Remove Spaces
+
+let str = "Java Script Is Fun";
+
+console.log(str.trim().replaceAll(" ",""));
 
