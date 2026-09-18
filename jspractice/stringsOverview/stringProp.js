@@ -110,9 +110,23 @@
 // console.log(maxC);
 // console.log(charC);
 
-// q. 11 Remove Spaces
+// // q. 11 Remove Spaces
 
-let str = "Java Script Is Fun";
+// let str = "Java Script Is Fun";
 
-console.log(str.trim().replaceAll(" ",""));
+// console.log(str.trim().replaceAll(" ",""));
 
+//Q12 — Find the Longest Word ⭐⭐⭐
+
+let sentence = "I am learning JavaScript programming";
+
+let str = sentence.split(" ");
+let str2 = "";
+
+for(let i=0; i<str.length-1; i++){
+    if(str[i].length > str[i+1].length){
+        str2+=str[i] + " ";
+    };
+};
+
+console.log(str2);
