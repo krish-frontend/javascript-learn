@@ -139,9 +139,14 @@
 
 // console.log(str2);
 
-// q.14 count words in string 
+// // q.14 count words in string 
 
-let sentence = "I am learning JavaScript";
-let str = sentence.split(" ");
+// let sentence = "I am learning JavaScript";
+// let str = sentence.split(" ");
 
-console.log(str.length);
+// console.log(str.length);
+
+//q. 15 find duplicate 
+
+let str = "programming";
+
