@@ -116,17 +116,25 @@
 
 // console.log(str.trim().replaceAll(" ",""));
 
-//Q12 — Find the Longest Word ⭐⭐⭐
+// //Q12 — Find the Longest Word ⭐⭐⭐
 
-let sentence = "I am learning JavaScript programming";
+// let sentence = "I am learning JavaScript programming";
 
-let str = sentence.split(" ");
-let str2 = "";
+// let str = sentence.split(" ");
+// let str2 = "";
 
-for(let i=0; i<str.length; i++){
-    if(str[i].length > str2.length){
-        str2=str[i];
-    };
-};
+// for(let i=0; i<str.length; i++){
+//     if(str[i].length > str2.length){
+//         str2=str[i];
+//     };
+// };
+
+// console.log(str2);
+
+//  q.13 Capitalize First Letter
+
+let nam = "krish";
+
+let str2 = nam[0].toUpperCase()+nam.slice(1);
 
 console.log(str2);
