@@ -131,10 +131,17 @@
 
 // console.log(str2);
 
-//  q.13 Capitalize First Letter
+// //  q.13 Capitalize First Letter
 
-let nam = "krish";
+// let nam = "krish";
 
-let str2 = nam[0].toUpperCase()+nam.slice(1);
+// let str2 = nam[0].toUpperCase()+nam.slice(1);
 
-console.log(str2);
+// console.log(str2);
+
+// q.14 count words in string 
+
+let sentence = "I am learning JavaScript";
+let str = sentence.split(" ");
+
+console.log(str.length);
