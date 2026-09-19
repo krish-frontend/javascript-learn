@@ -123,9 +123,9 @@ let sentence = "I am learning JavaScript programming";
 let str = sentence.split(" ");
 let str2 = "";
 
-for(let i=0; i<str.length-1; i++){
-    if(str[i].length > str[i+1].length){
-        str2+=str[i] + " ";
+for(let i=0; i<str.length; i++){
+    if(str[i].length > str2.length){
+        str2=str[i];
     };
 };
 
