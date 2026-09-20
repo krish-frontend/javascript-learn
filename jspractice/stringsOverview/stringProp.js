@@ -179,16 +179,16 @@
 //q.17 Character Frequency ⭐⭐⭐
 
 let str = "banana";
-let str2= str.split("");
+let str2= "";
 
-let ch = "";
-let count = 0;
+for(let i=0; i<str.length; i++){
+    let char =str[i];
 
-for(let i=0; i<str2.length; i++){
-    if(str2[i]===str2[i+1]){
-        ch==str2[i];
-        count+=str2[i]
+    if(!str2.includes(char)){
+        let count =str.split(char).length-1;
+        console.log(char+":"+count);
+        str2+=char
     };
 };
 
-console.log(`${ch}:${count}`)
+// console.log(str2);
