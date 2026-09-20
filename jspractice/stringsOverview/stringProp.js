@@ -162,16 +162,29 @@
 // console.log(str2)
 
 
-//q.16 Check whether these two strings are anagrams:
+// //q.16 Check whether these two strings are anagrams:
 
-let a = "listen";
-let b = "silent";
+// let a = "listen";
+// let b = "silent";
 
-let word1= a.split("").sort().join("");
-let word2= b.split("").sort().join("");
+// let word1= a.split("").sort().join("");
+// let word2= b.split("").sort().join("");
 
-if(word1===word2){
-    console.log("yes")
-}else{
-    console.log("no")
-};
+// if(word1===word2){
+//     console.log("yes")
+// }else{
+//     console.log("no")
+// };
+
+//q.17 Character Frequency ⭐⭐⭐
+
+let str = "banana";
+let str2= str.split("");
+
+let ch = "";
+let count = 0;
+
+for(let i=0; i<str2.length; i++){
+    if(str2[i]===)
+}
+
