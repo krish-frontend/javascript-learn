@@ -146,17 +146,32 @@
 
 // console.log(str.length);
 
-//q. 15 remove duplicate 
+// //q. 15 remove duplicate 
 
-let str = "programming";
-let arr = str.split("");
+// let str = "programming";
+// let arr = str.split("");
 
-let str2 = "";
+// let str2 = "";
 
-for(let i=0; i<arr.length; i++){
-    if(!str2.includes(arr[i])){
-        str2+=arr[i];
-    };
+// for(let i=0; i<arr.length; i++){
+//     if(!str2.includes(arr[i])){
+//         str2+=arr[i];
+//     };
+// };
+
+// console.log(str2)
+
+
+//q.16 Check whether these two strings are anagrams:
+
+let a = "listen";
+let b = "silent";
+
+let word1= a.split("").sort().join("");
+let word2= b.split("").sort().join("");
+
+if(word1===word2){
+    console.log("yes")
+}else{
+    console.log("no")
 };
-
-console.log(str2)
