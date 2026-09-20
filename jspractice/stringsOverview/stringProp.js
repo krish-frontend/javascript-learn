@@ -185,6 +185,10 @@ let ch = "";
 let count = 0;
 
 for(let i=0; i<str2.length; i++){
-    if(str2[i]===)
-}
+    if(str2[i]===str2[i+1]){
+        ch==str2[i];
+        count+=str2[i]
+    };
+};
 
+console.log(`${ch}:${count}`)
