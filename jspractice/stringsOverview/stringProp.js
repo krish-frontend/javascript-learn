@@ -146,7 +146,17 @@
 
 // console.log(str.length);
 
-//q. 15 find duplicate 
+//q. 15 remove duplicate 
 
 let str = "programming";
+let arr = str.split("");
 
+let str2 = "";
+
+for(let i=0; i<arr.length; i++){
+    if(!str2.includes(arr[i])){
+        str2+=arr[i];
+    };
+};
+
+console.log(str2)
