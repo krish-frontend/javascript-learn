@@ -176,19 +176,31 @@
 //     console.log("no")
 // };
 
-//q.17 Character Frequency ⭐⭐⭐
+// //q.17 Character Frequency ⭐⭐⭐
 
-let str = "banana";
-let str2= "";
+// let str = "banana";
+// let str2= "";
 
-for(let i=0; i<str.length; i++){
-    let char =str[i];
+// for(let i=0; i<str.length; i++){
+//     let char =str[i];
 
-    if(!str2.includes(char)){
-        let count =str.split(char).length-1;
-        console.log(char+":"+count);
-        str2+=char
+//     if(!str2.includes(char)){
+//         let count =str.split(char).length-1;
+//         console.log(char+":"+count);
+//         str2+=char
+//     };
+// };
+
+// // console.log(str2);
+
+//q. 18 Longest Word Without Using sort()
+
+let sentence = "JavaScript is a powerful programming language";
+
+let inParts = sentence.split("");
+
+for(let i=0; i<inParts.length; i++){
+    if(inParts[i].length>inParts[i+1].length){
+      console.log(inParts[i].length);
     };
 };
-
-// console.log(str2);
