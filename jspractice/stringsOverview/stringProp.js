@@ -197,10 +197,13 @@
 
 let sentence = "JavaScript is a powerful programming language";
 
-let inParts = sentence.split("");
+let inParts = sentence.split(" ");
+let long = "";
 
 for(let i=0; i<inParts.length; i++){
-    if(inParts[i].length>inParts[i+1].length){
-      console.log(inParts[i].length);
+    if(inParts[i].length>long.length){
+        long=inParts[i];
     };
 };
+
+console.log(long);
