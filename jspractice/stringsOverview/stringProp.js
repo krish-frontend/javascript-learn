@@ -219,7 +219,13 @@
 
 // console.log(username);
 
-let str = "javascript";
+// let str = "javascript";
 
-console.log(str.slice(-6));
-console.log(str.substring(-6))
+// console.log(str.slice(-6));
+// console.log(str.substring(-6))
+
+let str = "Krish";
+
+let str2 = str.split("").reverse().join("");
+
+console.log(str2);
