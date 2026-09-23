@@ -224,8 +224,19 @@
 // console.log(str.slice(-6));
 // console.log(str.substring(-6))
 
-let str = "Krish";
+// let str = "Krish";
 
-let str2 = str.split("").reverse().join("");
+// let str2 = str.split("").reverse().join("");
 
-console.log(str2);
+// console.log(str2);
+
+let str = "JavaScript";
+let str2 = str.split("")
+let count = 0;
+
+for(let i=0; i<str2.length; i++){
+    if(str2[i]<str2.length)
+    count+=i;
+};
+
+console.log(count)
