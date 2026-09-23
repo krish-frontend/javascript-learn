@@ -193,17 +193,28 @@
 
 // // console.log(str2);
 
-//q. 18 Longest Word Without Using sort()
+// //q. 18 Longest Word Without Using sort()
 
-let sentence = "JavaScript is a powerful programming language";
+// let sentence = "JavaScript is a powerful programming language";
 
-let inParts = sentence.split(" ");
-let long = "";
+// let inParts = sentence.split(" ");
+// let long = "";
 
-for(let i=0; i<inParts.length; i++){
-    if(inParts[i].length>long.length){
-        long=inParts[i];
-    };
-};
+// for(let i=0; i<inParts.length; i++){
+//     if(inParts[i].length>long.length){
+//         long=inParts[i];
+//     };
+// };
 
-console.log(long);
+// console.log(long);
+
+let username = "   Krish Kumar   ";
+
+console.log(username.length);
+
+let result = username.trim();
+
+console.log(result);
+console.log(result.length);
+
+console.log(username);
