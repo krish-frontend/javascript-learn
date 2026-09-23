@@ -208,13 +208,18 @@
 
 // console.log(long);
 
-let username = "   Krish Kumar   ";
+// let username = "   Krish Kumar   ";
 
-console.log(username.length);
+// console.log(username.length);
 
-let result = username.trim();
+// let result = username.trim();
 
-console.log(result);
-console.log(result.length);
+// console.log(result);
+// console.log(result.length);
 
-console.log(username);
+// console.log(username);
+
+let str = "javascript";
+
+console.log(str.slice(-6));
+console.log(str.substring(-6))
