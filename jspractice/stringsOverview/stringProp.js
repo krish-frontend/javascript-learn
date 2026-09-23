@@ -208,6 +208,8 @@
 
 // console.log(long);
 
+
+// _________________________________________
 // let username = "   Krish Kumar   ";
 
 // console.log(username.length);
@@ -230,12 +232,27 @@
 
 // console.log(str2);
 
-let str = "JavaScript";
-let str2 = str.split("")
+// let str = "JavaScript";
+// let str2 = str.split("")
+// let count = 0;
+
+// for (let i = 0; str2[i] !== undefined; i++) {
+//     count++;
+// }
+
+// console.log(count)
+
+let str = "JavaScript Interview";
 let count = 0;
 
-for (let i = 0; str2[i] !== undefined; i++) {
-    count++;
+
+for(let i of str){
+    if(i==="a" || i==="e" || i==="i" || i==="o" || i==="u"){
+        count++;
+        console.log(`the number of count ${i}`)
+        continue;
+
+    }
 }
 
 console.log(count)
