@@ -234,9 +234,8 @@ let str = "JavaScript";
 let str2 = str.split("")
 let count = 0;
 
-for(let i=0; i<str2.length; i++){
-    if(str2[i]<str2.length)
-    count+=i;
-};
+for (let i = 0; str2[i] !== undefined; i++) {
+    count++;
+}
 
 console.log(count)
