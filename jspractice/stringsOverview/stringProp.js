@@ -242,17 +242,29 @@
 
 // console.log(count)
 
-let str = "JavaScript Interview";
+// let str = "JavaScript Interview";
+// let count = 0;
+
+
+// for(let i of str){
+//     if(i==="a" || i==="e" || i==="i" || i==="o" || i==="u"){
+//         count++;
+//         console.log(`the number of count ${i}`)
+//         continue;
+
+//     }
+// }
+
+// console.log(count)
+
+let str = "javascript";
+
 let count = 0;
 
-
-for(let i of str){
-    if(i==="a" || i==="e" || i==="i" || i==="o" || i==="u"){
+for(let i=0; i<str.length; i++){
+    if(str[i]==="a"){
         count++;
-        console.log(`the number of count ${i}`)
-        continue;
+    };
+};
 
-    }
-}
-
-console.log(count)
+console.log(count);
