@@ -293,15 +293,34 @@
 
 // console.log(str2)
 
-let str = "I am learning JavaScript programming";
+// let str = "I am learning JavaScript programming";
 
-let str2 = str.split(" ");
-let str3 = "";
+// let str2 = str.split(" ");
+// let str3 = "";
 
-for(let i=0; i<str2.length; i++){
-    if(str2[i].length>str3.length){
-        str3=str2[i];
+// for(let i=0; i<str2.length; i++){
+//     if(str2[i].length>str3.length){
+//         str3=str2[i];
+//     };
+// };
+
+// console.log(str3);
+
+
+let str = "programming";
+let duplicayte = "";
+
+for(let i=0; i<str.length; i++){
+    count = 0;
+    for(let j=0; j<str.length; j++){
+        if(str[i]===str[j]){
+            count++;
+        };
+    };
+    if(count>1 && !duplicayte.includes(str[i])){
+        duplicayte+=str[i];
     };
 };
 
-console.log(str3);
+console.log(duplicayte);
+    
