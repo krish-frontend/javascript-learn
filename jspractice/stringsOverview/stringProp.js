@@ -270,18 +270,25 @@
 // console.log(count);
 
 
-let str = "madam";
-let isPalindrome =true;
+// let str = "madam";
+// let isPalindrome =true;
 
-for(let i=0; i<str.length/2; i++){
-    if(str[i]!==str[str.length-1-i]){
-        isPalindrome=false;
-        break;
-    };
-};
+// for(let i=0; i<str.length/2; i++){
+//     if(str[i]!==str[str.length-1-i]){
+//         isPalindrome=false;
+//         break;
+//     };
+// };
 
-if(isPalindrome){
-    console.log(`this is example of palindrome ${str}`);
-}else{
-    console.log("not a palindrome")
-}
+// if(isPalindrome){
+//     console.log(`this is example of palindrome :-${str}`);
+// }else{
+//     console.log("not a palindrome")
+// }
+
+
+let str = "JavaScript is very easy";
+
+let str2 = str.split(" ").join("")
+
+console.log(str2)
