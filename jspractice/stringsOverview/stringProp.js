@@ -257,14 +257,31 @@
 
 // console.log(count)
 
-let str = "javascript";
+// let str = "javascript";
 
-let count = 0;
+// let count = 0;
 
-for(let i=0; i<str.length; i++){
-    if(str[i]==="a"){
-        count++;
+// for(let i=0; i<str.length; i++){
+//     if(str[i]==="a"){
+//         count++;
+//     };
+// };
+
+// console.log(count);
+
+
+let str = "madam";
+let isPalindrome =true;
+
+for(let i=0; i<str.length/2; i++){
+    if(str[i]!==str[str.length-1-i]){
+        isPalindrome=false;
+        break;
     };
 };
 
-console.log(count);
+if(isPalindrome){
+    console.log(`this is example of palindrome ${str}`);
+}else{
+    console.log("not a palindrome")
+}
