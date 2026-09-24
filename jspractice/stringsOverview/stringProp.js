@@ -287,8 +287,21 @@
 // }
 
 
-let str = "JavaScript is very easy";
+// let str = "JavaScript is very easy";
 
-let str2 = str.split(" ").join("")
+// let str2 = str.split(" ").join("")
 
-console.log(str2)
+// console.log(str2)
+
+let str = "I am learning JavaScript programming";
+
+let str2 = str.split(" ");
+let str3 = "";
+
+for(let i=0; i<str2.length; i++){
+    if(str2[i].length>str3.length){
+        str3=str2[i];
+    };
+};
+
+console.log(str3);
