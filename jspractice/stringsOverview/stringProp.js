@@ -307,20 +307,37 @@
 // console.log(str3);
 
 
-let str = "programming";
-let duplicayte = "";
+// let str = "programming";
+// let duplicayte = "";
 
-for(let i=0; i<str.length; i++){
-    count = 0;
-    for(let j=0; j<str.length; j++){
-        if(str[i]===str[j]){
-            count++;
+// for(let i=0; i<str.length; i++){
+//     count = 0;
+//     for(let j=0; j<str.length; j++){
+//         if(str[i]===str[j]){
+//             count++;
+//         };
+//     };
+//     if(count>1 && !duplicayte.includes(str[i])){
+//         duplicayte+=str[i];
+//     };
+// };
+
+// console.log(duplicayte);
+
+
+
+    
+let str = "aabbcdd";
+let spl = str.split("")
+let str2 = "";
+
+for(let i=0; i<spl.length; i++){
+   
+        if(spl.indexOf(spl[i])===spl.lastIndexOf(spl[i])){
+            str2+=spl[i];
+            break;
         };
-    };
-    if(count>1 && !duplicayte.includes(str[i])){
-        duplicayte+=str[i];
-    };
+   
 };
 
-console.log(duplicayte);
-    
+console.log(str2);
