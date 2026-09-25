@@ -327,17 +327,33 @@
 
 
     
-let str = "aabbcdd";
-let spl = str.split("")
-let str2 = "";
+// let str = "aabbcdd";
+// let spl = str.split("")
+// let str2 = "";
 
-for(let i=0; i<spl.length; i++){
+// for(let i=0; i<spl.length; i++){
    
-        if(spl.indexOf(spl[i])===spl.lastIndexOf(spl[i])){
-            str2+=spl[i];
-            break;
-        };
+//         if(spl.indexOf(spl[i])===spl.lastIndexOf(spl[i])){   //c=> indexof(4) === lastindex(4)
+//             str2+=spl[i];
+//             break;
+//         };
    
-};
+// };
 
-console.log(str2);
+// console.log(str2);
+
+let str1 = "listen";
+let str2 = "silent";
+
+let str1s = str1.split("").sort().join("");
+let str2s = str2.split("").sort().join("");
+
+
+console.log(str1s===str2s)
+// if(str1s===str2s){
+//     console.log("this is an anagram")
+// }else{
+//     console.log("this is not an anagram")    
+// };
+
+
