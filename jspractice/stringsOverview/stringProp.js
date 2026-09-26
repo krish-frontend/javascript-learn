@@ -357,14 +357,14 @@
 // // };
 
 
-let str = "programming";
-// let str2 = str.split("");
-let freq = {};
+// let str = "programming";
+// // let str2 = str.split("");
+// let freq = {};
 
-for(let i=0; i<str.length; i++){
-    let char=str[i];   
-        freq[char] = (freq[char] || 0) + 1  //character → check existing count → add   
-};
+// for(let i=0; i<str.length; i++){
+//     let char=str[i];   
+//         freq[char] = (freq[char] || 0) + 1  //character → check existing count → add   
+// };
 
-console.log(freq);
+// console.log(freq);
 
