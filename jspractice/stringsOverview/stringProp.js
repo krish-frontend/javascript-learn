@@ -342,18 +342,29 @@
 
 // console.log(str2);
 
-let str1 = "listen";
-let str2 = "silent";
+// let str1 = "listen";
+// let str2 = "silent";
 
-let str1s = str1.split("").sort().join("");
-let str2s = str2.split("").sort().join("");
+// let str1s = str1.split("").sort().join("");
+// let str2s = str2.split("").sort().join("");
 
 
-console.log(str1s===str2s)
-// if(str1s===str2s){
-//     console.log("this is an anagram")
-// }else{
-//     console.log("this is not an anagram")    
-// };
+// console.log(str1s===str2s)
+// // if(str1s===str2s){
+// //     console.log("this is an anagram")
+// // }else{
+// //     console.log("this is not an anagram")    
+// // };
 
+
+let str = "programming";
+// let str2 = str.split("");
+let freq = {};
+
+for(let i=0; i<str.length; i++){
+    let char=str[i];   
+        freq[char] = (freq[char] || 0) + 1  //character → check existing count → add   
+};
+
+console.log(freq);
 
