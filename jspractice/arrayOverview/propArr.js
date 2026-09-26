@@ -3,10 +3,26 @@
 
 // ------day 1 quest of array-------
 
-let num = [10, 20, 30, 40, 50];
+// q.1 basic one
+// let numbers = [10, 20, 30, 40, 50];
 
-for(let i=0; i<num.length; i++){
-    if(num[i]%20!==0){
-        console.log(num[i])
-    };    
-};
+// // for(let i=0; i<num.length; i++){
+// //     if(num[i]%20!==0){
+// //         console.log(num[i])
+// //     };    
+// // };
+
+// console.log(numbers[0]);
+// console.log(numbers[2]);
+// console.log(numbers[4]);
+
+//q.2 Add & Remove from Array
+
+let fruits = ["Apple", "Banana", "Mango"];
+
+
+fruits.push("Orange");
+fruits.pop();
+fruits.unshift("Grapes");
+
+console.log(fruits);
