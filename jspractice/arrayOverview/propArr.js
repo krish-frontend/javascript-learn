@@ -67,16 +67,33 @@
 
 // console.log(result);
 
-//q. 7 🔥 map() vs filter()
+// //q. 7 🔥 map() vs filter()
 
-let numbers = [1, 2, 3, 4, 5];
+// let numbers = [1, 2, 3, 4, 5];
 
-let result = numbers
-    .filter(function(el){
-        return el%2===0;
-    })
-    .map(function(el){
-        return el*10;
-    });
+// let result = numbers
+//     .filter(function(el){
+//         return el%2===0;
+//     })
+//     .map(function(el){
+//         return el*10;
+//     });
 
-console.log(result);
+// console.log(result);
+
+//🔥 Q8 — Find the Largest Number
+
+let numbers = [12, 45, 7, 89, 23];
+let largest =numbers[0];
+
+for(let i=0; i<numbers.length; i++){
+    // for(let j=i+1; j<numbers.length; j++){
+    //     if(numbers[i]>numbers[j]){
+    //         largest=numbers[i];
+    //     };
+    // };
+    if(numbers[i]>largest){
+        largest=numbers[i];
+    };
+};
+console.log(largest);
