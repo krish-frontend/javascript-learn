@@ -27,14 +27,42 @@
 
 // console.log(fruits);
 
-//q.3 shift() + unshift()
+// //q.3 shift() + unshift()
 
-let numbers = [10, 20, 30, 40];
+// let numbers = [10, 20, 30, 40];
 
-numbers.shift();
-numbers.unshift(5);
-numbers.push(50);
-numbers.pop();
+// numbers.shift();
+// numbers.unshift(5);
+// numbers.push(50);
+// numbers.pop();
 
-console.log(numbers);
+// console.log(numbers);
 
+
+// // q.4 slice() and splice()
+
+// let fruits = ["apple", "banana", "orange"];
+
+// fruits.splice(0,0,"jaya", "jay");
+
+// console.log(fruits);
+
+// // q.5 map() concept in array
+
+// let numbers = [5, 10, 15, 20];
+
+// let result = numbers.map(function(el){
+//     return el+=5
+// });
+
+// console.log(result);
+
+//q.6 🔥- filter() in array
+
+let numbers = [10, 15, 20, 25, 30];
+
+let result = numbers.filter(function(el){
+    return el > 20;
+});
+
+console.log(result);
