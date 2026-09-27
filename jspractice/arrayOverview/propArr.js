@@ -16,13 +16,25 @@
 // console.log(numbers[2]);
 // console.log(numbers[4]);
 
-//q.2 Add & Remove from Array
+// //q.2 Add & Remove from Array
 
-let fruits = ["Apple", "Banana", "Mango"];
+// let fruits = ["Apple", "Banana", "Mango"];
 
 
-fruits.push("Orange");
-fruits.pop();
-fruits.unshift("Grapes");
+// fruits.push("Orange");
+// fruits.pop();
+// fruits.unshift("Grapes");
 
-console.log(fruits);
+// console.log(fruits);
+
+//q.3 shift() + unshift()
+
+let numbers = [10, 20, 30, 40];
+
+numbers.shift();
+numbers.unshift(5);
+numbers.push(50);
+numbers.pop();
+
+console.log(numbers);
+
