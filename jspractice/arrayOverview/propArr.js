@@ -98,14 +98,33 @@
 // };
 // console.log(largest);
 
-//🔥 Q9— Find the Smallest Number
+// //🔥 Q9— Find the Smallest Number
+
+// let numbers = [12, 45, 7, 89, 23];
+// let smallest = numbers[0];
+
+// for(let i=0; i<numbers.length; i++){
+//     if(numbers[i]<smallest)
+//         smallest=numbers[i];   
+// };
+
+// console.log(smallest)
+
+//🔥 Q10 — Find the Second Largest Number
 
 let numbers = [12, 45, 7, 89, 23];
-let smallest = numbers[0];
 
-for(let i=0; i<numbers.length; i++){
-    if(numbers[i]<smallest)
-        smallest=numbers[i];   
+let largest = Math.max(...numbers);
+let largest2 = numbers[0];
+
+for(let i=0; i < numbers.length; i++){
+    if(numbers[i] < largest && numbers[i] > largest2){
+        largest2 = numbers[i]
+    };
 };
 
-console.log(smallest)
+console.log(largest);
+console.log(largest2);
+
+
+
