@@ -162,16 +162,39 @@
 //  console.log(`odd numbers:- ${odd} and numbers of odd present in ${odd.length}`)
 //  console.log(`even numbers:- ${even} and numbers of even present in ${even.length}`)
 
-// 🔥 Q11 Remove Duplicates
+// // 🔥 Q11 Remove Duplicates
 
-let numbers = [10, 20, 10, 30, 20, 40, 30];
+// let numbers = [10, 20, 10, 30, 20, 40, 30];
 
-let duplicate = [];
+// let duplicate = [];
 
-for(let i=0; i<numbers.length; i++){
-    if(!duplicate.includes(numbers[i])){
-        duplicate.push(numbers[i])
-    };
+// for(let i=0; i<numbers.length; i++){
+//     if(!duplicate.includes(numbers[i])){
+//         duplicate.push(numbers[i])
+//     };
+// };
+
+// console.log(duplicate);
+
+// 🔥 Q12 Count Frequency
+
+let numbers = [10, 20, 10, 30, 20, 10, 40];
+
+let freq = {};
+
+// for(let i=0; i<numbers.length; i++){
+//     let char = numbers[i];
+//     freq[char] = (freq[char] || 0) + 1
+// };
+
+// console.log(freq);
+
+for (let num of numbers){
+    if (freq[num]) {
+        freq[num]++;
+    } else {
+        freq[num] = 1;
+    }
 };
 
-console.log(duplicate);
+console.log(freq);
