@@ -114,17 +114,33 @@
 
 let numbers = [12, 45, 7, 89, 23];
 
-let largest = Math.max(...numbers);
-let largest2 = numbers[0];
+// let largest = Math.max(...numbers);
+// let largest2 = numbers[0];
 
-for(let i=0; i < numbers.length; i++){
-    if(numbers[i] < largest && numbers[i] > largest2){
-        largest2 = numbers[i]
+// for(let i=0; i < numbers.length; i++){
+//     if(numbers[i] < largest && numbers[i] > largest2){
+//         largest2 = numbers[i]
+//     };
+// };
+
+// console.log(largest);
+// console.log(largest2);
+
+let largest = -Infinity;
+let largest2 = -Infinity;
+
+for(let i=0; i<numbers.length; i++){
+
+    if(largest<numbers[i]){
+        largest2=largest
+        largest=numbers[i]
+    }
+    else if(largest2<numbers[i] && numbers[i]<largest){
+         largest2=numbers[i]
     };
 };
 
-console.log(largest);
-console.log(largest2);
-
+console.log(`The largest number:- ${largest}`)
+console.log(`The largest2 number:- ${largest2}`)
 
 
