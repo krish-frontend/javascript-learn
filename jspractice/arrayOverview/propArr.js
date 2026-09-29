@@ -176,25 +176,52 @@
 
 // console.log(duplicate);
 
-// 🔥 Q12 Count Frequency
+// // 🔥 Q12 Count Frequency
 
-let numbers = [10, 20, 10, 30, 20, 10, 40];
+// let numbers = [10, 20, 10, 30, 20, 10, 40];
 
-let freq = {};
+// let freq = {};
 
-// for(let i=0; i<numbers.length; i++){
-//     let char = numbers[i];
-//     freq[char] = (freq[char] || 0) + 1
+// // for(let i=0; i<numbers.length; i++){
+// //     let char = numbers[i];
+// //     freq[char] = (freq[char] || 0) + 1
+// // };
+
+// // console.log(freq);
+
+// for (let num of numbers){
+//     if (freq[num]) {
+//         freq[num]++;
+//     } else {
+//         freq[num] = 1;
+//     }
 // };
 
 // console.log(freq);
 
-for (let num of numbers){
-    if (freq[num]) {
-        freq[num]++;
-    } else {
-        freq[num] = 1;
-    }
+// 🔥 Q13 Most Frequent Number
+
+let numbers = [10, 20, 10, 30, 20, 10, 40];
+
+let sortt = numbers.sort((a, b) => a - b)
+let arr = [];
+
+let count = 1;
+let maxCount= 1;
+
+for(let i=0; i<sortt.length; i++){
+
+    if(sortt[i]===sortt[i+1]){
+       count++;
+    }else{
+        if(count > maxCount){
+            maxCount = count;
+            arr = [sortt[i]]
+        }
+        count=1;
+    };
 };
 
-console.log(freq);
+console.log(sortt);
+console.log(`${arr} number of counts is ${maxCount}`);
+
