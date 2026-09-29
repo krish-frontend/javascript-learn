@@ -110,39 +110,58 @@
 
 // console.log(smallest)
 
-//🔥 Q10 — Find the Second Largest Number
+// //🔥 Q10 — Find the Second Largest Number
 
-let numbers = [12, 45, 7, 89, 23];
+// let numbers = [12, 45, 7, 89, 23];
 
-// let largest = Math.max(...numbers);
-// let largest2 = numbers[0];
+// // let largest = Math.max(...numbers);
+// // let largest2 = numbers[0];
 
-// for(let i=0; i < numbers.length; i++){
-//     if(numbers[i] < largest && numbers[i] > largest2){
-//         largest2 = numbers[i]
+// // for(let i=0; i < numbers.length; i++){
+// //     if(numbers[i] < largest && numbers[i] > largest2){
+// //         largest2 = numbers[i]
+// //     };
+// // };
+
+// // console.log(largest);
+// // console.log(largest2);
+
+// let largest = -Infinity;
+// let largest2 = -Infinity;
+
+// for(let i=0; i<numbers.length; i++){
+
+//     if(largest<numbers[i]){
+//         largest2=largest
+//         largest=numbers[i]
+//     }
+//     else if(largest2<numbers[i] && numbers[i]<largest){
+//          largest2=numbers[i]
 //     };
 // };
 
-// console.log(largest);
-// console.log(largest2);
+// console.log(`The largest number:- ${largest}`)
+// console.log(`The largest2 number:- ${largest2}`)
+// console.log(numbers.sort((a,b)=>a-b))
 
-let largest = -Infinity;
-let largest2 = -Infinity;
+//🔥 Q11 odd and even 
 
-for(let i=0; i<numbers.length; i++){
+let numbers = [12, 7, 5, 18, 20, 9, 14];
+let odd = [];
+let even = [];
 
-    if(largest<numbers[i]){
-        largest2=largest
-        largest=numbers[i]
-    }
-    else if(largest2<numbers[i] && numbers[i]<largest){
-         largest2=numbers[i]
+
+ for(let i=0; i<numbers.length; i++){
+    if(numbers[i]%2===0){
+        even.push(numbers[i])
+    }else{
+        odd.push(numbers[i])
     };
-};
+ };
 
-console.log(`The largest number:- ${largest}`)
-console.log(`The largest2 number:- ${largest2}`)
-console.log(numbers.sort((a,b)=>a-b))
+ console.log(`odd numbers:- ${odd} and numbers of odd present in ${odd.length}`)
+ console.log(`even numbers:- ${even} and numbers of even present in ${even.length}`)
+
 
 
 
