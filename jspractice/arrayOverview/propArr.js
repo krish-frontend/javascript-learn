@@ -144,24 +144,34 @@
 // console.log(`The largest2 number:- ${largest2}`)
 // console.log(numbers.sort((a,b)=>a-b))
 
-//🔥 Q11 odd and even 
+// //🔥 Q11 odd and even 
 
-let numbers = [12, 7, 5, 18, 20, 9, 14];
-let odd = [];
-let even = [];
+// let numbers = [12, 7, 5, 18, 20, 9, 14];
+// let odd = [];
+// let even = [];
 
 
- for(let i=0; i<numbers.length; i++){
-    if(numbers[i]%2===0){
-        even.push(numbers[i])
-    }else{
-        odd.push(numbers[i])
+//  for(let i=0; i<numbers.length; i++){
+//     if(numbers[i]%2===0){
+//         even.push(numbers[i])
+//     }else{
+//         odd.push(numbers[i])
+//     };
+//  };
+
+//  console.log(`odd numbers:- ${odd} and numbers of odd present in ${odd.length}`)
+//  console.log(`even numbers:- ${even} and numbers of even present in ${even.length}`)
+
+// 🔥 Q11 Remove Duplicates
+
+let numbers = [10, 20, 10, 30, 20, 40, 30];
+
+let duplicate = [];
+
+for(let i=0; i<numbers.length; i++){
+    if(!duplicate.includes(numbers[i])){
+        duplicate.push(numbers[i])
     };
- };
+};
 
- console.log(`odd numbers:- ${odd} and numbers of odd present in ${odd.length}`)
- console.log(`even numbers:- ${even} and numbers of even present in ${even.length}`)
-
-
-
-
+console.log(duplicate);
