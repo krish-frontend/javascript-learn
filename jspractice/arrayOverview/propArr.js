@@ -142,5 +142,7 @@ for(let i=0; i<numbers.length; i++){
 
 console.log(`The largest number:- ${largest}`)
 console.log(`The largest2 number:- ${largest2}`)
+console.log(numbers.sort((a,b)=>a-b))
+
 
 
