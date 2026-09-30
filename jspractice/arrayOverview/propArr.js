@@ -199,29 +199,41 @@
 
 // console.log(freq);
 
-// 🔥 Q13 Most Frequent Number
+// // 🔥 Q13 Most Frequent Number
 
-let numbers = [10, 20, 10, 30, 20, 10, 40];
+// let numbers = [10, 20, 10, 30, 20, 10, 20, 40, 20, 5,20];
 
-let sortt = numbers.sort((a, b) => a - b)
-let arr = [];
+// let sortt = numbers.sort((a, b) => a - b)
+// let arr = [];
 
-let count = 1;
-let maxCount= 1;
+// let count = 1;
+// let maxCount= 1;
 
-for(let i=0; i<sortt.length; i++){
+// for(let i=0; i<sortt.length; i++){
 
-    if(sortt[i]===sortt[i+1]){
-       count++;
-    }else{
-        if(count > maxCount){
-            maxCount = count;
-            arr = [sortt[i]]
-        }
-        count=1;
-    };
+//     if(sortt[i]===sortt[i+1]){
+//        count++;
+//     }else{
+//         if(count > maxCount){
+//             maxCount = count;
+//             arr = [sortt[i]]
+//         }
+//         count=1;
+//     };
+// };
+
+// console.log(sortt);
+// console.log(`${arr} number of counts is ${maxCount}`);
+
+// 🔥 Q14 Reverse an array without using .reverse()
+
+let numbers = [10, 20, 30, 40, 50];
+
+for(let i=0,j=numbers.length-1; i<j; i++,j--){
+    
+    let temp = numbers[i];
+    numbers[i] = numbers[j];
+    numbers[j] = temp;    
 };
 
-console.log(sortt);
-console.log(`${arr} number of counts is ${maxCount}`);
-
+console.log(numbers);
