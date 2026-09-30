@@ -239,19 +239,32 @@
 // console.log(numbers);
 
 
-// 🔥 Q15 Move Zeros to the End
+// // 🔥 Q15 Move Zeros to the End
 
-let numbers = [0, 10, 0, 20, 30, 0, 40];
+// let numbers = [0, 10, 0, 20, 30, 0, 40];
 
+// let arr = [];
+// let zero = [];
+
+// for(let i=0; i<numbers.length; i++){
+//     if(numbers[i]>1){
+//         arr.push(numbers[i])
+//     }else if(numbers[i]===0){
+//         zero.push(numbers[i])
+//     }
+// }
+// console.log(arr)
+// console.log(arr.concat(zero))
+
+
+// 🔥 Q16 Find the Missing Number
+
+let numbers = [1, 2, 4, 5, 6];
 let arr = [];
-let zero = [];
+for(let i=0; i<numbers.length-1; i++){
+    if(numbers[i]+1 !==numbers[i+1]){
+        arr.push(numbers[i]+1)
+    };
+};
 
-for(let i=0; i<numbers.length; i++){
-    if(numbers[i]>1){
-        arr.push(numbers[i])
-    }else if(numbers[i]===0){
-        zero.push(numbers[i])
-    }
-}
 console.log(arr)
-console.log(arr.concat(zero))
