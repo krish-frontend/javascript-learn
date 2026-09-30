@@ -257,13 +257,29 @@
 // console.log(arr.concat(zero))
 
 
-// 🔥 Q16 Find the Missing Number
+// // 🔥 Q16 Find the Missing Number
 
-let numbers = [1, 2, 4, 5, 6];
+// let numbers = [1, 2, 4, 5, 6];
+// let arr = [];
+// for(let i=0; i<numbers.length-1; i++){
+//     if(numbers[i]+1 !==numbers[i+1]){
+//         arr.push(numbers[i]+1)
+//     };
+// };
+
+// console.log(arr)
+
+// 🔥 Q17 Two Sum
+
+let numbers = [2, 7, 11, 15];
+let target = 9;
 let arr = [];
-for(let i=0; i<numbers.length-1; i++){
-    if(numbers[i]+1 !==numbers[i+1]){
-        arr.push(numbers[i]+1)
+
+for(let i=0; i<numbers.length; i++){
+    for (let j=i+1; j<numbers.length; j++){
+        if(numbers[i]+numbers[j]===target){
+            arr.push(numbers[i],numbers[j])
+        };
     };
 };
 
