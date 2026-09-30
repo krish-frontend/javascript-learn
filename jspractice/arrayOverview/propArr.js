@@ -271,16 +271,38 @@
 
 // 🔥 Q17 Two Sum
 
-let numbers = [2, 7, 11, 15];
-let target = 9;
-let arr = [];
+// let numbers = [2, 7, 11, 15];
+// let target = 9;
+// let arr = [];
+
+// for(let i=0; i<numbers.length; i++){
+//     for (let j=i+1; j<numbers.length; j++){
+//         if(numbers[i]+numbers[j]===target){
+//             arr.push(numbers[i],numbers[j])
+//         };
+//     };
+// };
+
+// console.log(arr)
+
+// 🔥 Q18 Separate Positive, Negative & Zero 
+
+let numbers = [10, -5, 0, 20, -8, 0, 15, -2];
+
+let zero = [];
+let pos = [];
+let neg = [];
 
 for(let i=0; i<numbers.length; i++){
-    for (let j=i+1; j<numbers.length; j++){
-        if(numbers[i]+numbers[j]===target){
-            arr.push(numbers[i],numbers[j])
-        };
+    if(numbers[i]>0){
+        pos.push(numbers[i])
+    }else if(numbers[i]<0){
+        neg.push(numbers[i])
+    }else{
+        zero.push(numbers[i])
     };
 };
 
-console.log(arr)
+console.log(zero);
+console.log(pos.sort());
+console.log(neg.sort());
