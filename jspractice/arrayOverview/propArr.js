@@ -225,15 +225,33 @@
 // console.log(sortt);
 // console.log(`${arr} number of counts is ${maxCount}`);
 
-// 🔥 Q14 Reverse an array without using .reverse()
+// // 🔥 Q14 Reverse an array without using .reverse()
 
-let numbers = [10, 20, 30, 40, 50];
+// let numbers = [10, 20, 30, 40, 50];
 
-for(let i=0,j=numbers.length-1; i<j; i++,j--){
+// for(let i=0,j=numbers.length-1; i<j; i++,j--){
     
-    let temp = numbers[i];
-    numbers[i] = numbers[j];
-    numbers[j] = temp;    
-};
+//     let temp = numbers[i];
+//     numbers[i] = numbers[j];
+//     numbers[j] = temp;    
+// };
 
-console.log(numbers);
+// console.log(numbers);
+
+
+// 🔥 Q15 Move Zeros to the End
+
+let numbers = [0, 10, 0, 20, 30, 0, 40];
+
+let arr = [];
+let zero = [];
+
+for(let i=0; i<numbers.length; i++){
+    if(numbers[i]>1){
+        arr.push(numbers[i])
+    }else if(numbers[i]===0){
+        zero.push(numbers[i])
+    }
+}
+console.log(arr)
+console.log(arr.concat(zero))
