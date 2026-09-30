@@ -285,24 +285,63 @@
 
 // console.log(arr)
 
-// 🔥 Q18 Separate Positive, Negative & Zero 
+// // 🔥 Q18 Separate Positive, Negative & Zero 
 
-let numbers = [10, -5, 0, 20, -8, 0, 15, -2];
+// let numbers = [10, -5, 0, 20, -8, 0, 15, -2];
 
-let zero = [];
-let pos = [];
-let neg = [];
+// let zero = [];
+// let pos = [];
+// let neg = [];
+
+// for(let i=0; i<numbers.length; i++){
+//     if(numbers[i]>0){
+//         pos.push(numbers[i])
+//     }else if(numbers[i]<0){
+//         neg.push(numbers[i])
+//     }else{
+//         zero.push(numbers[i])
+//     };
+// };
+
+// console.log(zero);
+// console.log(pos.sort());
+// console.log(neg.sort());
+
+// // 🔥 Q18 Find the Average
+
+// let numbers = [10, 20, 30, 40, 50];
+
+// let avg = 0;
+
+// for(let i=0; i<numbers.length; i++){
+//     if(avg<numbers[i]){
+//         let result= numbers[i]/numbers.length;
+//         avg+=result
+//     }
+// }
+
+// console.log(avg);
+
+// 🔥 Q19 Find the Largest Difference
+
+let numbers = [10, 5, 25, 8, 40, 15];
+
+let small = numbers[0];
+let large = numbers[0];
 
 for(let i=0; i<numbers.length; i++){
-    if(numbers[i]>0){
-        pos.push(numbers[i])
-    }else if(numbers[i]<0){
-        neg.push(numbers[i])
-    }else{
-        zero.push(numbers[i])
-    };
+    
+    if(numbers[i]>large){
+        large=numbers[i]
+    }else if(numbers[i]<small){
+        small=numbers[i]
+    }
+
+    // let result = large - small;
+    // largestDiff+=result;
 };
 
-console.log(zero);
-console.log(pos.sort());
-console.log(neg.sort());
+console.log(small)
+console.log(large)
+
+console.log(`The difference between large number and small number is- ${large-small}`)
