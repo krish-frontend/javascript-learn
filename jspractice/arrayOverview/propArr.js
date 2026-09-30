@@ -322,26 +322,38 @@
 
 // console.log(avg);
 
-// 🔥 Q19 Find the Largest Difference
+// // 🔥 Q19 Find the Largest Difference
 
-let numbers = [10, 5, 25, 8, 40, 15];
+// let numbers = [10, 5, 25, 8, 40, 15];
 
-let small = numbers[0];
-let large = numbers[0];
+// let small = numbers[0];
+// let large = numbers[0];
 
-for(let i=0; i<numbers.length; i++){
+// for(let i=0; i<numbers.length; i++){
     
-    if(numbers[i]>large){
-        large=numbers[i]
-    }else if(numbers[i]<small){
-        small=numbers[i]
-    }
+//     if(numbers[i]>large){
+//         large=numbers[i]
+//     }else if(numbers[i]<small){
+//         small=numbers[i]
+//     }
 
-    // let result = large - small;
-    // largestDiff+=result;
-};
+//     // let result = large - small;
+//     // largestDiff+=result;
+// };
 
-console.log(small)
-console.log(large)
+// console.log(small)
+// console.log(large)
 
-console.log(`The difference between large number and small number is- ${large-small}`)
+// console.log(`The difference between large number and small number is- ${large-small}`)
+
+// 🔥 Q20 Rotate an Array by One Position
+
+let numbers = [10, 20, 30, 40, 50];
+let last = numbers[numbers.length-1]
+
+for(let i=numbers.length-1; i>0; i--){
+    numbers[i]=numbers[i-1]
+}
+
+numbers[0]=last
+console.log(numbers);
