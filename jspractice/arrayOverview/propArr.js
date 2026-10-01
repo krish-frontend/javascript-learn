@@ -358,18 +358,39 @@
 // numbers[0]=last
 // console.log(numbers);
 
-// 🔥 Q21 Move All Zeros to the End
+// // 🔥 Q21 Move All Zeros to the End
 
-let numbers = [0, 5, 0, 3, 8, 0, 2];
-let j = 0;
+// let numbers = [0, 5, 0, 3, 8, 0, 2];
+// let j = 0;
 
-for(let i=0; i<numbers.length; i++){ 
-   if(numbers[i]!==0){
-      [numbers[i], numbers[j]]=[numbers[j],numbers[i]];
-      j++;
-   };
+// for(let i=0; i<numbers.length; i++){ 
+//    if(numbers[i]!==0){
+//       [numbers[i], numbers[j]]=[numbers[j],numbers[i]];
+//       j++;
+//    };
+// };
+
+// console.log(numbers)
+
+// 🔥 Q22 Find the First Duplicate\
+
+let numbers = [10, 20, 30, 20, 40, 10];
+
+let duplicate = 0;
+let result = false;
+
+for(let i=0; i<numbers.length; i++){
+    for(let j=i+1; j<numbers.length; j++){    
+    if(numbers[i]===numbers[j]){
+        duplicate=numbers[i];
+        result = true;
+        break;
+        }    
+    }
+    
+    if(result){
+        break;
+    };
 };
 
-console.log(numbers)
-
-
+console.log(duplicate);
