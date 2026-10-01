@@ -346,14 +346,30 @@
 
 // console.log(`The difference between large number and small number is- ${large-small}`)
 
-// 🔥 Q20 Rotate an Array by One Position
+// // 🔥 Q20 Rotate an Array by One Position
 
-let numbers = [10, 20, 30, 40, 50];
-let last = numbers[numbers.length-1]
+// let numbers = [10, 20, 30, 40, 50];
+// let last = numbers[numbers.length-1]
 
-for(let i=numbers.length-1; i>0; i--){
-    numbers[i]=numbers[i-1]
-}
+// for(let i=numbers.length-1; i>0; i--){
+//     numbers[i]=numbers[i-1]
+// }
 
-numbers[0]=last
-console.log(numbers);
+// numbers[0]=last
+// console.log(numbers);
+
+// 🔥 Q21 Move All Zeros to the End
+
+let numbers = [0, 5, 0, 3, 8, 0, 2];
+let j = 0;
+
+for(let i=0; i<numbers.length; i++){ 
+   if(numbers[i]!==0){
+      [numbers[i], numbers[j]]=[numbers[j],numbers[i]];
+      j++;
+   };
+};
+
+console.log(numbers)
+
+
