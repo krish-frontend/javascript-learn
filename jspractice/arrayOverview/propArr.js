@@ -372,25 +372,37 @@
 
 // console.log(numbers)
 
-// 🔥 Q22 Find the First Duplicate\
+// // 🔥 Q22 Find the First Duplicate\
 
-let numbers = [10, 20, 30, 20, 40, 10];
+// let numbers = [10, 20, 30, 20, 40, 10];
 
-let duplicate = 0;
-let result = false;
+// let duplicate = 0;
 
-for(let i=0; i<numbers.length; i++){
-    for(let j=i+1; j<numbers.length; j++){    
-    if(numbers[i]===numbers[j]){
-        duplicate=numbers[i];
-        result = true;
-        break;
-        }    
-    }
-    
-    if(result){
-        break;
-    };
+// for(let i=0; i<numbers.length; i++){
+//     for(let j=i+1; j<numbers.length; j++)
+//     if(numbers[i]===numbers[j]){
+//         duplicate=numbers[i];
+//         // break;
+//     };
+// };
+
+// console.log(duplicate);
+
+// 🔥 Q22 Find 10% off on given price and total cost after discount 
+
+let arr =[250, 645, 300, 900, 50];
+
+let discount=[];
+let final = []
+let pAd = 0;
+
+for(let i=0; i<arr.length; i++){
+    let dp = arr[i]/10;
+    discount.push(dp);
+    final.push(arr[i]-discount[i])
+    pAd+=final[i];
 };
 
-console.log(duplicate);
+console.log(discount);
+console.log(final)
+console.log(pAd);
