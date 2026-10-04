@@ -388,21 +388,65 @@
 
 // console.log(duplicate);
 
-// 🔥 Q22 Find 10% off on given price and total cost after discount 
+// // 🔥 Q22 Find 10% off on given price and total cost after discount 
 
-let arr =[250, 645, 300, 900, 50];
+// let arr =[250, 645, 300, 900, 50];
 
-let discount=[];
-let final = []
-let pAd = 0;
+// let discount=[];
+// let final = []
+// let pAd = 0;
 
-for(let i=0; i<arr.length; i++){
-    let dp = arr[i]/10;
-    discount.push(dp);
-    final.push(arr[i]-discount[i])
-    pAd+=final[i];
-};
+// for(let i=0; i<arr.length; i++){
+//     let dp = arr[i]/10;
+//     discount.push(dp);
+//     final.push(arr[i]-discount[i])
+//     pAd+=final[i];
+// };
 
-console.log(discount);
-console.log(final)
-console.log(pAd);
+// console.log(discount);
+// console.log(final);
+// console.log(pAd);
+
+
+
+//                                  -------function concept-----
+
+// function greet(a) {
+//     return  "Hello" + a;
+//     // console.log(message);
+// }
+
+// greet("krish");
+
+// function sayHello() {
+//     console.log("Hello");
+// }
+
+// function run(callback) {
+//     callback();
+// }
+
+// run(sayHello);
+
+
+//                                              ---call back power---
+// function calculate(a, b, callback) {
+//     let result = a + b;
+//     callback(result);
+// }
+
+// function showResult(value) {
+//     console.log("Result:", value);
+// }
+
+// calculate(10, 20, showResult);
+
+// // Important correction
+
+// // You said the callback does the addition.
+
+// // ❌ No.
+
+// // The calculate() function does the addition.
+
+// // ✅ The callback receives the result and decides what to do with that result.
