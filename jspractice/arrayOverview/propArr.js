@@ -452,13 +452,29 @@
 // // ✅ The callback receives the result and decides what to do with that result.
 
 
-let multiple = function(a,b,cb){
-    let result=a*b;
-    cb(result);
+// let multiple = function(a,b,cb){
+//     let result=a*b;
+//     cb(result);
+// }
+
+// let total =function(value){
+//     console.log(value);
+// };
+
+// multiple(2,4, total);
+
+function outer() {
+    function inner() {
+    console.log("krish")
+     function inner2(){
+        console.log("Hello");
+        };
+        return inner2();
+    };
+
+    return inner();
 }
 
-let total =function(value){
-    console.log(value);
-};
+let result = outer();
 
-multiple(2,4, total);
+result();
