@@ -450,3 +450,15 @@
 // // The calculate() function does the addition.
 
 // // ✅ The callback receives the result and decides what to do with that result.
+
+
+let multiple = function(a,b,cb){
+    let result=a*b;
+    cb(result);
+}
+
+let total =function(value){
+    console.log(value);
+};
+
+multiple(2,4, total);
