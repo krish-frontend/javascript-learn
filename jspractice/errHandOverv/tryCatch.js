@@ -22,13 +22,17 @@ catch   → runs only if error occurs
 finally → runs almost always, whether error occurs or not
 */
 
-// 2. //JavaScript also lets you create your own error intentionally:
-// function checkAge(age) {
-//     if (age < 18) {
-//         throw new Error("Age must be 18 or above");
-//     }
+2. //JavaScript also lets you create your own error intentionally:
+function checkAge(age) {
+    if (age < 18) {
+        throw new Error("Age must be 18 or above");
+    }
 
-//     return "Allowed";
-// }
+    return "Allowed";
+}
 
-// console.log(checkAge(15));
+try{
+    console.log(checkAge(15));
+}catch(error){
+    console.log(error.message)
+};
