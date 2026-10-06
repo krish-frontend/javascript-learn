@@ -32,14 +32,3 @@
 
 
 
-
-// // callback 
-// // function callBack(x,y,z){
-// //     let a = x+y;
-// //     return z(a);
-// // }
-
-// // callBack(2,8, (el)=>{
-// //     console.log(el);
-    
-// // })
