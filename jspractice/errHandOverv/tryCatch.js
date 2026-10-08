@@ -43,3 +43,8 @@ finally → runs almost always, whether error occurs or not
 
 // container.removeChild(para);
 
+let call =()=>{ return console.log("hello krish")}
+
+let btn = document.querySelector(".btn")
+btn.addEventListener("click",call)
+
