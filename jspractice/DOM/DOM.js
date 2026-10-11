@@ -7,5 +7,10 @@
 
 // let call =()=>console.log("hello krish");
 
-// let btn = document.querySelector(".btn");
+let btn = document.querySelector(".btn");
 // btn.addEventListener("click",call)
+
+btn.addEventListener("click", function(event) {
+    event.stopPropagation();
+    console.log("Child clicked");
+});
