@@ -37,14 +37,4 @@ finally → runs almost always, whether error occurs or not
 //     console.log(error.message)
 // };
 
-// let container = document.querySelector("#container");
-// let para = document.querySelector("#para").style.background="red";
-// para.textContent="bhaijaan"
-
-// container.removeChild(para);
-
-let call =()=>{ return console.log("hello krish")}
-
-let btn = document.querySelector(".btn")
-btn.addEventListener("click",call)
 
