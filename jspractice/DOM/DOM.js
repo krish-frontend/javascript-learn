@@ -42,18 +42,18 @@
 
 // --------form event---
 
-let form =document.querySelector("#myForm");
-let userin =document.querySelector("#name");
-let mssg =document.querySelector("#message");
+// let form =document.querySelector("#myForm");
+// let userin =document.querySelector("#name");
+// let mssg =document.querySelector("#message");
 
-let defaultMssg =(el)=>{
-    el.preventDefault()
-    if(userin.value.trim() === ""){
-        console.log("required feild filled plss")
-    }else{
-        console.log("form submit successfully!!")
-    };
-};
+// let defaultMssg =(el)=>{
+//     el.preventDefault()
+//     if(userin.value.trim() === ""){
+//         console.log("required feild filled plss")
+//     }else{
+//         console.log("form submit successfully!!")
+//     };
+// };
 
 
-form.addEventListener("click", defaultMssg);
+// form.addEventListener("click", defaultMssg);
