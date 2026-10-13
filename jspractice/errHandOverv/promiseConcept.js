@@ -14,10 +14,41 @@
 
 
 //2. return in promise how is it work 
-Promise.resolve(5)
-    .then((num) => {
-        return num * 2;
-    })
-    .then((result) => {
-        console.log(result);
-    });
+// Promise.resolve(5)
+//     .then((num) => {
+//         return num * 2;
+//     })
+//     .then((result) => {
+//         console.log(result);
+//     });
+
+
+//3. implicit arrow function should return value 
+// Promise.resolve(10)
+//     .then((num) => num + 5)
+//     .then((result) => result * 2)
+//     .then((finalResult) => console.log(finalResult));
+
+
+//4.Will it print "Failed", "Recovered", or something else? Explain your reasoning.
+// Promise.reject("Failed")
+//     .catch((error) => {
+//         return "Recovered";
+//     })
+//     .then((result) => {
+//         console.log(result);
+//     });
+
+//Remember: .catch() can recover from an error. If it returns a normal value, the next .then() runs successfully.
+
+async function test() {
+    console.log("A");
+
+    const result = await Promise.resolve("B");
+
+    console.log(result);
+}
+
+console.log("C");
+test();
+console.log("D");
