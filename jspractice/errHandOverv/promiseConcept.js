@@ -68,15 +68,14 @@
 
 // //7. error handling with async/await
 
-// async function test() {
-//     try {
-//         const result = await Promise.reject("Something went wrong");
-//         console.log(result);
-//     } catch (error) {
-//         console.log("Error:", error);
-//     }
+async function test() {
+    try{
+        let result = await Promise.reject("something went wrong")
+        console.log(result);
+    }catch(error){
+        console.log("error", error);
+    }
+    console.log("finished")
+}
 
-//     console.log("Finished");
-// }
-
-// test();
+test()
