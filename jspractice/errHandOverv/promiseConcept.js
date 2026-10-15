@@ -80,14 +80,36 @@
 
 // test()
 
-let arr = [1, 2, 3, 4, 5];
+// let arr = [1, 2, 3, 4, 5];
 
-arr.forEach((item)=>{
-    console.log(item)
+// arr.forEach((item)=>{
+//     console.log(item)
+// });
+
+// const newArr = arr.map((item) =>{
+//     return item*2;
+// })
+
+// console.log(newArr)
+
+//8. async/await and try/catch quest
+
+async function calculate() {
+    try {
+        console.log("A");
+
+        const result = await Promise.reject("Failed");
+
+        console.log("B", result);
+        return 100;
+    } catch (error) {
+        console.log("C", error);
+        return 50;
+    } finally {
+        console.log("D");
+    }
+}
+
+calculate().then((value) => {
+    console.log("E", value);
 });
-
-const newArr = arr.map((item) =>{
-    return item*2;
-})
-
-console.log(newArr)
