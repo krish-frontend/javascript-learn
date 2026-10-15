@@ -66,16 +66,28 @@
 // test();
 // console.log("C");
 
-// //7. error handling with async/await
+// // //7. error handling with async/await
 
-async function test() {
-    try{
-        let result = await Promise.reject("something went wrong")
-        console.log(result);
-    }catch(error){
-        console.log("error", error);
-    }
-    console.log("finished")
-}
+// async function test() {
+//     try{
+//         let result = await Promise.reject("something went wrong")
+//         console.log(result);
+//     }catch(error){
+//         console.log("error", error);
+//     }
+//     console.log("finished")
+// }
 
-test()
+// test()
+
+let arr = [1, 2, 3, 4, 5];
+
+arr.forEach((item)=>{
+    console.log(item)
+});
+
+const newArr = arr.map((item) =>{
+    return item*2;
+})
+
+console.log(newArr)
