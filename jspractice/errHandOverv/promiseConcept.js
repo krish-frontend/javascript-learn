@@ -56,13 +56,26 @@
 // test();
 // console.log("D");
 
-//6. async/await example with order of execution
+// //6. async/await example with order of execution
+// async function test() {
+//     const result = await Promise.resolve(20);
+//     console.log("A", result);
+// }
+
+// console.log("B");
+// test();
+// console.log("C");
+
+//7. error handling with async/await
 async function test() {
-    const result = await Promise.resolve(20);
-    console.log("A", result);
+    try {
+        const result = await Promise.reject("Something went wrong");
+        console.log(result);
+    } catch (error) {
+        console.log("Error:", error);
+    }
+
+    console.log("Finished");
 }
 
-console.log("B");
 test();
-console.log("C");
-
