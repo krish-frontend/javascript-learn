@@ -66,16 +66,17 @@
 // test();
 // console.log("C");
 
-//7. error handling with async/await
-async function test() {
-    try {
-        const result = await Promise.reject("Something went wrong");
-        console.log(result);
-    } catch (error) {
-        console.log("Error:", error);
-    }
+// //7. error handling with async/await
 
-    console.log("Finished");
-}
+// async function test() {
+//     try {
+//         const result = await Promise.reject("Something went wrong");
+//         console.log(result);
+//     } catch (error) {
+//         console.log("Error:", error);
+//     }
 
-test();
+//     console.log("Finished");
+// }
+
+// test();
