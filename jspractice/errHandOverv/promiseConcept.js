@@ -41,14 +41,28 @@
 
 //Remember: .catch() can recover from an error. If it returns a normal value, the next .then() runs successfully.
 
+
+// // 5. async/await example
+
+// async function test() {
+//     console.log("A");
+
+//     const result = await Promise.resolve("B");
+
+//     console.log(result);
+// }
+
+// console.log("C");
+// test();
+// console.log("D");
+
+//6. async/await example with order of execution
 async function test() {
-    console.log("A");
-
-    const result = await Promise.resolve("B");
-
-    console.log(result);
+    const result = await Promise.resolve(20);
+    console.log("A", result);
 }
 
-console.log("C");
+console.log("B");
 test();
-console.log("D");
+console.log("C");
+
