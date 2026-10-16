@@ -92,24 +92,38 @@
 
 // console.log(newArr)
 
-//8. async/await and try/catch quest
+// //8. async/await and try/catch quest
 
-async function calculate() {
+// async function calculate() {
+//     try {
+//         console.log("A");
+
+//         const result = await Promise.reject("Failed");
+
+//         console.log("B", result);
+//         return 100;
+//     } catch (error) {
+//         console.log("C", error);
+//         return 50;
+//     } finally {
+//         console.log("D");
+//     }
+// }
+
+// calculate().then((value) => {
+//     console.log("E", value);
+// });
+
+
+//9. Promise rejection without await
+
+async function test() {
     try {
-        console.log("A");
-
-        const result = await Promise.reject("Failed");
-
-        console.log("B", result);
-        return 100;
+        Promise.reject("Failed"); // Creates a rejected Promise
+        console.log("Success");   // Runs normally
     } catch (error) {
-        console.log("C", error);
-        return 50;
-    } finally {
-        console.log("D");
+        console.log("Caught:", error);
     }
 }
 
-calculate().then((value) => {
-    console.log("E", value);
-});
+test();
