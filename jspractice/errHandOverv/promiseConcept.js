@@ -128,16 +128,30 @@
 
 // test();
 
-//10. 
+// //10. which one print first "Finally" or "Hello" and why?
 
-async function test() {
-    try {
-        return "Hello";
-    }finally {
-        console.log("Finally");
-    }
+// async function test() {
+//     try {
+//         return "Hello";
+//     }finally {
+//         console.log("Finally");
+//     }
+// };
+
+// test().then(result => {
+//     console.log(result);
+// });
+
+//11. Debugging challenge
+
+async function calculate() {
+    const result = Promise.resolve(10);
+    return result * 2;
 }
 
-test().then(result => {
-    console.log(result);
+calculate().then(value => {
+    console.log(value);
 });
+
+// Interview tip:
+//  await extracts the fulfilled value from a Promise. Without it, you're working with the Promise object itself.
