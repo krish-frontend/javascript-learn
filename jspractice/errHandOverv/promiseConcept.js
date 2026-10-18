@@ -115,15 +115,29 @@
 // });
 
 
-//9. Promise rejection without await
+// //9. Promise rejection without await
+
+// async function test() {
+//     try {
+//         Promise.reject("Failed"); // Creates a rejected Promise
+//         console.log("Success");   // Runs normally
+//     } catch (error) {
+//         console.log("Caught:", error);
+//     }
+// }
+
+// test();
+
+//10. 
 
 async function test() {
     try {
-        Promise.reject("Failed"); // Creates a rejected Promise
-        console.log("Success");   // Runs normally
-    } catch (error) {
-        console.log("Caught:", error);
+        return "Hello";
+    }finally {
+        console.log("Finally");
     }
 }
 
-test();
+test().then(result => {
+    console.log(result);
+});
