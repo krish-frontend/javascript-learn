@@ -142,16 +142,56 @@
 //     console.log(result);
 // });
 
-//11. Debugging challenge
+// //11. Debugging challenge
 
-async function calculate() {
-    const result = Promise.resolve(10);
-    return result * 2;
+// async function calculate() {
+//     const result = Promise.resolve(10);
+//     return result * 2;
+// }
+
+// calculate().then(value => {
+//     console.log(value);
+// });
+
+// // Interview tip:
+// //  await extracts the fulfilled value from a Promise. Without it, you're working with the Promise object itself.
+
+// //12. combined challenge
+
+
+// async function test() {
+//     try {
+//         const value = await Promise.resolve(10);
+//         console.log("A", value);
+
+//         throw new Error("Oops");
+//     } catch (error) {
+//         console.log("B", error.message);
+//         return 30;
+//     } finally {
+//         console.log("C");
+//     }
+// }
+
+// test().then(value => console.log("D", value));  
+
+//13. Predict the output
+
+async function first() {
+    console.log("1");
+    return 5;
 }
 
-calculate().then(value => {
-    console.log(value);
-});
+async function second() {
+    console.log("2");
 
-// Interview tip:
-//  await extracts the fulfilled value from a Promise. Without it, you're working with the Promise object itself.
+    const result = await first();
+
+    console.log("3", result);
+
+    return result + 5;
+}
+
+second().then(value => console.log("4", value));
+
+console.log("5");
