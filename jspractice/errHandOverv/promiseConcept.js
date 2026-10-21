@@ -175,23 +175,41 @@
 
 // test().then(value => console.log("D", value));  
 
-//13. Predict the output
+// //13. Predict the output
 
-async function first() {
-    console.log("1");
-    return 5;
+// async function first() {
+//     console.log("1");
+//     return 5;
+// }
+
+// async function second() {
+//     console.log("2");
+
+//     const result = await first();
+
+//     console.log("3", result);
+
+//     return result + 5;
+// }
+
+// second().then(value => console.log("4", value));
+
+// console.log("5");
+
+
+//revision of promise and async/await
+
+//Practice 1 — Does catch execute?
+
+async function test() {
+    try {
+        await Promise.reject("Failed");
+        console.log("A");
+    } catch (error) {
+        console.log("B");
+    }
+
+    console.log("C");
 }
 
-async function second() {
-    console.log("2");
-
-    const result = await first();
-
-    console.log("3", result);
-
-    return result + 5;
-}
-
-second().then(value => console.log("4", value));
-
-console.log("5");
+test();
