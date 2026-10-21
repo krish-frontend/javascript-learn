@@ -199,17 +199,27 @@
 
 //revision of promise and async/await
 
-//Practice 1 — Does catch execute?
+// //Practice 1 — Does catch execute?
 
-async function test() {
-    try {
-        await Promise.reject("Failed");
-        console.log("A");
-    } catch (error) {
-        console.log("B");
-    }
+// async function test() {
+//     try {
+//         await Promise.reject("Failed");
+//         console.log("A");
+//     } catch (error) {
+//         console.log("B");
+//     }
 
-    console.log("C");
+//     console.log("C");
+// }
+
+// test();
+
+// //Practice 2
+async function getData() {
+    const result = await Promise.resolve(20);
+    console.log(result);
 }
 
-test();
+getData();
+
+//Practice 3
