@@ -214,12 +214,22 @@
 
 // test();
 
-// //Practice 2
-async function getData() {
-    const result = await Promise.resolve(20);
-    console.log(result);
-}
+// // //Practice 2
+// async function getData() {
+//     const result = await Promise.resolve(20);
+//     console.log(result);
+// }
 
-getData();
+// getData();
 
 //Practice 3
+
+async function getData() {
+    try {
+        return "Success";
+    } finally {
+        return "Finally";
+    }
+}
+
+getData().then(result => console.log(result));
