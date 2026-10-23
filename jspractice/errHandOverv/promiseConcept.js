@@ -222,14 +222,29 @@
 
 // getData();
 
-//Practice 3
+// //Practice 3
+
+// async function getData() {
+//     try {
+//         return "Success";
+//     } finally {
+//         return "Finally";
+//     }
+// }
+
+// getData().then(result => console.log(result));
+
+
+
+// //Practice 4 api error handling with async/await
 
 async function getData() {
-    try {
-        return "Success";
-    } finally {
-        return "Finally";
-    }
-}
+    const response = await fetch("https://example.com/api/users");
 
-getData().then(result => console.log(result));
+    if (!response.ok) {
+        throw new Error("API request failed");
+    }
+
+    const data = await response.json();
+    console.log(data);
+}
