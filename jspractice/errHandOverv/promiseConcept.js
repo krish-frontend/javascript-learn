@@ -271,21 +271,52 @@
 
 // getData();
 
-//practice 6 - coding practice make a function
+// //practice 6 - coding practice make a function
+/*Write an async function named getUsers() that:
+1. Uses fetch() to request https://jsonplaceholder.typicode.com/users.
+2. Checks response.ok and throws an error if the response isn't successful.
+3. Converts the response into JSON using await response.json().
+4. Prints the users with console.log(users).
+5. Uses try/catch to handle errors.*/
 
-async function getUsers(){
+
+// async function getUsers(){
+//     const response = await fetch("https://jsonplaceholder.typicode.com/users");
+// try{
+
+//     if(!response.ok){
+//         throw new error(`HTTP Error: ${response.status}`)
+//     }
+
+//     const data = await response.json()
+//     console.log(data)
+// }catch(error){
+//     console.log(error.message)
+//     }
+// }
+
+// getUsers();
+
+//practice 7- Modify the function so it prints only the name of each user instead of printing the complete array. Use a loop or an array method
+
+
+async function getUsers(){    
+    try{ 
     const response = await fetch("https://jsonplaceholder.typicode.com/users");
-try{
-
+    
     if(!response.ok){
-        throw new error(`HTTP Error: ${response.status}`)
+    throw new Error(`HTTP Error: ${response.status}`)
     }
 
     const data = await response.json()
-    console.log(data)
-}catch(error){
-    console.log(error.message)
+    // data.forEach(user => console.log(user.name.startsWith("C") ? user.name : null));
+
+    const filterC = data.filter((el)=>el.name.startsWith("C" || "c"))
+    console.log(filterC)
+
+    }catch(error){
+        console.log(error.message)
     }
 }
 
-getUsers();
+getUsers()
