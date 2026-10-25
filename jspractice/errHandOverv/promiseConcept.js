@@ -249,24 +249,43 @@
 //     console.log(data);
 // }
 
-//practice 5 — Promise chaining with async/await
+// //practice 5 — Promise chaining with async/await
 
-async function getData() {
-    try {
-        const response = await fetch(
-            "https://example.com/api/users"
-        );
+// async function getData() {
+//     try {
+//         const response = await fetch(
+//             "https://example.com/api/users"
+//         );
 
-        if (!response.ok) {
-            throw new Error(`HTTP error: ${response.status}`);
-        }
+//         if (!response.ok) {
+//             throw new Error(`HTTP error: ${response.status}`);
+//         }
 
-        const data = await response.json();
-        console.log(data);
+//         const data = await response.json();
+//         console.log(data);
 
-    } catch (error) {
-        console.log("Something went wrong:", error.message);
+//     } catch (error) {
+//         console.log("Something went wrong:", error.message);
+//     }
+// }
+
+// getData();
+
+//practice 6 - coding practice make a function
+
+async function getUsers(){
+    const response = await fetch("https://jsonplaceholder.typicode.com/users");
+try{
+
+    if(!response.ok){
+        throw new error(`HTTP Error: ${response.status}`)
+    }
+
+    const data = await response.json()
+    console.log(data)
+}catch(error){
+    console.log(error.message)
     }
 }
 
-getData();
+getUsers();
