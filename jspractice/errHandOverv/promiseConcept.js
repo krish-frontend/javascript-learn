@@ -236,15 +236,37 @@
 
 
 
-// //Practice 4 api error handling with async/await
+// // //Practice 4 api error handling with async/await
+
+// async function getData() {
+//     const response = await fetch("https://example.com/api/users");
+
+//     if (!response.ok) {
+//         throw new Error("API request failed");
+//     }
+
+//     const data = await response.json();
+//     console.log(data);
+// }
+
+//practice 5 — Promise chaining with async/await
 
 async function getData() {
-    const response = await fetch("https://example.com/api/users");
+    try {
+        const response = await fetch(
+            "https://example.com/api/users"
+        );
 
-    if (!response.ok) {
-        throw new Error("API request failed");
+        if (!response.ok) {
+            throw new Error(`HTTP error: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log(data);
+
+    } catch (error) {
+        console.log("Something went wrong:", error.message);
     }
-
-    const data = await response.json();
-    console.log(data);
 }
+
+getData();
