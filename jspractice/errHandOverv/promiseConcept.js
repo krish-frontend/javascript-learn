@@ -297,22 +297,49 @@
 
 // getUsers();
 
-//practice 7- Modify the function so it prints only the name of each user instead of printing the complete array. Use a loop or an array method
+// //practice 7- Modify the function so it prints only the name of each user instead of printing the complete array. Use a loop or an array method
 
 
-async function getUsers(){    
-    try{ 
-    const response = await fetch("https://jsonplaceholder.typicode.com/users");
+// async function getUsers(){    
+//     try{ 
+//     const response = await fetch("https://jsonplaceholder.typicode.com/users");
     
-    if(!response.ok){
-    throw new Error(`HTTP Error: ${response.status}`)
-    }
+//     if(!response.ok){
+//     throw new Error(`HTTP Error: ${response.status}`)
+//     }
 
-    const data = await response.json()
-    // data.forEach(user => console.log(user.name.startsWith("C") ? user.name : null));
+//     const data = await response.json()
+//     // data.forEach(user => console.log(user.name.startsWith("C") ? user.name : null));
 
-    const filterC = data.filter((el)=>el.name.startsWith("C" || "c"))
-    console.log(filterC)
+//     const filterC = data.filter((el)=>el.name.startsWith("C" || "c"))
+//     console.log(filterC)
+
+//     }catch(error){
+//         console.log(error.message)
+//     }
+// }
+
+// getUsers()
+
+//practice 8- Modify your code to print only the names of users whose names contain more than 15 characters.
+
+
+async function getUsers(){
+    try{
+        const response = await fetch("https://jsonplaceholder.typicode.com/users")
+
+        if(!response.ok){
+            throw new Error(`HTTP Error: ${response.status}`)
+        };
+
+        const data = await response.json();
+        console.log(data);
+
+        const filName = data
+        .filter(el=>el.name.length >15)
+        .map(el=>el.name);
+        
+        console.log(filName);
 
     }catch(error){
         console.log(error.message)
