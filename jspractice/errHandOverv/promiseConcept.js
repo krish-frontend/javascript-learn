@@ -349,27 +349,55 @@
 // getUsers()
 
 
-// practice 9 -API mini-project
+// // practice 9 -API mini-project
 
-async function getUserNames(){
+// async function getUserNames(){
+//     try{
+
+//         const repsonse = await fetch("https://jsonplaceholder.typicode.com/users");
+
+//         if(!repsonse.ok){
+//             throw new Error(`HTTP Error: ${repsonse.status}`)
+//         }
+
+//         const data =await repsonse.json();
+
+//         console.group(data)
+
+//         const mapping = data.map(el=>el.name)
+//         console.log(mapping)
+
+//     }catch(error){
+//         console.log(error.message)
+//     }
+// }
+
+// getUserNames()
+
+// practice 10 - API mini-project with filter and find name start c
+
+async function getNames(){
     try{
+        const res = await fetch("https://jsonplaceholder.typicode.com/users");
 
-        const repsonse = await fetch("https://jsonplaceholder.typicode.com/users");
-
-        if(!repsonse.ok){
-            throw new Error(`HTTP Error: ${repsonse.status}`)
+        if(!res.ok){
+            throw new Error(`HTTPS Error: ${res.status}`)
         }
 
-        const data =await repsonse.json();
+        const dataR = await res.json();
 
-        console.group(data)
+        console.log(dataR)
 
-        const mapping = data.map(el=>el.name)
-        console.log(mapping)
+        const dataC = dataR
+        .filter(el=>el.name.startsWith("C"))
+        .map(el=>el.name.toLowerCase())
+        console.log(dataC)
 
     }catch(error){
-        console.log(error.message)
+         console.log(error.message)
     }
+    
 }
 
-getUserNames()
+getNames();
+
