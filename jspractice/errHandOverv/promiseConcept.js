@@ -465,10 +465,11 @@ async function findEmailAdd(){
         console.log(userDataEmail);
 
         const getEmail = userDataEmail
-        .filter(el=>el.name.startsWith("C") && el.email.endsWith(".biz"))
-        .map(el=>el.email);
+        .filter(el=>el.name.startsWith("C") && el.email)
+        .map(el=>el.name)
+        
 
-        console.log(getEmail)
+        console.log([`name:${getEmail}`])
 
     }catch(error){
         console.log(error.message)
