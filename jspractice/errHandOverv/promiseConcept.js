@@ -389,10 +389,9 @@ async function getNames(){
         console.log(dataR)
 
         const dataC = dataR
-        .filter(el=>el.name.startsWith("C"))
-        .map(el=>el.name.toLowerCase())
+        .filter(el=>el.name.includes("son"))
+        .map(el=>el.name);
         console.log(dataC)
-
     }catch(error){
          console.log(error.message)
     }
@@ -400,4 +399,5 @@ async function getNames(){
 }
 
 getNames();
+
 
