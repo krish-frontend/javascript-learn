@@ -427,26 +427,54 @@
 // twoWords();
 
 
-//practice 12 -Write code to fetch the users and print the names of users whose names have more than 15 characters and start with "C", ignoring uppercase/lowercase differences.
+// //practice 12 -Write code to fetch the users and print the names of users whose names have more than 15 characters and start with "C", ignoring uppercase/lowercase differences.
 
-async function grt15Words(){
+// async function grt15Words(){
+//     try{
+//         const respD = await fetch("https://jsonplaceholder.typicode.com/users");
+
+//         if(!respD.ok){
+//             throw new Error(`HTTPS Error: ${respD.status}`)
+//         }
+
+//         const dataRc = await respD.json();
+//         const resultD = dataRc
+//         .filter(el=>el.name.toUpperCase().startsWith("C") && el.name.length > 15)
+//         .map(el=> el.name)
+
+//         console.log(resultD)
+//     }catch(error){
+//         console.log(error.message)
+//     }
+// };
+
+// grt15Words();
+
+//practice 13 -Fetch the users and print the email addresses of users whose names start with "C" and whose email addresses end with ".biz", ignoring case.
+
+async function findEmailAdd(){
+
     try{
-        const respD = await fetch("https://jsonplaceholder.typicode.com/users");
+        const respEmail = await fetch("https://jsonplaceholder.typicode.com/users");
 
-        if(!respD.ok){
-            throw new Error(`HTTPS Error: ${respD.status}`)
+        if(!respEmail.ok){
+            throw new Error(`HTTPS Error: ${respEmail.status}`);
         }
 
-        const dataRc = await respD.json();
-        const resultD = dataRc
-        .filter(el=>el.name.toUpperCase().startsWith("C") && el.name.length > 15)
-        .map(el=> el.name)
+        const userDataEmail = await respEmail.json();
+        console.log(userDataEmail);
 
-        console.log(resultD)
+        const getEmail = userDataEmail
+        .filter(el=>el.name.startsWith("C") && el.email.endsWith(".biz"))
+        .map(el=>el.email);
+
+        console.log(getEmail)
+
     }catch(error){
         console.log(error.message)
     }
-};
+}
 
-grt15Words();
+findEmailAdd();
+
 
