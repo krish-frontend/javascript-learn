@@ -374,30 +374,54 @@
 
 // getUserNames()
 
-// practice 10 - API mini-project with filter and find name start c
+// // practice 10 - API mini-project with filter and find name start son
 
-async function getNames(){
+// async function getNames(){
+//     try{
+//         const res = await fetch("https://jsonplaceholder.typicode.com/users");
+
+//         if(!res.ok){
+//             throw new Error(`HTTPS Error: ${res.status}`)
+//         }
+
+//         const dataR = await res.json();
+
+//         console.log(dataR)
+
+//         const dataC = dataR
+//         .filter(el=>el.name.toLowerCase().includes("son"))
+//         .map(el=>el.name);
+//         console.log(dataC)
+//     }catch(error){
+//          console.log(error.message)
+//     }
+    
+// }
+
+// getNames();
+
+// practice 11 - API mini-project with filter and find name start greater than 2 words 
+
+async function twoWords(){
+
     try{
-        const res = await fetch("https://jsonplaceholder.typicode.com/users");
-
-        if(!res.ok){
-            throw new Error(`HTTPS Error: ${res.status}`)
+        const resp = await fetch("https://jsonplaceholder.typicode.com/users");
+        
+        if(!resp.ok){
+            throw new Error(`HTTPS ERROR: ${resp.status}`)            
         }
 
-        const dataR = await res.json();
+        const dataR = await resp.json();
+        console.log(dataR);
+        
+        const result = dataR
+        .filter(el=>el.name.split(" ").length>2)
+        .map(el=>el.name)
 
-        console.log(dataR)
-
-        const dataC = dataR
-        .filter(el=>el.name.includes("son"))
-        .map(el=>el.name);
-        console.log(dataC)
+        console.log(result)
     }catch(error){
-         console.log(error.message)
+        console.log(error.message)
     }
-    
 }
 
-getNames();
-
-
+twoWords();
