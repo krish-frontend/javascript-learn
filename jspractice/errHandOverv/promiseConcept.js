@@ -400,28 +400,53 @@
 
 // getNames();
 
-// practice 11 - API mini-project with filter and find name start greater than 2 words 
+// // practice 11 - API mini-project with filter and find name start greater than 2 words 
 
-async function twoWords(){
+// async function twoWords(){
 
-    try{
-        const resp = await fetch("https://jsonplaceholder.typicode.com/users");
+//     try{
+//         const resp = await fetch("https://jsonplaceholder.typicode.com/users");
         
-        if(!resp.ok){
-            throw new Error(`HTTPS ERROR: ${resp.status}`)            
+//         if(!resp.ok){
+//             throw new Error(`HTTPS ERROR: ${resp.status}`)            
+//         }
+
+//         const dataR = await resp.json();
+//         console.log(dataR);
+        
+//         const result = dataR
+//         .filter(el=>el.name.split(" ").length>2)
+//         .map(el=>el.name)
+
+//         console.log(result)
+//     }catch(error){
+//         console.log(error.message)
+//     }
+// }
+
+// twoWords();
+
+
+//practice 12 -Write code to fetch the users and print the names of users whose names have more than 15 characters and start with "C", ignoring uppercase/lowercase differences.
+
+async function grt15Words(){
+    try{
+        const respD = await fetch("https://jsonplaceholder.typicode.com/users");
+
+        if(!respD.ok){
+            throw new Error(`HTTPS Error: ${respD.status}`)
         }
 
-        const dataR = await resp.json();
-        console.log(dataR);
-        
-        const result = dataR
-        .filter(el=>el.name.split(" ").length>2)
-        .map(el=>el.name)
+        const dataRc = await respD.json();
+        const resultD = dataRc
+        .filter(el=>el.name.toUpperCase().startsWith("C") && el.name.length > 15)
+        .map(el=> el.name)
 
-        console.log(result)
+        console.log(resultD)
     }catch(error){
         console.log(error.message)
     }
-}
+};
 
-twoWords();
+grt15Words();
+
