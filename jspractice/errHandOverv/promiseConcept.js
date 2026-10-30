@@ -509,26 +509,56 @@
 
 //practice 15-Fetch the users and display their names in alphabetical order (A to Z).
 
-async function sortNameAlpha(){
-    try{
-        const res = await fetch("https://jsonplaceholder.typicode.com/users");
+// async function sortNameAlpha(){
+//     try{
+//         const res = await fetch("https://jsonplaceholder.typicode.com/users");
 
-        if(!res.ok){
-            throw new Error(`HTTPS Error: ${res.status}`)
-        }
+//         if(!res.ok){
+//             throw new Error(`HTTPS Error: ${res.status}`)
+//         }
 
-        const resData = await res.json();
-        console.log(resData);
+//         const resData = await res.json();
+//         console.log(resData);
 
-        const alphaSortResult = resData
-        .map(el=>el.name)
-        .sort()
+//         const alphaSortResult = resData
+//         .map(el=>el.name)        
+//         .sort()
 
-        console.log(alphaSortResult);
+//         console.log(alphaSortResult);
 
-    }catch(error){
-        console.log(error.message)
-    }
-}
+//     }catch(error){
+//         console.log(error.message)
+//     }
+// }
 
-sortNameAlpha()
+// sortNameAlpha()
+
+
+// //practice 16-Fetch the users and display their names in alphabetical reverse order (Z to A).
+
+// async function sortNameAlpha(){
+//     try{
+//         const res = await fetch("https://jsonplaceholder.typicode.com/users");
+
+//         if(!res.ok){
+//             throw new Error(`HTTPS Error: ${res.status}`)
+//         }
+
+//         const resData = await res.json();
+//         console.log(resData);
+
+//         const alphaSortResult = resData
+//         .map(el=>el.name)
+        
+//         .sort((a, b) => b.localeCompare(a));
+
+//         console.log(alphaSortResult);
+
+//     }catch(error){
+//         console.log(error.message)
+//     }
+// }
+
+// sortNameAlpha()
+
+
