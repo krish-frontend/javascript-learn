@@ -481,27 +481,54 @@
 
 //practice 14 -Now fetch the users and return an array of objects containing only name and email for users whose names start with "C".
 
-async function getNameEmail(){
-    try{
-        const respEmail = await fetch("https://jsonplaceholder.typicode.com/users");
+// async function getNameEmail(){
+//     try{
+//         const respEmail = await fetch("https://jsonplaceholder.typicode.com/users");
 
-        if(!respEmail.ok){
-            throw new Error(`HTTPS Error: ${respEmail.status}`)
+//         if(!respEmail.ok){
+//             throw new Error(`HTTPS Error: ${respEmail.status}`)
+//         }
+
+//         const dataOfEmail = await respEmail.json();
+//         console.log(dataOfEmail);
+
+//         const resultOfEmail = dataOfEmail
+//         .filter(el=>el.name.startsWith("C"))
+//         .map(el=>({"Name": el.name, "E-Mail": el.email}))
+        
+//         console.log(resultOfEmail);
+
+//     }catch(error){
+//         console.log(error.message)
+//     }
+// }
+
+// getNameEmail()
+
+
+
+//practice 15-Fetch the users and display their names in alphabetical order (A to Z).
+
+async function sortNameAlpha(){
+    try{
+        const res = await fetch("https://jsonplaceholder.typicode.com/users");
+
+        if(!res.ok){
+            throw new Error(`HTTPS Error: ${res.status}`)
         }
 
-        const dataOfEmail = await respEmail.json();
-        console.log(dataOfEmail);
+        const resData = await res.json();
+        console.log(resData);
 
-        const resultOfEmail = dataOfEmail
-        .filter(el=>el.name.startsWith("C"))
-        .map(el=>({"Name": el.name, "E-Mail": el.email}))
-        
-        console.log(resultOfEmail);
+        const alphaSortResult = resData
+        .map(el=>el.name)
+        .sort()
+
+        console.log(alphaSortResult);
 
     }catch(error){
         console.log(error.message)
     }
 }
 
-getNameEmail()
-
+sortNameAlpha()
