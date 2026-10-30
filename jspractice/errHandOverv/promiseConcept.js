@@ -452,30 +452,56 @@
 
 //practice 13 -Fetch the users and print the email addresses of users whose names start with "C" and whose email addresses end with ".biz", ignoring case.
 
-async function findEmailAdd(){
+// async function findEmailAdd(){
 
+//     try{
+//         const respEmail = await fetch("https://jsonplaceholder.typicode.com/users");
+
+//         if(!respEmail.ok){
+//             throw new Error(`HTTPS Error: ${respEmail.status}`);
+//         }
+
+//         const userDataEmail = await respEmail.json();
+//         console.log(userDataEmail);
+
+//         const getEmail = userDataEmail
+//         .filter(el=>el.name.startsWith("C") && el.email.endWith(".biz"))
+//         .map(el=>el.name)
+        
+
+//         console.log(getEmail)
+
+//     }catch(error){
+//         console.log(error.message)
+//     }
+// }
+
+// findEmailAdd();
+
+
+//practice 14 -Now fetch the users and return an array of objects containing only name and email for users whose names start with "C".
+
+async function getNameEmail(){
     try{
         const respEmail = await fetch("https://jsonplaceholder.typicode.com/users");
 
         if(!respEmail.ok){
-            throw new Error(`HTTPS Error: ${respEmail.status}`);
+            throw new Error(`HTTPS Error: ${respEmail.status}`)
         }
 
-        const userDataEmail = await respEmail.json();
-        console.log(userDataEmail);
+        const dataOfEmail = await respEmail.json();
+        console.log(dataOfEmail);
 
-        const getEmail = userDataEmail
-        .filter(el=>el.name.startsWith("C") && el.email)
-        .map(el=>el.name)
+        const resultOfEmail = dataOfEmail
+        .filter(el=>el.name.startsWith("C"))
+        .map(el=>({"Name": el.name, "E-Mail": el.email}))
         
-
-        console.log([`name:${getEmail}`])
+        console.log(resultOfEmail);
 
     }catch(error){
         console.log(error.message)
     }
 }
 
-findEmailAdd();
-
+getNameEmail()
 
