@@ -578,6 +578,8 @@ async function sortByNameLength() {
                         .map(el=>el.name)
                         .sort((a, b) => a.length - b.length);
 
+                        // .sort((a,b)=>b.length - a.length) //for longest to shortest name
+
         console.log(dataRec);
 
     }catch(error){
