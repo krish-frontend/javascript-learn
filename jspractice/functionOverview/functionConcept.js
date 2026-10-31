@@ -46,8 +46,10 @@
 //                                  ---------callback function with arrow function-------
 // let greet = (a) => "Hello" + a;
 // let run = (callback) => callback("krish");
-// run(greet);
-//
+
+
+// console.log(run(greet));
+
 
 
 
