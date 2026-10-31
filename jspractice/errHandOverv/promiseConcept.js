@@ -562,3 +562,28 @@
 // sortNameAlpha()
 
 
+//practice 17- Sort users by name length, from shortest name to longest name.
+
+async function sortByNameLength() {
+    try{
+        const resData = await fetch("https://jsonplaceholder.typicode.com/users");
+
+        if(!resData.ok){
+            throw new Error(`HTTPS Error: ${resData.status}`)
+        }
+
+        const dataToJson = await resData.json();
+
+        const dataRec = dataToJson
+                        .map(el=>el.name)
+                        .sort((a, b) => a.length - b.length);
+
+        console.log(dataRec);
+
+    }catch(error){
+        console.log(error.message)
+    }
+}
+
+sortByNameLength();
+
