@@ -124,27 +124,63 @@
 // Return only their name and company name
 
 
-async function findUserCC() {
-    try{
-        const datafrmAPI = await fetch("https://jsonplaceholder.typicode.com/users");
+// async function findUserCC() {
+//     try{
+//         const datafrmAPI = await fetch("https://jsonplaceholder.typicode.com/users");
 
-        if(!datafrmAPI.ok){
-            throw new Error(`HTTPS Error: ${datafrmAPI.status}`);
+//         if(!datafrmAPI.ok){
+//             throw new Error(`HTTPS Error: ${datafrmAPI.status}`);
+//         }
+
+//         const jsonForm = await datafrmAPI.json();
+
+//         console.log(jsonForm);
+
+//         const outputR = jsonForm
+//         .filter(el=>el.address.city === "Gwenborough" && el.company.name.includes("Group"))
+//         .map(el=>({Name: el.name, "Company-Name": el.company.name}))
+
+//        console.log(outputR)
+
+//     }catch(error){
+//         console.log(error.message)
+//     }
+// }
+
+// findUserCC()
+
+
+
+// practice 6-API practice
+
+// Task: Find the first user whose city is "Gwenborough" and display their name and email.
+
+// Use:
+// - fetch()
+// - async/await
+// - try/catch
+// - find()
+
+
+async function findCityOfUser() {
+    try{
+        const dataRec = await fetch("https://jsonplaceholder.typicode.com/users"); 
+
+        if(!dataRec.ok){
+            throw new Error(`HTTPS Error: ${dataRec}`)
         }
 
-        const jsonForm = await datafrmAPI.json();
+        const dataJson = await dataRec.json();
+        console.log(dataJson);
 
-        console.log(jsonForm);
-
-        const outputR = jsonForm
-        .filter(el=>el.address.city === "Gwenborough" && el.company.name.includes("Group"))
-        .map(el=>({Name: el.name, "Company-Name": el.company.name}))
-
-       console.log(outputR)
+        const resultDataJson = dataJson
+        .find(el=>el.address.city==="Gwenborough")
+        
+        console.log(resultDataJson);
 
     }catch(error){
         console.log(error.message)
     }
 }
 
-findUserCC()
+findCityOfUser();
