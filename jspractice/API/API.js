@@ -167,7 +167,7 @@ async function findCityOfUser() {
         const dataRec = await fetch("https://jsonplaceholder.typicode.com/users"); 
 
         if(!dataRec.ok){
-            throw new Error(`HTTPS Error: ${dataRec}`)
+            throw new Error(`HTTPS Error: ${dataRec.status}`)
         }
 
         const dataJson = await dataRec.json();
@@ -176,7 +176,12 @@ async function findCityOfUser() {
         const resultDataJson = dataJson
         .find(el=>el.address.city==="Gwenborough")
         
-        console.log(resultDataJson);
+        if(resultDataJson){
+            console.log({
+                Name: resultDataJson.name,
+                "Email": resultDataJson.email
+            })
+        }
 
     }catch(error){
         console.log(error.message)
