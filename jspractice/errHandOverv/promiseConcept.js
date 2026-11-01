@@ -1,6 +1,7 @@
 
 // //------simply create promise and resolve error----
-// //1.
+
+//1. simple way 
 // const promise = new Promise((resolve, reject) => {
 //     resolve("Success");
 // });
@@ -31,10 +32,15 @@
 
 
 //4.Will it print "Failed", "Recovered", or something else? Explain your reasoning.
+
 // Promise.reject("Failed")
 //     .catch((error) => {
-//         return "Recovered";
+//         // throw new Error("Recovered") ;
+//         return "recovered"
 //     })
+//     // .catch((error)=>{
+//     //     console.log(error)
+//     // })
 //     .then((result) => {
 //         console.log(result);
 //     });

@@ -298,7 +298,7 @@
 
 //         const resultOfEmail = dataOfEmail
 //         .filter(el=>el.name.startsWith("C"))
-//         .map(el=>({"Name": el.name, "E-Mail": el.email}))
+//         .map(el=>({Name: el.name, "E-Mail": el.email}))
         
 //         console.log(resultOfEmail);
 
