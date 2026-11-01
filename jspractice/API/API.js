@@ -91,26 +91,60 @@
 // - Email
 
 
-async function findUser_Company() {
-    try{
-        const apiData = await fetch("https://jsonplaceholder.typicode.com/users");
+// async function findUser_Company() {
+//     try{
+//         const apiData = await fetch("https://jsonplaceholder.typicode.com/users");
 
-        if(!apiData.ok){
-            throw new Error(`HTTPS Error: ${apiData.status}`);
+//         if(!apiData.ok){
+//             throw new Error(`HTTPS Error: ${apiData.status}`);
+//         }
+
+//         const tranApiData = await apiData.json();
+//         console.log(tranApiData)
+
+//         const finalResult = tranApiData
+//         .filter(el=>el.company.name.includes("Group"))
+//         .map(el=>({Name: el.name, Company: el.company.name, "E-Mail": el.email}))
+
+//         console.log(finalResult);
+
+//     }catch(error){
+//         console.log(error.message)
+//     }
+// }
+
+// findUser_Company();
+
+
+
+// practice 5-API practice
+// Find users who satisfy both conditions:
+// 1. Their city is "Gwenborough".
+// 2. Their company name contains "Group".
+// Return only their name and company name
+
+
+async function findUserCC() {
+    try{
+        const datafrmAPI = await fetch("https://jsonplaceholder.typicode.com/users");
+
+        if(!datafrmAPI.ok){
+            throw new Error(`HTTPS Error: ${datafrmAPI.status}`);
         }
 
-        const tranApiData = await apiData.json();
-        console.log(tranApiData)
+        const jsonForm = await datafrmAPI.json();
 
-        const finalResult = tranApiData
-        .filter(el=>el.company.name.includes("Group"))
-        .map(el=>({Name: el.name, Company: el.company.name, "E-Mail": el.email}))
+        console.log(jsonForm);
 
-        console.log(finalResult);
+        const outputR = jsonForm
+        .filter(el=>el.address.city === "Gwenborough" && el.company.name.includes("Group"))
+        .map(el=>({Name: el.name, "Company-Name": el.company.name}))
+
+       console.log(outputR)
 
     }catch(error){
         console.log(error.message)
     }
 }
 
-findUser_Company();
+findUserCC()
