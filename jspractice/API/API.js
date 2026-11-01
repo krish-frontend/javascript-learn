@@ -162,30 +162,71 @@
 // - find()
 
 
-async function findCityOfUser() {
-    try{
-        const dataRec = await fetch("https://jsonplaceholder.typicode.com/users"); 
+// async function findCityOfUser() {
+//     try{
+//         const dataRec = await fetch("https://jsonplaceholder.typicode.com/users"); 
 
-        if(!dataRec.ok){
-            throw new Error(`HTTPS Error: ${dataRec.status}`)
+//         if(!dataRec.ok){
+//             throw new Error(`HTTPS Error: ${dataRec.status}`)
+//         }
+
+//         const dataJson = await dataRec.json();
+//         console.log(dataJson);
+
+//         const resultDataJson = dataJson
+//         .find(el=>el.address.city==="Gwenborough")
+        
+//         if(resultDataJson){
+//             console.log({
+//                 Name: resultDataJson.name,
+//                 "Email": resultDataJson.email
+//             })
+//         }
+
+//     }catch(error){
+//         console.log(error.message)
+//     }
+// }
+
+// findCityOfUser();
+
+
+// practice 6-API practice
+// Your task:
+
+// Find the first user whose:
+// 1. Company name contains "Group".
+// 2. Email ends with ".biz".
+// Return only:
+// - Name
+// - Email
+// - Company name
+
+
+async function userNameEmailfind() {
+    try{
+        const dataApiCall = await fetch("https://jsonplaceholder.typicode.com/users");
+
+        if(!dataApiCall.ok){
+            throw new Error(`HTTPS Error: ${dataApiCall.status}`);
         }
 
-        const dataJson = await dataRec.json();
-        console.log(dataJson);
+        const JsonConv = await dataApiCall.json();
+        console.log(JsonConv);
 
-        const resultDataJson = dataJson
-        .find(el=>el.address.city==="Gwenborough")
+        const dataResult = JsonConv
+        .find(el=>el.email.includes(".biz") && el.company.name.includes("Group"))
         
-        if(resultDataJson){
+        if(dataResult){
             console.log({
-                Name: resultDataJson.name,
-                "Email": resultDataJson.email
+                Name: dataResult.name,
+                "E-Mail": dataResult.email,
+                "Company-Name": dataResult.company.name 
             })
         }
-
     }catch(error){
         console.log(error.message)
     }
 }
 
-findCityOfUser();
+userNameEmailfind();
