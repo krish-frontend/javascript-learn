@@ -59,26 +59,58 @@
 // Find users whose email domain is biz and return their names and cities.
 
 
-async function find_User_Email(){
-    try{
-        const dataLink = await fetch("https://jsonplaceholder.typicode.com/users");
+// async function find_User_Email(){
+//     try{
+//         const dataLink = await fetch("https://jsonplaceholder.typicode.com/users");
 
-        if(!dataLink.ok){
-            throw new Error(`HTTPS Error: ${dataLink.status}`);
+//         if(!dataLink.ok){
+//             throw new Error(`HTTPS Error: ${dataLink.status}`);
+//         }
+
+//         const jsonData = await dataLink.json();
+//         console.log(jsonData);
+
+//         const resUlt = jsonData
+//         .filter(el=> el.email.endsWith(".biz"))
+//         .map(el=> ({Name: el.name, Cities: el.address.city}))
+
+//         console.log(resUlt);
+
+//     }catch(error){
+//         console.log(error.message)
+//     }
+// }
+
+// find_User_Email();
+
+
+// practice 4 -API practice
+// Find users whose company name contains the word "Group", then return:
+// - User name
+// - Company name
+// - Email
+
+
+async function findUser_Company() {
+    try{
+        const apiData = await fetch("https://jsonplaceholder.typicode.com/users");
+
+        if(!apiData.ok){
+            throw new Error(`HTTPS Error: ${apiData.status}`);
         }
 
-        const jsonData = await dataLink.json();
-        console.log(jsonData);
-        
-        const resUlt = jsonData
-        .filter(el=> el.email.endsWith(".biz"))
-        .map(el=> ({Name: el.name, Cities: el.address.city}))
+        const tranApiData = await apiData.json();
+        console.log(tranApiData)
 
-        console.log(resUlt);
+        const finalResult = tranApiData
+        .filter(el=>el.company.name.includes("Group"))
+        .map(el=>({Name: el.name, Company: el.company.name, "E-Mail": el.email}))
+
+        console.log(finalResult);
 
     }catch(error){
         console.log(error.message)
     }
 }
 
-find_User_Email();
+findUser_Company();
