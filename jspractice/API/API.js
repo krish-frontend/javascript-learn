@@ -2,6 +2,8 @@
 
 // practice 1-  task: Filter users by city
 
+const { use } = require("react")
+
 // async function findCity(){
 //     try{
 //         const res = await fetch("https://jsonplaceholder.typicode.com/users");
@@ -238,25 +240,54 @@
 // Task: Fetch users and check whether at least one user belongs to the city "Gwenborough" using some().
 
 
-async function findUserCity(){
-    try{
-        const ApiData = await fetch("https://jsonplaceholder.typicode.com/users");
+// async function findUserCity(){
+//     try{
+//         const ApiData = await fetch("https://jsonplaceholder.typicode.com/users");
 
-        if(!ApiData.ok){
-            throw new Error(`HTTPS Error: ${ApiData.status}`)
+//         if(!ApiData.ok){
+//             throw new Error(`HTTPS Error: ${ApiData.status}`)
+//         }
+
+//         const apiToJson = await ApiData.json();
+//         console.log(apiToJson);
+
+//         const resultFindCity = apiToJson
+//         .some(el=>el.address.city ==="Gwenborough")
+
+//         console.log(resultFindCity);
+        
+//     }catch(error){
+//         console.log(error.message)
+//     };
+// };
+
+// findUserCity();
+
+
+// practice 8-API practice
+
+// Fetch the same users and check whether every user's email ends with .com.
+
+async function userEveryMethod(){
+    try{
+        const fetchData = await fetch("https://jsonplaceholder.typicode.com/users");
+
+        if(!fetchData.ok){
+            throw new Error(`HTTPS Error: ${fetchData.status}`)
         }
 
-        const apiToJson = await ApiData.json();
-        console.log(apiToJson);
+        const everyDataToJson = await fetchData.json();
+        console.log(everyDataToJson);
 
-        const resultFindCity = apiToJson
-        .some(el=>el.address.city ==="Gwenborough")
+        const resultFind = everyDataToJson
+        .every(el=>el.email.endsWith(".com"))
 
-        console.log(resultFindCity);
-        
+       console.log(resultFind);
+       
     }catch(error){
         console.log(error.message)
     };
 };
 
-findUserCity();
+userEveryMethod();
+
