@@ -203,30 +203,60 @@
 // - Company name
 
 
-async function userNameEmailfind() {
-    try{
-        const dataApiCall = await fetch("https://jsonplaceholder.typicode.com/users");
+// async function userNameEmailfind() {
+//     try{
+//         const dataApiCall = await fetch("https://jsonplaceholder.typicode.com/users");
 
-        if(!dataApiCall.ok){
-            throw new Error(`HTTPS Error: ${dataApiCall.status}`);
-        }
+//         if(!dataApiCall.ok){
+//             throw new Error(`HTTPS Error: ${dataApiCall.status}`);
+//         }
 
-        const JsonConv = await dataApiCall.json();
-        console.log(JsonConv);
+//         const JsonConv = await dataApiCall.json();
+//         console.log(JsonConv);
 
-        const dataResult = JsonConv
-        .find(el=>el.email.includes(".biz") && el.company.name.includes("Group"))
+//         const dataResult = JsonConv
+//         .find(el=>el.email.includes(".biz") && el.company.name.includes("Group"))
         
-        if(dataResult){
-            console.log({
-                Name: dataResult.name,
-                "E-Mail": dataResult.email,
-                "Company-Name": dataResult.company.name 
-            })
+//         if(dataResult){
+//             console.log({
+//                 Name: dataResult.name,
+//                 "E-Mail": dataResult.email,
+//                 "Company-Name": dataResult.company.name 
+//             })
+//         }
+//     }catch(error){
+//         console.log(error.message)
+//     }
+// }
+
+// userNameEmailfind();
+
+
+
+// practice 7-API practice
+
+// Task: Fetch users and check whether at least one user belongs to the city "Gwenborough" using some().
+
+
+async function findUserCity(){
+    try{
+        const ApiData = await fetch("https://jsonplaceholder.typicode.com/users");
+
+        if(!ApiData.ok){
+            throw new Error(`HTTPS Error: ${ApiData.status}`)
         }
+
+        const apiToJson = await ApiData.json();
+        console.log(apiToJson);
+
+        const resultFindCity = apiToJson
+        .some(el=>el.address.city ==="Gwenborough")
+
+        console.log(resultFindCity);
+        
     }catch(error){
         console.log(error.message)
-    }
-}
+    };
+};
 
-userNameEmailfind();
+findUserCity();
