@@ -26,6 +26,24 @@
 
 // Find employees whose salary is greater than ₹30,000 and return only their names.
 
+// const employees = [
+//     { name: "Aman", salary: 25000 },
+//     { name: "Rahul", salary: 40000 },
+//     { name: "Krish", salary: 30000 },
+//     { name: "Neha", salary: 50000 }
+// ];
+
+// const userFind = employees
+//                 .filter(el=> el.salary>30000)
+//                 .map(el=>el.name)
+
+// console.log(userFind);
+
+
+// Question 3 — Find the highest salary
+
+// Your task: Find the employee who has the highest salary and print their complete object (name and salary).
+
 const employees = [
     { name: "Aman", salary: 25000 },
     { name: "Rahul", salary: 40000 },
@@ -33,8 +51,10 @@ const employees = [
     { name: "Neha", salary: 50000 }
 ];
 
-const userFind = employees
-                .filter(el=> el.salary>30000)
-                .map(el=>el.name)
+const highSalaryUser = employees
+.reduce((prev, curr)=>{
+    const find =prev.salary>curr.salary ? prev:curr;
+    return find;
+})
 
-console.log(userFind);
+console.log(highSalaryUser);
