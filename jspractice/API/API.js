@@ -2,7 +2,7 @@
 
 // practice 1-  task: Filter users by city
 
-const { use } = require("react")
+// const { use } = require("react")
 
 // async function findCity(){
 //     try{
@@ -268,26 +268,26 @@ const { use } = require("react")
 
 // Fetch the same users and check whether every user's email ends with .com.
 
-async function userEveryMethod(){
-    try{
-        const fetchData = await fetch("https://jsonplaceholder.typicode.com/users");
+// async function userEveryMethod(){
+//     try{
+//         const fetchData = await fetch("https://jsonplaceholder.typicode.com/users");
 
-        if(!fetchData.ok){
-            throw new Error(`HTTPS Error: ${fetchData.status}`)
-        }
+//         if(!fetchData.ok){
+//             throw new Error(`HTTPS Error: ${fetchData.status}`)
+//         }
 
-        const everyDataToJson = await fetchData.json();
-        console.log(everyDataToJson);
+//         const everyDataToJson = await fetchData.json();
+//         console.log(everyDataToJson);
 
-        const resultFind = everyDataToJson
-        .every(el=>el.email.endsWith(".com"))
+//         const resultFind = everyDataToJson
+//         .every(el=>el.email.endsWith(".com"))
 
-       console.log(resultFind);
-       
-    }catch(error){
-        console.log(error.message)
-    };
-};
+//        console.log(resultFind);
 
-userEveryMethod();
+//     }catch(error){
+//         console.log(error.message)
+//     };
+// };
+
+// userEveryMethod();
 
