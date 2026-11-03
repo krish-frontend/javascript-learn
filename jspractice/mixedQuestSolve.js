@@ -44,17 +44,37 @@
 
 // Your task: Find the employee who has the highest salary and print their complete object (name and salary).
 
-const employees = [
-    { name: "Aman", salary: 25000 },
-    { name: "Rahul", salary: 40000 },
-    { name: "Krish", salary: 30000 },
-    { name: "Neha", salary: 50000 }
-];
+// const employees = [
+//     { name: "Aman", salary: 25000 },
+//     { name: "Rahul", salary: 40000 },
+//     { name: "Krish", salary: 30000 },
+//     { name: "Neha", salary: 50000 }
+// ];
 
-const highSalaryUser = employees
-.reduce((prev, curr)=>{
-    const find =prev.salary>curr.salary ? prev:curr;
-    return find;
-})
+// const highSalaryUser = employees
+// .reduce((prev, curr)=>{
+    //     const find =prev.salary>curr.salary ? prev:curr;
+    //     return find;
+    // })
+    
+    // console.log(highSalaryUser);
+    
+    
 
-console.log(highSalaryUser);
+// Question 4 — Second-highest salary
+// Find the employee with the second-highest salary and print their complete object.
+    
+    const employees = [
+        { name: "Aman", salary: 25000 },
+        { name: "Rahul", salary: 40000 },
+        { name: "Krish", salary: 30000 },
+        { name: "Neha", salary: 50000 }
+    ];
+
+
+    const secHigheshSalary = employees
+    .map(el=>el.salary)
+    .sort()
+    
+
+    console.log(secHigheshSalary[secHigheshSalary.length-2]);
