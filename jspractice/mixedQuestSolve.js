@@ -52,8 +52,8 @@
 // ];
 
 // const highSalaryUser = employees
-// .reduce((prev, curr)=>{
-    //     const find =prev.salary>curr.salary ? prev:curr;
+// .reduce((prev, curr.salary)=>{
+    //     const find =prev.salary>curr.salary.salary ? prev:curr.salary;
     //     return find;
     // })
     
@@ -63,7 +63,9 @@
 
 // Question 4 — Second-highest salary
 // Find the employee with the second-highest salary and print their complete object.
-    
+
+// part 1-use sort
+
     // const employees = [
     //     { name: "Aman", salary: 25000 },
     //     { name: "Rahul", salary: 40000 },
@@ -84,3 +86,30 @@
     // sort((a,b)=>b.salary - a.salary)
 
     // console.log(data[1])
+
+// part 2-use reduce 
+
+const employees = [
+        { name: "Aman", salary: 25000 },
+        { name: "Rahul", salary: 40000 },
+        { name: "Krish", salary: 30000 },
+        { name: "Neha", salary: 50000 }
+    ];
+
+const secHigheshSalary = employees
+.reduce((prev,curr)=>{
+
+    if(curr.salary > prev.first.salary){
+        prev.second = prev.first;
+        prev.first = curr;
+    }else if(curr.salary > prev.second.salary){
+        prev.second = curr;
+    }
+    return prev;
+    },{
+    first: { salary: -Infinity },
+    second: { salary: -Infinity }
+});
+
+
+console.log(secHigheshSalary.second)

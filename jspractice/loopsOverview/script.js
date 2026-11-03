@@ -171,6 +171,8 @@
 // });
 
 // console.log(arr2)
+
+
 // const arr1=[14,16,18,9,1,30];
 
 // let arr2=arr1.reduce((prev,curr)=>{
