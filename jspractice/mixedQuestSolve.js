@@ -64,17 +64,23 @@
 // Question 4 — Second-highest salary
 // Find the employee with the second-highest salary and print their complete object.
     
-    const employees = [
-        { name: "Aman", salary: 25000 },
-        { name: "Rahul", salary: 40000 },
-        { name: "Krish", salary: 30000 },
-        { name: "Neha", salary: 50000 }
-    ];
+    // const employees = [
+    //     { name: "Aman", salary: 25000 },
+    //     { name: "Rahul", salary: 40000 },
+    //     { name: "Krish", salary: 30000 },
+    //     { name: "Neha", salary: 50000 }
+    // ];
 
 
-    const secHigheshSalary = employees
-    .map(el=>el.salary)
-    .sort()
+    // // const secHigheshSalary = employees
+    // // .map(el=>el.salary)
+    // // .sort()
     
 
-    console.log(secHigheshSalary[secHigheshSalary.length-2]);
+    // // console.log(secHigheshSalary[secHigheshSalary.length-2]);
+
+
+    // const data= employees.
+    // sort((a,b)=>b.salary - a.salary)
+
+    // console.log(data[1])
