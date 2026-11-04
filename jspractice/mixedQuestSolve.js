@@ -116,23 +116,33 @@
 
 
 
-// Question 4 — find lowest salary using reduce()
+// // Question 4 — find lowest salary using reduce()
 
 
-const employees = [
-        { name: "Aman", salary: 25000 },
-        { name: "Rahul", salary: 40000 },
-        { name: "Krish", salary: 30000 },
-        { name: "Neha", salary: 50000 }
-    ];
+// const employees = [
+//         { name: "Aman", salary: 25000 },
+//         { name: "Rahul", salary: 40000 },
+//         { name: "Krish", salary: 30000 },
+//         { name: "Neha", salary: 50000 }
+//     ];
 
 
-const lowestOne = employees.reduce((prev, curr)=>{
+// const lowestOne = employees.reduce((prev, curr)=>{
    
-    if(curr.salary<prev.salary){
-        prev = curr;
-    }
-    return prev;
-})
+//     if(curr.salary<prev.salary){
+//         prev = curr;
+//     }
+//     return prev;
+// })
 
-console.log(lowestOne);
+// console.log(lowestOne);
+
+
+//Question 5 — Remove duplicate values
+
+const numbers = [10, 20, 30, 20, 40, 10, 50, 30];
+
+const uniQ = numbers.filter((value,index)=>
+numbers.indexOf(value)!==index)
+
+console.log(uniQ)
