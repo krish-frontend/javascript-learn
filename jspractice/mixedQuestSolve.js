@@ -164,11 +164,32 @@
 
 
 
-//Question 6 — Modify your existing code so that even if a number appears three or four times, it appears only once in the duplicate result;
+// //Question 6 — Modify your existing code so that even if a number appears three or four times, it appears only once in the duplicate result;
 
-const numbers = [10, 20, 20, 20, 30, 10];
+// const numbers = [10, 20, 20, 20, 30, 10];
 
-const num3to4 = numbers
-.filter((val, idx)=> numbers.indexOf(val)!==idx && numbers.indexOf(val)===numbers.lastIndexOf(val));
+// const num3to4 = numbers
+// .filter((val, idx)=> numbers.indexOf(val)!==idx && numbers.indexOf(val)===numbers.lastIndexOf(val));
 
-console.log(num3to4);
+// console.log(num3to4);
+
+
+
+// //Question 6 — Given this array, return only the names of employees whose salary is above the average salary.
+
+const employees = [
+    { name: "Aman", salary: 25000 },
+    { name: "Rahul", salary: 40000 },
+    { name: "Krish", salary: 30000 },
+    { name: "Neha", salary: 50000 }
+];  
+
+const avgSalary = employees
+.reduce((prev, curr)=> prev+curr.salary,0)/employees.length;
+
+const highEarners = employees
+.filter(el=>el.salary > avgSalary)
+.map(el=> ({"name": el.name}))
+
+
+console.log(highEarners);
