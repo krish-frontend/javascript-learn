@@ -169,6 +169,6 @@
 const numbers = [10, 20, 20, 20, 30, 10];
 
 const num3to4 = numbers
-.filter((val, idx)=> numbers.indexOf(val)!==idx || numbers.indexOf(val)===numbers.lastIndexOf(val));
+.filter((val, idx)=> numbers.indexOf(val)!==idx && numbers.indexOf(val)===numbers.lastIndexOf(val));
 
 console.log(num3to4);
