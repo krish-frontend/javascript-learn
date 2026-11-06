@@ -155,9 +155,20 @@
 
 //Question 6 — Find duplicate values only once
 
-const numbers = [10, 20, 30, 20, 40, 10, 50, 30];
+// const numbers = [10, 20, 30, 20, 40, 10, 50, 30];
 
-const dubliCates = numbers
-.filter((value, index)=>numbers.indexOf(value)!==index);
+// const dubliCates = numbers
+// .filter((value, index)=>numbers.indexOf(value)!==index);
 
-console.log(dubliCates);
+// console.log(dubliCates);
+
+
+
+//Question 6 — Modify your existing code so that even if a number appears three or four times, it appears only once in the duplicate result;
+
+const numbers = [10, 20, 20, 20, 30, 10];
+
+const num3to4 = numbers
+.filter((val, idx)=> numbers.indexOf(val)!==idx || numbers.indexOf(val)===numbers.lastIndexOf(val));
+
+console.log(num3to4);
