@@ -140,9 +140,24 @@
 
 //Question 5 — Remove duplicate values
 
+// const numbers = [10, 20, 30, 20, 40, 10, 50, 30];
+
+// const uniQ = numbers.filter((value,index)=>
+// numbers.indexOf(value)===index)
+
+// console.log(uniQ);
+
+// // Remember this interview concept
+// // - indexOf(value) === index → keeps the first occurrence (unique values).
+// // - indexOf(value) !== index → keeps subsequent occurrences (duplicates).
+
+
+
+//Question 6 — Find duplicate values only once
+
 const numbers = [10, 20, 30, 20, 40, 10, 50, 30];
 
-const uniQ = numbers.filter((value,index)=>
-numbers.indexOf(value)!==index)
+const dubliCates = numbers
+.filter((value, index)=>numbers.indexOf(value)!==index);
 
-console.log(uniQ)
+console.log(dubliCates);
