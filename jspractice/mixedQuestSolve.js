@@ -274,6 +274,22 @@
 
 // 🌟Question 12- ind whether at least one student scored below 40.
 
+// const students = [
+//     { name: "Aman", marks: 45 },
+//     { name: "Rahul", marks: 85 },
+//     { name: "Neha", marks: 92 },
+//     { name: "Krish", marks: 65 }
+// ];
+
+// const belowScore40 = students
+// .some(el=>el.marks < 40)
+
+
+// console.log(belowScore40)
+
+
+// 🌟Question 13- Find whether at least one student scored exactly 92.
+
 const students = [
     { name: "Aman", marks: 45 },
     { name: "Rahul", marks: 85 },
@@ -281,8 +297,8 @@ const students = [
     { name: "Krish", marks: 65 }
 ];
 
-const belowScore40 = students
-.some(el=>el.marks < 40)
 
+const findUser92 = students
+.filter(el=>el.marks === 92);
 
-console.log(belowScore40)
+console.log(findUser92);
