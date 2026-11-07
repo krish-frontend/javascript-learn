@@ -177,19 +177,44 @@
 
 // //Question 6 — Given this array, return only the names of employees whose salary is above the average salary.
 
-const employees = [
-    { name: "Aman", salary: 25000 },
-    { name: "Rahul", salary: 40000 },
-    { name: "Krish", salary: 30000 },
-    { name: "Neha", salary: 50000 }
-];  
+// const employees = [
+//     { name: "Aman", salary: 25000 },
+//     { name: "Rahul", salary: 40000 },
+//     { name: "Krish", salary: 30000 },
+//     { name: "Neha", salary: 50000 }
+// ];  
 
-const avgSalary = employees
-.reduce((prev, curr)=> prev+curr.salary,0)/employees.length;
+// const avgSalary = employees
+// .reduce((prev, curr)=> prev+curr.salary,0)/employees.length;
 
-const highEarners = employees
-.filter(el=>el.salary > avgSalary)
-.map(el=> ({"name": el.name}))
+// const highEarners = employees
+// .filter(el=>el.salary > avgSalary)
+// .map(el=> ({"name": el.name}))
 
 
-console.log(highEarners);
+// console.log(highEarners);
+
+
+
+
+//Question 7- Ready to try a question involving sort() and filter() together?
+
+// Task:
+// 1. Filter products with a price above ₹1,000.
+// 2. Sort them from highest price to lowest.
+// 3. Return only their names.
+
+const products = [
+    { name: "Laptop", price: 55000 },
+    { name: "Mouse", price: 500 },
+    { name: "Keyboard", price: 1500 },
+    { name: "Monitor", price: 12000 },
+    { name: "Headphones", price: 3000 }
+];
+
+const highPrice = products
+.filter(el=>el.price>1000)
+.sort((a,b)=>b.price-a.price)
+
+
+console.log(highPrice)
