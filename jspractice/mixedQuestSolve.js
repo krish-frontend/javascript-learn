@@ -204,17 +204,46 @@
 // 2. Sort them from highest price to lowest.
 // 3. Return only their names.
 
+// const products = [
+//     { name: "Laptop", price: 55000 },
+//     { name: "Mouse", price: 500 },
+//     { name: "Keyboard", price: 1500 },
+//     { name: "Monitor", price: 12000 },
+//     { name: "Headphones", price: 3000 }
+// ];
+
+// const highPrice = products
+// .filter(el=>el.price>1000)
+// .sort((a,b)=>b.price-a.price)
+
+
+// console.log(highPrice)
+
+
+// // Interview tip: Remember the sequence:
+// // - filter() → selects
+// // - sort() → arranges
+// // - map() → transforms
+
+
+
+// Question 8-Find the top 2 products
+
+// Your tasks:
+// 1. Filter products costing more than ₹2,000.
+// 2. Sort them from highest to lowest price.
+// 3. Return only the top 2 product names.
+
 const products = [
     { name: "Laptop", price: 55000 },
     { name: "Mouse", price: 500 },
     { name: "Keyboard", price: 1500 },
     { name: "Monitor", price: 12000 },
-    { name: "Headphones", price: 3000 }
+    { name: "Headphones", price: 3000 },
+    { name: "Phone", price: 40000 }
 ];
 
-const highPrice = products
-.filter(el=>el.price>1000)
-.sort((a,b)=>b.price-a.price)
 
-
-console.log(highPrice)
+const twoProducts = products
+.filter(el=>el.price >2000)
+.sort((a,b)=> a.price-b.price)
