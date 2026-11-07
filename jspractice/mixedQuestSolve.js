@@ -299,6 +299,8 @@ const students = [
 
 
 const findUser92 = students
-.filter(el=>el.marks === 92);
+// .filter(el=>el.marks === 92);
+.every(el=>el.marks<100)
+
 
 console.log(findUser92);
