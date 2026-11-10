@@ -313,8 +313,13 @@ const employee = {
     city: "Delhi"
 };
 
-const name1 = employee.name;
-const dep = employee.department;
+// const name1 = employee.name;
+// const dep = employee.department;
 
-console.log(name1);
-console.log(dep);
+// console.log(name1);
+// console.log(dep);
+
+
+const { name: employeeName, salary} =employee;
+
+console.log(employee,salary)
