@@ -288,19 +288,33 @@
 // console.log(belowScore40)
 
 
-// 🌟Question 13- Find whether at least one student scored exactly 92.
+// // 🌟Question 13- Find whether at least one student scored exactly 92.
 
-const students = [
-    { name: "Aman", marks: 45 },
-    { name: "Rahul", marks: 85 },
-    { name: "Neha", marks: 92 },
-    { name: "Krish", marks: 65 }
-];
-
-
-const findUser92 = students
-// .filter(el=>el.marks === 92);
-.every(el=>el.marks<100)
+// const students = [
+//     { name: "Aman", marks: 45 },
+//     { name: "Rahul", marks: 85 },
+//     { name: "Neha", marks: 92 },
+//     { name: "Krish", marks: 65 }
+// ];
 
 
-console.log(findUser92);
+// const findUser92 = students
+// // .filter(el=>el.marks === 92);
+// .every(el=>el.marks<100)
+
+
+// console.log(findUser92);
+
+
+const employee = {
+    name: "Rahul",
+    salary: 35000,
+    department: "IT",
+    city: "Delhi"
+};
+
+const name1 = employee.name;
+const dep = employee.department;
+
+console.log(name1);
+console.log(dep);
