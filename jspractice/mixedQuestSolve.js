@@ -305,21 +305,33 @@
 
 // console.log(findUser92);
 
+// 🌟Question 14- JavaScript Object Destructuring
+// const employee = {
+//     name: "Rahul",
+//     salary: 35000,
+//     department: "IT",
+//     city: "Delhi"
+// };
 
-const employee = {
-    name: "Rahul",
-    salary: 35000,
-    department: "IT",
-    city: "Delhi"
+// // const name1 = employee.name;
+// // const dep = employee.department;
+
+// // console.log(name1);
+// // console.log(dep);
+
+
+2// const {name: employeeName, salary} =employee;
+
+// console.log(employee,salary)
+
+
+// 🌟Question 15- Extract city using destructuring and assign "Mumbai" as its default value.
+
+const user = {
+    name: "Aman",
+    age: 25
 };
 
-// const name1 = employee.name;
-// const dep = employee.department;
+const {city = "mumbai"} = user;
 
-// console.log(name1);
-// console.log(dep);
-
-
-const { name: employeeName, salary} =employee;
-
-console.log(employee,salary)
+console.log(city);
