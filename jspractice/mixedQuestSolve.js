@@ -347,4 +347,5 @@ const employee = {
     }
 };
 
-console.log(employee.address.city);
+console.log(employee.address.country);
+console.log(employee.name);
