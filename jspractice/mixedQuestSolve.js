@@ -327,11 +327,24 @@
 
 // 🌟Question 15- Extract city using destructuring and assign "Mumbai" as its default value.
 
-const user = {
-    name: "Aman",
-    age: 25
+// const user = {
+//     name: "Aman",
+//     age: 25
+// };
+
+// const {city = "mumbai"} = user;
+
+// console.log(city);
+
+// 🌟Question 16- Nested object destructuring
+// Try extracting city from this nested object:
+
+const employee = {
+    name: "Rahul",
+    address: {
+        city: "Delhi",
+        country: "India"
+    }
 };
 
-const {city = "mumbai"} = user;
-
-console.log(city);
+console.log(employee.address.city);
