@@ -355,18 +355,28 @@
 // console.log(name);  
 // console.log(country);
 
-// 🌟Question 17- Rename + default value + nested destructuring
+// // 🌟Question 17- Rename + default value + nested destructuring
 
-const employee = {
-    name: "Krish",
-    salary: 35000,
-    address: {
-        city: "Delhi",
-        country: "India"
-    }
-};
+// const employee = {
+//     name: "Krish",
+//     salary: 35000,
+//     address: {
+//         city: "Delhi",
+//         country: "India"
+//     }
+// };
 
 
- const{name="employeename",salary, address:{city}, department="IT"} = employee;
+//  const{name=employeename,salary, address:{city}, department="IT"} = employee;
 
- console.log(name,salary,city, department);
+//  console.log(name,salary,city, department);
+
+
+// 🌟Question 18- What is array destructuring?
+
+const fruits = ["Apple", "Mango", "Banana", "Orange"];
+
+const[firstFuit, ,thirdFruit] = fruits;
+
+console.log(firstFuit); 
+console.log(thirdFruit); 
