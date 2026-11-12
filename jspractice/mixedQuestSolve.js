@@ -339,20 +339,34 @@
 // 🌟Question 16- Nested object destructuring
 // Try extracting city from this nested object:
 
+// const employee = {
+//     name: "Rahul",
+//     address: {
+//         city: "Delhi",
+//         country: "India"
+//     }
+// };
+
+// // console.log(employee.address.country);
+// // console.log(employee.name);
+
+// const{name, address:{country}}=employee;
+
+// console.log(name);  
+// console.log(country);
+
+// 🌟Question 17- Rename + default value + nested destructuring
+
 const employee = {
-    name: "Rahul",
+    name: "Krish",
+    salary: 35000,
     address: {
         city: "Delhi",
         country: "India"
     }
 };
 
-// console.log(employee.address.country);
-// console.log(employee.name);
 
-const{name, address:{country}}=employee;
+ const{name="employeename",salary, address:{city}, department="IT"} = employee;
 
-console.log(name);  
-console.log(country);
-
-// 🌟Question 17- Nested object destructuring
+ console.log(name,salary,city, department);
