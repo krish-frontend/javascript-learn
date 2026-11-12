@@ -347,5 +347,12 @@ const employee = {
     }
 };
 
-console.log(employee.address.country);
-console.log(employee.name);
+// console.log(employee.address.country);
+// console.log(employee.name);
+
+const{name, address:{country}}=employee;
+
+console.log(name);  
+console.log(country);
+
+// 🌟Question 17- Nested object destructuring
