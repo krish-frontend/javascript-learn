@@ -393,24 +393,24 @@
 
 // 🌟Question 20- Extract name and skills using destructuring, then create a new object that contains all the original properties plus role: "Frontend Developer".
 
-const user = {
-    name: "Krish",
-    age: 24,
-    city: "Delhi",
-    skills: ["HTML", "CSS", "JavaScript"]
-};
+// const user = {
+//     name: "Krish",
+//     age: 24,
+//     city: "Delhi",
+//     skills: ["HTML", "CSS", "JavaScript"]
+// };
 
-const{name,skills}=user;
+// const{name,skills}=user;
 
-console.log(name, skills)
+// console.log(name, skills)
 
 
-const newObj = {
-    ...user,
-    role: "Frontened Engineer"
-}
+// const newObj = {
+//     ...user,
+//     role: "Frontened Engineer"
+// }
 
-console.log(newObj)
+// console.log(newObj)
 
 
 // 🌟Question 21 Combining everything
@@ -429,6 +429,7 @@ const userNew = {
     exprience: "fresher"
 }
 
-const {name = userName} = userNew;
+const {name:userName} = userNew;
 
 console.log(userNew)
+console.log(userName)
