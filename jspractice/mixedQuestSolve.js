@@ -374,9 +374,18 @@
 
 // 🌟Question 18- What is array destructuring?
 
-const fruits = ["Apple", "Mango", "Banana", "Orange"];
+// const fruits = ["Apple", "Mango", "Banana", "Orange"];
 
-const[firstFuit, ,thirdFruit] = fruits;
+// const[firstFuit, ,thirdFruit] = fruits;
 
-console.log(firstFuit); 
-console.log(thirdFruit); 
+// console.log(firstFuit); 
+// console.log(thirdFruit); 
+
+
+// 🌟Question 19- Default values in array destructuring
+
+const numbers = [10, 20];
+
+const[, ,thirdNum = 100] = numbers;
+
+console.log(numbers);
