@@ -384,8 +384,51 @@
 
 // 🌟Question 19- Default values in array destructuring
 
-const numbers = [10, 20];
+// const numbers = [10, 20];
 
-const[, ,thirdNum = 100] = numbers;
+// const[, ,thirdNum = 100] = numbers;
 
-console.log(numbers);
+// console.log(numbers);
+
+
+// 🌟Question 20- Extract name and skills using destructuring, then create a new object that contains all the original properties plus role: "Frontend Developer".
+
+const user = {
+    name: "Krish",
+    age: 24,
+    city: "Delhi",
+    skills: ["HTML", "CSS", "JavaScript"]
+};
+
+const{name,skills}=user;
+
+console.log(name, skills)
+
+
+const newObj = {
+    ...user,
+    role: "Frontened Engineer"
+}
+
+console.log(newObj)
+
+
+// 🌟Question 21 Combining everything
+
+const user = {
+    name: "Krish",
+    age: 24,
+    city: "Delhi",
+    skills: ["HTML", "CSS", "JavaScript"]
+};
+
+
+const userNew = {
+    ...user,    
+    age: 25,
+    exprience: "fresher"
+}
+
+const {name = userName} = userNew;
+
+console.log(userNew)
