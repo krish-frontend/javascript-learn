@@ -415,21 +415,32 @@
 
 // 🌟Question 21 Combining everything
 
-const user = {
-    name: "Krish",
-    age: 24,
-    city: "Delhi",
-    skills: ["HTML", "CSS", "JavaScript"]
-};
+// const user = {
+//     name: "Krish",
+//     age: 24,
+//     city: "Delhi",
+//     skills: ["HTML", "CSS", "JavaScript"]
+// };
 
 
-const userNew = {
-    ...user,    
-    age: 25,
-    exprience: "fresher"
+// const userNew = {
+//     ...user,    
+//     age: 25,
+//     exprience: "fresher"
+// }
+
+// const {name:userName} = userNew;
+
+// console.log(userNew)
+// console.log(userName)
+
+
+// 🌟Question 22 -Callback with an anonymous function
+
+function calculate(a,b, callback){
+    callback(a+b);
 }
 
-const {name:userName} = userNew;
-
-console.log(userNew)
-console.log(userName)
+calculate(10,20, function(result){
+    console.log(result);
+})
