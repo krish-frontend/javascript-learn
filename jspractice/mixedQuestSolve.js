@@ -437,10 +437,23 @@
 
 // 🌟Question 22 -Callback with an anonymous function
 
-function calculate(a,b, callback){
-    callback(a+b);
+// function calculate(a,b, callback){
+//     callback(a+b);
+// }
+
+// calculate(10,20, function(result){
+//     console.log(result);
+// });
+
+
+// 🌟Question 23 What will be the output?
+
+function multiply(){
+    return function(a,b){
+        console.log(a*b)
+    };
 }
 
-calculate(10,20, function(result){
-    console.log(result);
-})
+const answer =multiply();
+
+answer(4,5);
