@@ -448,12 +448,27 @@
 
 // 🌟Question 23 What will be the output?
 
-function multiply(){
-    return function(a,b){
-        console.log(a*b)
+// function multiply(){
+//     return function(a,b){
+//         console.log(a*b)
+//     };
+// }
+
+// const answer =multiply();
+
+
+// 🌟Question 24 ?
+
+function counter(){
+    let count = 0;
+    return function(){
+        count++;
+        console.log(count);
     };
-}
+};
 
-const answer =multiply();
+const result = counter();
 
-answer(4,5);
+result();
+result();
+result();
