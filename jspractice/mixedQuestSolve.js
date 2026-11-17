@@ -458,17 +458,39 @@
 
 
 // 🌟Question 24 ?
+ 
+// function counter(){
+//     let count = 0;
+//     return function(){
+//         count++;
+//         console.log(count);
+//     };
+// };
+
+// const result = counter();
+
+// result();
+// result();
+// result();
+
+
+
+// 🌟Question 25 What will be the output?
 
 function counter(){
-    let count = 0;
+    let count =0;
+     
     return function(){
         count++;
-        console.log(count);
+        return count
     };
 };
 
-const result = counter();
+let first = counter();
 
-result();
-result();
-result();
+console.log(first());
+console.log(first());
+
+let second = counter();
+console.log(second());
+
