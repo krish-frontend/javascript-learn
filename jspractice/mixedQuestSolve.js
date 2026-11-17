@@ -477,20 +477,46 @@
 
 // 🌟Question 25 What will be the output?
 
+// function counter(){
+//     let count =0;
+     
+//     return function(){
+//         count++;
+//         return count
+//     };
+// };
+
+// let first = counter();
+
+// console.log(first());
+// console.log(first());
+
+// let second = counter();
+// console.log(second());
+
+
+// 🌟Question 26 explain whether increment and decrement share the same count variable.?
+
 function counter(){
     let count =0;
-     
-    return function(){
-        count++;
-        return count
+
+    return{
+    
+        increase: function(){
+            count++;
+            console.log(count);
+        },
+        decrease: function(){
+            count--;
+            console.log(count)
+        }
     };
+
 };
 
-let first = counter();
+let result =counter();
 
-console.log(first());
-console.log(first());
-
-let second = counter();
-console.log(second());
-
+result.increase();
+result.increase();
+result.decrease();
+result.decrease();
