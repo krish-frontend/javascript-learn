@@ -546,4 +546,7 @@ function createrCounter(){
 let counter = createrCounter();
 
 counter.decrement()
+counter.increment()
+counter.increment()
+
 
