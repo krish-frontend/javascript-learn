@@ -497,26 +497,53 @@
 
 // 🌟Question 26 explain whether increment and decrement share the same count variable.?
 
-function counter(){
-    let count =0;
+// function counter(){
+//     let count =0;
 
-    return{
+//     return{
     
-        increase: function(){
+//         increase: function(){
+//             count++;
+//             console.log(count);
+//         },
+//         decrease: function(){
+//             count--;
+//             console.log(count)
+//         }
+//     };
+
+// };
+
+// let result =counter();
+
+// result.increase();
+// result.increase();
+// result.decrease();
+// result.decrease();
+
+
+
+// 🌟Question 27 ?
+
+function createrCounter(){
+    let count = 0;
+
+    return {
+        increment: function(){
             count++;
-            console.log(count);
-        },
-        decrease: function(){
+            console.log(count)
+
+    },
+       decrement: function(){
             count--;
             console.log(count)
-        }
-    };
 
-};
+       }
+    }
+}
 
-let result =counter();
 
-result.increase();
-result.increase();
-result.decrease();
-result.decrease();
+let counter = createrCounter();
+
+counter.decrement()
+
