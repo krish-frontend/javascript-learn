@@ -523,35 +523,58 @@
 
 
 
-// 🌟Question 27 ?
+// 🌟Question 27 Create a private counter using closures?
 
-function createrCounter(){
-    let count = 0;
+// Task: Write a function called createCounter() that:
+// 1. Creates a private variable count starting at 0.
+// 2. Returns an object with three methods:
+//    - increment() – increases count by 1.
+//    - decrement() – decreases count by 1.
+//    - getCount() – returns the current count. ?
 
-    return {
-        increment: function(){
-            count++;
-            console.log(count)
 
-    },
-       decrement: function(){
-            count--;
-            console.log(count)
 
-    },
-    getCount: function(){
-        return count;
+// function createrCounter(){
+//     let count = 0;
+
+//     return {
+//         increment: function(){
+//             count++;
+//             console.log(count)
+
+//     },
+//        decrement: function(){
+//             count--;
+//             console.log(count)
+
+//     },
+//     getCount: function(){
+//         return count;
+//     }
+// }
+// }
+
+// let counter = createrCounter();
+
+// counter.decrement()
+// counter.increment()
+// counter.increment()
+
+// console.log(counter.count);  
+// console.log(counter.getCount());
+
+
+// 🌟Question 28 what is this keyword??
+
+const user = {
+    name: "krissh",
+    age: 24,
+
+    showDetails: function(){
+        console.log(this.name);
+        console.log(this.age);
     }
-}
-}
+};
 
-let counter = createrCounter();
-
-counter.decrement()
-counter.increment()
-counter.increment()
-
-console.log(counter.count);  
-console.log(counter.getCount());
-
+user.showDetails();
 
