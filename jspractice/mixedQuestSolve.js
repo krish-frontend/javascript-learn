@@ -538,15 +538,20 @@ function createrCounter(){
             count--;
             console.log(count)
 
-       }
+    },
+    getCount: function(){
+        return count;
     }
 }
-
+}
 
 let counter = createrCounter();
 
 counter.decrement()
 counter.increment()
 counter.increment()
+
+console.log(counter.count);  
+console.log(counter.getCount());
 
 
