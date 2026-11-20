@@ -566,15 +566,31 @@
 
 // 🌟Question 28 what is this keyword??
 
-const user = {
-    name: "krissh",
-    age: 24,
+// const user = {
+//     name: "krissh",
+//     age: 24,
 
-    showDetails: function(){
-        console.log(this.name);
-        console.log(this.age);
+//     showDetails: function(){
+//         console.log(this.name);
+//         console.log(this.age);
+//     }
+// };
+
+// user.showDetails();
+
+
+
+// 🌟Question 29    what will be the output??
+
+const user={
+    name:"krissh",
+    age: 26,
+
+    showdetails: function(){
+        console.log(this.name)
     }
 };
 
-user.showDetails();
+user.showdetails();
+
 
