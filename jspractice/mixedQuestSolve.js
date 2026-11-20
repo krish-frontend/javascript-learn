@@ -591,6 +591,8 @@ const user={
     }
 };
 
-user.showdetails();
+const user2= user.showdetails;
+
+user2();
 
 
