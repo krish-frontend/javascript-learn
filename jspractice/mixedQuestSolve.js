@@ -582,17 +582,33 @@
 
 // 🌟Question 29    what will be the output??
 
-const user={
-    name:"krissh",
-    age: 26,
+// const user={
+//     name:"krissh",
+//     age: 26,
 
-    showdetails: function(){
-        console.log(this.name)
+//     showdetails: function(){
+//         console.log(this.name)
+//     }
+// };
+
+// const user2= user.showdetails;
+
+// user2();
+
+
+// 🌟Question 30  what will be the output??
+
+const student ={
+    name:"krrish"
+
+    , show:function(){
+        const arrow=()=>{
+            console.log(this.name)
+        }
+
+        arrow();
     }
 };
 
-const user2= user.showdetails;
-
-user2();
-
+student.show()
 
