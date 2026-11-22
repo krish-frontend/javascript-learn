@@ -598,17 +598,32 @@
 
 // 🌟Question 30  what will be the output??
 
-const student ={
-    name:"krrish"
+// const student ={
+//     name:"krrish"
 
-    , show:function(){
-        const arrow=()=>{
-            console.log(this.name)
-        }
+//     , show:function(){
+//         const arrow=()=>{
+//             console.log(this.name)
+//         }
 
-        arrow();
-    }
-};
+//         arrow();
+//     }
+// };
 
-student.show()
+// student.show()
 
+
+
+// 🌟Question 31 call ?
+
+const user={
+    name:"krissh"
+}
+
+function details(age,role){
+    console.log(this.name);
+    console.log(age);
+    console.log(role);
+}
+
+details.call(user,25,"developer");
