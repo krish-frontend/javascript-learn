@@ -616,14 +616,30 @@
 
 // 🌟Question 31 call ?
 
-const user={
-    name:"krissh"
+// const user={
+//     name:"krissh"
+// }
+
+// function details(age,role){
+//     console.log(this.name);
+//     console.log(age);
+//     console.log(role); 
+// }
+
+// details.call(user,25,"developer");
+
+
+// 🌟Question 32 apply ?
+
+const user = {
+    name:"rahul"
 }
 
-function details(age,role){
-    console.log(this.name);
-    console.log(age);
-    console.log(role);
+function introduction(city, profession){
+    console.log(this.name,"from city:",city);
+    
+    console.log("profession:", profession);
 }
 
-details.call(user,25,"developer");
+introduction.apply(user,["Delhi","Frontend Developer"]);
+
