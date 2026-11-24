@@ -631,15 +631,31 @@
 
 // 🌟Question 32 apply ?
 
+// const user = {
+//     name:"rahul"
+// }
+
+// function introduction(city, profession){
+//     console.log(this.name,"from city:",city);
+    
+//     console.log("profession:", profession);
+// }
+
+// introduction.apply(user,["Delhi","Frontend Developer"]);
+
+
+
+// 🌟Question 33 ?
+
 const user = {
     name:"rahul"
+};
+
+function showRole(role){
+    console.log(this.name+"is a"+role);
 }
 
-function introduction(city, profession){
-    console.log(this.name,"from city:",city);
-    
-    console.log("profession:", profession);
-}
+const result = showRole.bind(user,"developer");
 
-introduction.apply(user,["Delhi","Frontend Developer"]);
-
+result();
+result();
